@@ -7,11 +7,18 @@ This repository hosts legal documents for our apps.
 ### Image Converter
 - [Privacy Policy](https://oversea-starups.github.io/terms-privacy/image-converter/privacy.html)
 
+### Vocai
+- [Privacy Policy](https://oversea-starups.github.io/terms-privacy/vocai/privacy.html)
+- [Terms of Service](https://oversea-starups.github.io/terms-privacy/vocai/terms.html)
+
 ## Structure
 
 ```
 /
 ├── image-converter/
 │   └── privacy.html
+├── vocai/
+│   ├── privacy.html
+│   └── terms.html
 └── [other-apps]/
 ```
