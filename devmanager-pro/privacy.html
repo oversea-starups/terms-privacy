@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DevManager Pro</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6; color: #1d1d1f; background: #f5f5f7; padding: 20px;
+        }
+        .container {
+            max-width: 800px; margin: 0 auto; background: white;
+            padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h1 { font-size: 32px; font-weight: 700; color: #1d1d1f; margin-bottom: 10px; }
+        .effective-date { color: #86868b; font-size: 14px; margin-bottom: 30px; }
+        h2 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin-top: 40px; margin-bottom: 16px; }
+        h3 { font-size: 18px; margin-top: 20px; margin-bottom: 12px; color: #1d1d1f; }
+        p { margin-bottom: 16px; color: #424245; }
+        ul { margin-left: 20px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; color: #424245; }
+        .highlight {
+            background: #f5f5f7; padding: 16px; border-radius: 8px; margin: 20px 0;
+        }
+        a { color: #0071e3; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
+        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #e5e5e7; }
+        th { font-weight: 600; color: #1d1d1f; }
+        td { color: #424245; }
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="effective-date">Effective Date: June 11, 2026</p>
+
+        <h2>1. Overview</h2>
+        <p>DevManager Pro ("we", "our", or "the App") is a developer tools application for macOS that helps indie developers and development teams manage their iOS and Android applications across app stores. We are committed to protecting your privacy and being transparent about how we handle your data.</p>
+
+        <div class="highlight">
+            <strong>Key Privacy Principles:</strong>
+            <ul>
+                <li>Your App Store Connect and Google Play credentials are encrypted at rest and never shared with third parties</li>
+                <li>We collect only the minimum data necessary to provide the service</li>
+                <li>Sales and analytics data is fetched directly from Apple and Google APIs on your behalf</li>
+                <li>We do not sell your personal data to third parties</li>
+                <li>No third-party advertising or tracking</li>
+            </ul>
+        </div>
+
+        <h2>2. Data We Collect</h2>
+
+        <h3>2.1 Account Information</h3>
+        <p>When you create an account, we collect:</p>
+        <ul>
+            <li><strong>Email address</strong> — used for authentication and notifications</li>
+            <li><strong>Name</strong> — used to personalize your experience</li>
+            <li><strong>Password</strong> — stored as a bcrypt hash, never in plain text</li>
+        </ul>
+
+        <h3>2.2 App Store Credentials</h3>
+        <p>When you connect your app store accounts, we securely store:</p>
+        <ul>
+            <li><strong>Apple App Store Connect API credentials</strong> — Issuer ID, Key ID, and Private Key (ES256)</li>
+            <li><strong>Google Play Service Account credentials</strong> — Client email and Private Key</li>
+        </ul>
+        <p>These credentials are encrypted using AES-256-GCM encryption before storage and are only decrypted when needed to fetch your app data.</p>
+
+        <h3>2.3 App and Store Data</h3>
+        <p>We fetch and cache the following data from connected app stores on your behalf:</p>
+        <ul>
+            <li>App metadata (name, bundle ID, platform, icon)</li>
+            <li>App versions and build status</li>
+            <li>Customer reviews and ratings</li>
+            <li>Sales summaries (downloads, revenue, units)</li>
+            <li>Subscription and in-app purchase metrics</li>
+        </ul>
+
+        <h3>2.4 Payment Information</h3>
+        <ul>
+            <li><strong>Mac App Store subscriptions</strong> are processed entirely by Apple. We receive only transaction receipts for verification</li>
+            <li><strong>Web subscriptions (Stripe)</strong> are processed by Stripe. We do not store credit card information — Stripe handles all payment data securely</li>
+        </ul>
+
+        <h3>2.5 Usage and Analytics Data</h3>
+        <p>We may collect anonymous usage data to improve the App, including:</p>
+        <ul>
+            <li>Feature usage patterns</li>
+            <li>App performance and stability metrics</li>
+            <li>Device type and OS version</li>
+        </ul>
+        <p><strong>This data is anonymous and cannot be used to identify you personally.</strong></p>
+
+        <h2>3. How We Use Your Data</h2>
+        <table>
+            <thead>
+                <tr><th>Data Type</th><th>Purpose</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Account Info</td><td>Authentication, account management, and notifications</td></tr>
+                <tr><td>App Store Credentials</td><td>Fetching your app data from Apple and Google APIs</td></tr>
+                <tr><td>App & Store Data</td><td>Displaying dashboards, reports, and analytics</td></tr>
+                <tr><td>Payment Receipts</td><td>Verifying and managing your subscription</td></tr>
+                <tr><td>Usage Analytics</td><td>Improving app features, performance, and stability</td></tr>
+            </tbody>
+        </table>
+
+        <h2>4. Third-Party Services</h2>
+
+        <h3>4.1 Apple App Store Connect API</h3>
+        <p>We use Apple's App Store Connect API to fetch your app metadata, versions, reviews, and sales data. Your API credentials are used solely to make authorized requests on your behalf. <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></p>
+
+        <h3>4.2 Google Play Developer API</h3>
+        <p>We use Google's Play Developer API to fetch your Android app data. Your service account credentials are used solely for authorized API calls. <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></p>
+
+        <h3>4.3 Apple StoreKit (In-App Purchases)</h3>
+        <p>Mac App Store subscriptions are processed by Apple. We verify transaction receipts server-side using Apple's JWS verification. We do not have access to your full payment information. <a href="https://www.apple.com/legal/privacy/" target="_blank">Apple Privacy Policy</a></p>
+
+        <h3>4.4 Stripe</h3>
+        <p>Web-based subscriptions are processed through Stripe. We do not collect or store credit card numbers. Stripe handles all payment data in compliance with PCI DSS. <a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy</a></p>
+
+        <h3>4.5 Email Service (Resend)</h3>
+        <p>We use Resend to deliver transactional emails such as password reset links. Your email address is shared with Resend only for the purpose of sending these emails. <a href="https://resend.com/privacy" target="_blank">Resend Privacy Policy</a></p>
+
+        <h2>5. Data Storage &amp; Security</h2>
+        <ul>
+            <li><strong>Database:</strong> Encrypted MySQL database with TLS connections</li>
+            <li><strong>Credential Encryption:</strong> AES-256-GCM encryption for all stored API credentials</li>
+            <li><strong>Authentication:</strong> JWT tokens with 7-day expiration, stored securely in macOS Keychain</li>
+            <li><strong>Transport:</strong> All data in transit is encrypted via TLS 1.3</li>
+            <li><strong>Infrastructure:</strong> Docker containerized deployment with network isolation and security headers (Helmet)</li>
+        </ul>
+
+        <h2>6. Data Retention</h2>
+        <table>
+            <thead>
+                <tr><th>Data Type</th><th>Retention Period</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Account Data</td><td>Retained while account is active; deleted within 30 days of account deletion</td></tr>
+                <tr><td>App Store Credentials</td><td>Retained until you remove them or delete your account</td></tr>
+                <tr><td>Sales &amp; Analytics Data</td><td>Cached for 90 days; re-fetched from source APIs on sync</td></tr>
+                <tr><td>Sync Logs</td><td>Retained for 90 days for debugging purposes</td></tr>
+                <tr><td>Payment Receipts</td><td>Retained for subscription verification duration</td></tr>
+                <tr><td>Password Reset Tokens</td><td>Expires after 1 hour; deleted after use</td></tr>
+            </tbody>
+        </table>
+
+        <h2>7. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul>
+            <li><strong>Access</strong> — Request a copy of your personal data</li>
+            <li><strong>Correction</strong> — Request correction of inaccurate data</li>
+            <li><strong>Deletion</strong> — Delete your account and all associated data at any time</li>
+            <li><strong>Export</strong> — Request export of your data</li>
+            <li><strong>Withdraw Consent</strong> — Disconnect app store credentials at any time</li>
+            <li><strong>Opt Out</strong> — Disable analytics collection</li>
+        </ul>
+        <p>To exercise any of these rights, contact us at <a href="mailto:support@devmanager.pro">support@devmanager.pro</a>.</p>
+
+        <h2>8. Children's Privacy</h2>
+        <p>DevManager Pro is a professional developer tool not intended for children under 13. We do not knowingly collect personal information from children under 13. If we become aware that we have inadvertently collected such data, we will take steps to delete it promptly.</p>
+
+        <h2>9. International Data Transfers</h2>
+        <p>Your data may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place, including encryption and compliance with applicable data protection laws (GDPR, CCPA).</p>
+
+        <h2>10. GDPR Compliance</h2>
+        <p>For users in the European Economic Area (EEA):</p>
+        <ul>
+            <li><strong>Legal Basis:</strong> We process your data based on contractual necessity (providing the service), consent (where applicable), and legitimate interests (security and service improvement)</li>
+            <li><strong>Data Portability:</strong> You can request a machine-readable export of your data</li>
+            <li><strong>Right to Object:</strong> You can object to processing based on legitimate interests</li>
+            <li><strong>Data Protection Officer:</strong> Contact us at <a href="mailto:privacy@devmanager.pro">privacy@devmanager.pro</a></li>
+        </ul>
+
+        <h2>11. Changes to This Policy</h2>
+        <p>We may update this privacy policy from time to time. We will notify you by:</p>
+        <ul>
+            <li>Updating the "Effective Date" at the top of this page</li>
+            <li>Posting a notice in the App for significant changes</li>
+            <li>Sending an email notification for material changes</li>
+        </ul>
+
+        <h2>12. Contact Us</h2>
+        <p>For privacy-related questions or concerns:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="mailto:support@devmanager.pro">support@devmanager.pro</a></li>
+            <li><strong>Privacy:</strong> <a href="mailto:privacy@devmanager.pro">privacy@devmanager.pro</a></li>
+            <li><strong>Response Time:</strong> Within 48 hours (business days)</li>
+        </ul>
+
+        <div class="highlight" style="margin-top: 40px;">
+            <p><strong>Summary:</strong> DevManager Pro respects your privacy. We encrypt your API credentials, collect only necessary data to provide the service, process payments through Apple and Stripe, and never sell your data to third parties. You can delete your account and all data at any time.</p>
+        </div>
+    </div>
+</body>
+</html>

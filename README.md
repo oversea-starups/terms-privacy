@@ -11,6 +11,10 @@ This repository hosts legal documents for our apps.
 - [Privacy Policy](https://oversea-starups.github.io/terms-privacy/vocai/privacy.html)
 - [Terms of Service](https://oversea-starups.github.io/terms-privacy/vocai/terms.html)
 
+### DevManager Pro
+- [Privacy Policy](https://oversea-starups.github.io/terms-privacy/devmanager-pro/privacy.html)
+- [Terms of Service](https://oversea-starups.github.io/terms-privacy/devmanager-pro/terms.html)
+
 ## Structure
 
 ```
@@ -18,6 +22,9 @@ This repository hosts legal documents for our apps.
 ├── image-converter/
 │   └── privacy.html
 ├── vocai/
+│   ├── privacy.html
+│   └── terms.html
+├── devmanager-pro/
 │   ├── privacy.html
 │   └── terms.html
 └── [other-apps]/
