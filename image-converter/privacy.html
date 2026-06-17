@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter Privacy Policy - Learn how we protect your data">
     <title>Privacy Policy - Image Converter</title>
     <style>
+:root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-green: #34C759;
+        }
+        
         * {
             margin: 0;
             padding: 0;
@@ -12,192 +23,1237 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #1d1d1f;
-            background: #f5f5f7;
-            padding: 20px;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
         }
         
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 2rem 1.5rem;
         }
         
-        h1 {
-            font-size: 32px;
-            font-weight: 700;
-            color: #1d1d1f;
-            margin-bottom: 10px;
+        .lang-switcher {
+            background: var(--bg-secondary);
+            padding: 0.75rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .lang-switcher button {
+            background: transparent;
+            border: 1px solid var(--border-color);
+            padding: 0.4rem 1rem;
+            border-radius: 2rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .lang-switcher button:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        .lang-switcher button.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+        .footer-links.lang-content.active { display: flex; }
+        
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
         
-        .effective-date {
-            color: #86868b;
-            font-size: 14px;
-            margin-bottom: 30px;
+        .privacy-highlight {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .privacy-highlight h2 {
+            color: #2E7D32;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .privacy-highlight p {
+            color: #388E3C;
+            font-size: 0.95rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
         }
         
         h2 {
-            font-size: 24px;
+            font-size: 1.5rem;
             font-weight: 600;
-            color: #1d1d1f;
-            margin-top: 40px;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
         }
         
         p {
-            margin-bottom: 16px;
-            color: #424245;
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
         }
         
-        ul {
-            margin-left: 20px;
-            margin-bottom: 16px;
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
         }
         
         li {
-            margin-bottom: 8px;
-            color: #424245;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
         }
         
-        .highlight {
-            background: #f5f5f7;
-            padding: 16px;
-            border-radius: 8px;
-            margin: 20px 0;
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
         }
         
-        a {
-            color: #0071e3;
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .data-table th {
+            background: var(--text-primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .permission-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .permission-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .permission-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
             text-decoration: none;
         }
         
-        a:hover {
+        .footer-links a:hover {
             text-decoration: underline;
         }
         
         @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
             .container {
-                padding: 20px;
+                padding: 1.5rem 1rem;
             }
             
-            h1 {
-                font-size: 28px;
+            .data-table {
+                font-size: 0.85rem;
             }
             
-            h2 {
-                font-size: 20px;
+            .data-table th,
+            .data-table td {
+                padding: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="effective-date">Effective Date: January 24, 2026</p>
-        
-        <h2>1. Overview</h2>
-        <p>Image Converter ("we", "our", or "the app") is a local image conversion tool for iOS. We are committed to protecting your privacy and being transparent about our data practices.</p>
-        
-        <div class="highlight">
-            <strong>Key Privacy Principles:</strong>
-            <ul>
-                <li>All image processing happens locally on your device</li>
-                <li>We never upload your photos to our servers</li>
-                <li>No account registration required</li>
-                <li>Minimal data collection for app improvement only</li>
-            </ul>
+    <header>
+        <div class="lang-content active" data-lang="en">
+            <h1>Privacy Policy</h1>
+                    <p>Image Converter is committed to protecting your privacy</p>
+                    <div class="app-badge">
+                        <span>🔒</span>
+                        <span>Privacy-First Design</span>
+                    </div>
         </div>
-        
-        <h2>2. Data We Do NOT Collect</h2>
-        <p>We want to be clear about what we don't collect:</p>
-        <ul>
-            <li><strong>Your Images:</strong> All photos you convert are processed entirely on your device and never leave your device</li>
-            <li><strong>Personal Information:</strong> We do not collect names, email addresses, phone numbers, or any personally identifiable information</li>
-            <li><strong>Location Data:</strong> We do not access or collect your location</li>
-            <li><strong>Contacts or Photos Library:</strong> We only access photos you explicitly select for conversion</li>
-        </ul>
-        
-        <h2>3. Data We Collect</h2>
-        <p>We use Firebase Analytics to understand how the app is used and improve user experience. This includes:</p>
-        
-        <h3 style="font-size: 18px; margin-top: 20px; margin-bottom: 12px;">Anonymous Usage Analytics:</h3>
-        <ul>
-            <li>App launch and session duration</li>
-            <li>Feature usage (e.g., which output formats are selected)</li>
-            <li>Conversion success/failure events (without image content)</li>
-            <li>Device type and iOS version</li>
-            <li>App crashes and performance metrics</li>
-        </ul>
-        
-        <p><strong>Important:</strong> All analytics data is anonymous and cannot be used to identify you personally.</p>
-        
-        <h2>4. How We Use Data</h2>
-        <p>The anonymous analytics data we collect is used solely to:</p>
-        <ul>
-            <li>Understand which features are most valuable to users</li>
-            <li>Identify and fix bugs or crashes</li>
-            <li>Improve app performance and user experience</li>
-            <li>Make informed decisions about future features</li>
-        </ul>
-        
-        <h2>5. Third-Party Services</h2>
-        <p>We use the following third-party services:</p>
-        
-        <h3 style="font-size: 18px; margin-top: 20px; margin-bottom: 12px;">Firebase Analytics (Google)</h3>
-        <p>Firebase Analytics helps us understand app usage patterns. Firebase's privacy policy can be found at: <a href="https://firebase.google.com/support/privacy" target="_blank">https://firebase.google.com/support/privacy</a></p>
-        
-        <h3 style="font-size: 18px; margin-top: 20px; margin-bottom: 12px;">Apple StoreKit (In-App Purchases)</h3>
-        <p>All purchase transactions are processed by Apple. We do not have access to your payment information. Apple's privacy policy: <a href="https://www.apple.com/legal/privacy/" target="_blank">https://www.apple.com/legal/privacy/</a></p>
-        
-        <h2>6. Data Storage and Security</h2>
-        <ul>
-            <li><strong>Local Processing:</strong> All image conversions happen on your device using Apple's ImageIO framework</li>
-            <li><strong>Temporary Files:</strong> Converted images are temporarily stored in your device's cache and automatically deleted when you close the app</li>
-            <li><strong>No Cloud Storage:</strong> We do not store any of your data on our servers</li>
-        </ul>
-        
-        <h2>7. Your Rights and Choices</h2>
-        
-        <h3 style="font-size: 18px; margin-top: 20px; margin-bottom: 12px;">Disable Analytics:</h3>
-        <p>You can limit analytics tracking through your iOS device settings:</p>
-        <ul>
-            <li>Go to Settings → Privacy & Security → Analytics & Improvements</li>
-            <li>Toggle off "Share iPhone Analytics"</li>
-        </ul>
-        
-        <h3 style="font-size: 18px; margin-top: 20px; margin-bottom: 12px;">Delete App Data:</h3>
-        <p>To completely remove all app data:</p>
-        <ul>
-            <li>Delete the Image Converter app from your device</li>
-            <li>All temporary files and preferences will be automatically removed</li>
-        </ul>
-        
-        <h2>8. Children's Privacy</h2>
-        <p>Our app does not knowingly collect any information from children under 13. The app is designed for general audiences and does not require any personal information to function.</p>
-        
-        <h2>9. International Users</h2>
-        <p>Image Converter is available worldwide. Since all processing happens locally on your device, your data never crosses international borders through our app.</p>
-        
-        <h2>10. Changes to This Privacy Policy</h2>
-        <p>We may update this privacy policy from time to time. We will notify you of any changes by:</p>
-        <ul>
-            <li>Updating the "Effective Date" at the top of this policy</li>
-            <li>Posting a notice in the app (for significant changes)</li>
-        </ul>
-        <p>Your continued use of the app after changes constitutes acceptance of the updated policy.</p>
-        
-        <h2>11. Contact Us</h2>
-        <p>If you have any questions or concerns about this privacy policy or our data practices, please contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:privacy@imageconverter.app">privacy@imageconverter.app</a></p>
-        
-        <div class="highlight" style="margin-top: 40px;">
-            <p><strong>Summary:</strong> Image Converter respects your privacy. We process all images locally on your device, collect only anonymous usage statistics to improve the app, and never access or store your personal photos.</p>
+        <div class="lang-content" data-lang="zh">
+            <h1>隐私政策</h1>
+                    <p>Image Converter 致力于保护您的隐私</p>
+                    <div class="app-badge">
+                        <span>🔒</span>
+                        <span>隐私优先设计</span>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <h1>プライバシーポリシー</h1>
+                    <p>Image Converter はお客様のプライバシーを保護することをお約束します</p>
+                    <div class="app-badge">
+                        <span>🔒</span>
+                        <span>プライバシー最優先の設計</span>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="ko">
+            <h1>개인정보 처리방침</h1>
+                    <p>Image Converter는 귀하의 개인정보 보호를 최우선으로 생각합니다</p>
+                    <div class="app-badge">
+                        <span>🔒</span>
+                        <span>개인정보 보호 중심 설계</span>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="de">
+            <h1>Datenschutzerklärung</h1>
+                    <p>Image Converter setzt sich für den Schutz Ihrer Privatsphäre ein</p>
+                    <div class="app-badge">
+                        <span>🔒</span>
+                        <span>Datenschutzorientiertes Design</span>
+                    </div>
+        </div>
+    </header>
+
+    <div class="lang-switcher">
+        <button data-lang="en" class="active">English</button>
+        <button data-lang="zh">中文</button>
+        <button data-lang="ja">日本語</button>
+        <button data-lang="ko">한국어</button>
+        <button data-lang="de">Deutsch</button>
+    </div>
+
+    <div class="container">
+        <div class="lang-content active" data-lang="en">
+            <div class="last-updated">
+                        <span>📅</span>
+                        <strong>Last Updated:</strong> February 26, 2026
+                    </div>
+                    
+                    <div class="privacy-highlight">
+                        <h2>🔐 Core Privacy Promise</h2>
+                        <p><strong>Your images are always processed locally on your device and are never uploaded to any server.</strong> We adopt a privacy-first design philosophy to ensure your personal data remains entirely under your control.</p>
+                    </div>
+                    
+                    <section>
+                        <h2>1. Introduction</h2>
+                        <p>This Privacy Policy applies to the Image Converter application (hereinafter referred to as "the App"), operated by an independent developer. We place great importance on user privacy and are committed to explaining in a transparent manner how we collect, use, and protect your information.</p>
+                        <p>By using the App, you agree to the practices described in this Privacy Policy. If you do not agree, please discontinue use of the App.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. Information We Collect</h2>
+                        <p>We adhere to the principle of <strong>data minimization</strong> and collect only the minimum information necessary for the App to function properly:</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Data Type</th>
+                                    <th>Purpose</th>
+                                    <th>Personally Identifiable</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>App Interaction Data</td>
+                                    <td>Improving product features and user experience</td>
+                                    <td>No (anonymized)</td>
+                                </tr>
+                                <tr>
+                                    <td>Device Information</td>
+                                    <td>Diagnosing technical issues and optimizing performance</td>
+                                    <td>No</td>
+                                </tr>
+                                <tr>
+                                    <td>Crash Logs</td>
+                                    <td>Fixing application errors</td>
+                                    <td>No</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>2.1 Information We Do Not Collect</h3>
+                        <p>For the avoidance of doubt, we <strong>never</strong> collect the following information:</p>
+                        <ul>
+                            <li>The content of images you convert</li>
+                            <li>Your name, address, phone number, or other personally identifiable information</li>
+                            <li>Precise location information</li>
+                            <li>Contact information</li>
+                            <li>Payment information (all purchases are processed through Apple)</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>3. Photo Library Permission</h2>
+                        <p>The App requires access to your photo library to provide its core functionality. Our use of permissions is as follows:</p>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">📷</span> Photo Library Read Access</h4>
+                            <p>Used to select images for format conversion. We only read images you actively select and do not scan or upload your entire photo library.</p>
+                        </div>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">💾</span> Photo Library Write Access</h4>
+                            <p>Used to save converted images to your photo library. Converted results are written to the library only after your confirmation.</p>
+                        </div>
+                        
+                        <p><strong>Important Notice:</strong> All image processing is completed locally on your device. Your original and converted images never leave your device.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. Data Storage and Processing</h2>
+                        <h3>4.1 Local Processing Principle</h3>
+                        <p>Image Converter employs a <strong>fully local processing</strong> architecture:</p>
+                        <ul>
+                            <li>All image format conversions are performed on your device</li>
+                            <li>No internet connection is required to use core features</li>
+                            <li>Images are not uploaded to cloud servers</li>
+                            <li>Temporary files created during conversion are stored only in the device's local sandbox</li>
+                        </ul>
+                        
+                        <h3>4.2 Temporary Files</h3>
+                        <p>The App may generate temporary files during conversion. These files:</p>
+                        <ul>
+                            <li>Are saved only within the App's sandbox directory</li>
+                            <li>Are automatically cleaned up after conversion is complete</li>
+                            <li>Are completely deleted when the App is uninstalled</li>
+                            <li>Cannot be accessed by other applications</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>5. Third-Party Services</h2>
+                        <p>Image Converter does not integrate any third-party analytics SDKs or advertising SDKs. All data remains on your device locally and is not transmitted to third-party services.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. Your Rights</h2>
+                        <p>Depending on the laws and regulations in your jurisdiction, you may be entitled to the following rights:</p>
+                        
+                        <h3>6.1 GDPR (Users in the European Union)</h3>
+                        <ul>
+                            <li><strong>Right to Access:</strong> Obtain information about what data we hold about you</li>
+                            <li><strong>Right to Rectification:</strong> Request correction of inaccurate data</li>
+                            <li><strong>Right to Erasure:</strong> Request deletion of your data (the "right to be forgotten")</li>
+                            <li><strong>Right to Restrict Processing:</strong> Restrict the processing of your data</li>
+                            <li><strong>Right to Data Portability:</strong> Obtain your data in a commonly used format</li>
+                            <li><strong>Right to Object:</strong> Object to certain types of data processing</li>
+                        </ul>
+                        
+                        <h3>6.2 CCPA (Users in California)</h3>
+                        <ul>
+                            <li>Know the categories and specific pieces of personal information we collect</li>
+                            <li>Know the categories of sources from which personal information is collected</li>
+                            <li>Know the purposes for which personal information is collected</li>
+                            <li>Know the categories of third parties with whom we share personal information</li>
+                            <li>Request deletion of personal information we have collected</li>
+                            <li>Not be discriminated against for exercising your privacy rights</li>
+                        </ul>
+                        
+                        <h3>6.3 How to Exercise Your Rights</h3>
+                        <p>Since we collect only a minimal amount of anonymized data, most user rights requests can be fulfilled as follows:</p>
+                        <ul>
+                            <li>Reset your advertising identifier in iOS Settings</li>
+                            <li>Uninstall the App to delete all local data</li>
+                            <li>Contact us using the information below for specific requests</li>
+                        </ul>
+                        <p>We will respond to all reasonable rights requests within 30 days.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. Children's Privacy</h2>
+                        <p>The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe we may have collected information from a child, please contact us immediately and we will take steps to delete such information.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your data:</p>
+                        <ul>
+                            <li>Using iOS standard sandbox mechanisms to protect App data</li>
+                            <li>Following Apple's security best practices</li>
+                            <li>Regularly updating the App to fix security vulnerabilities</li>
+                            <li>Using iOS standard security mechanisms to protect App data</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. Changes to This Privacy Policy</h2>
+                        <p>We may update this Privacy Policy from time to time. Any material changes will be communicated to you via in-app notification or release notes. We encourage you to review this page periodically for the latest information.</p>
+                        <p>Changes to this Privacy Policy take effect immediately upon posting to this page.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. Contact Us</h2>
+                        <p>If you have any questions, concerns, or requests regarding this Privacy Policy, please contact us using the information below:</p>
+                    </section>
+                    
+                    <div class="contact-box">
+                        <h2>📧 Contact Support</h2>
+                        <p>We will respond to your message within 48 hours</p>
+                        <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="zh">
+            <div class="last-updated">
+                        <span>📅</span>
+                        <strong>最后更新日期：</strong>2026年2月26日
+                    </div>
+                    
+                    <div class="privacy-highlight">
+                        <h2>🔐 核心隐私承诺</h2>
+                        <p><strong>您的图片始终在设备本地处理，绝不会上传到任何服务器。</strong>我们采用隐私优先的设计理念，确保您的个人数据完全由您掌控。</p>
+                    </div>
+                    
+                    <section>
+                        <h2>1. 简介</h2>
+                        <p>本隐私政策适用于 Image Converter 应用（以下简称"本应用"），由独立开发者运营。我们高度重视用户隐私，致力于以透明的方式说明我们收集、使用和保护您的信息的方式。</p>
+                        <p>使用本应用即表示您同意本隐私政策中描述的做法。如果您不同意，请停止使用本应用。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. 我们收集的信息</h2>
+                        <p>我们遵循<strong>数据最小化原则</strong>，仅收集应用正常运行所必需的最少信息：</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>数据类型</th>
+                                    <th>目的</th>
+                                    <th>是否可识别个人身份</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>应用交互数据</td>
+                                    <td>改进产品功能和用户体验</td>
+                                    <td>否（匿名化）</td>
+                                </tr>
+                                <tr>
+                                    <td>设备信息</td>
+                                    <td>诊断技术问题和优化性能</td>
+                                    <td>否</td>
+                                </tr>
+                                <tr>
+                                    <td>崩溃日志</td>
+                                    <td>修复应用错误</td>
+                                    <td>否</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>2.1 我们不收集的信息</h3>
+                        <p>为明确起见，我们<strong>绝不</strong>收集以下信息：</p>
+                        <ul>
+                            <li>您转换的图片内容</li>
+                            <li>您的姓名、地址、电话等个人身份信息</li>
+                            <li>精确位置信息</li>
+                            <li>联系人信息</li>
+                            <li>支付信息（所有购买均通过 Apple 处理）</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>3. 相册权限使用说明</h2>
+                        <p>本应用需要访问您的相册以提供核心功能。我们对权限的使用方式如下：</p>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">📷</span> 相册读取权限</h4>
+                            <p>用于选择需要转换格式的图片。我们仅读取您主动选择的图片，不会扫描或上传您的整个相册。</p>
+                        </div>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">💾</span> 相册写入权限</h4>
+                            <p>用于将转换后的图片保存到您的相册。只有经您确认后，转换结果才会写入相册。</p>
+                        </div>
+                        
+                        <p><strong>重要提示：</strong>所有图片处理都在您的设备本地完成，您的原始图片和转换后的图片都不会离开您的设备。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. 数据存储与处理</h2>
+                        <h3>4.1 本地处理原则</h3>
+                        <p>Image Converter 采用<strong>完全本地处理</strong>架构：</p>
+                        <ul>
+                            <li>所有图片格式转换均在您的设备上完成</li>
+                            <li>不需要网络连接即可使用核心功能</li>
+                            <li>不会将图片上传到云端服务器</li>
+                            <li>转换过程中的临时文件仅存储在设备本地沙盒中</li>
+                        </ul>
+                        
+                        <h3>4.2 临时文件</h3>
+                        <p>应用在转换过程中可能产生临时文件，这些文件：</p>
+                        <ul>
+                            <li>仅保存在应用沙盒目录内</li>
+                            <li>在转换完成后自动清理</li>
+                            <li>应用卸载时完全删除</li>
+                            <li>其他应用无法访问</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>5. 第三方服务</h2>
+                        <p>Image Converter 不集成任何第三方分析 SDK 或广告 SDK。所有数据均保留在您的设备本地，不会传输给第三方服务。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. 您的权利</h2>
+                        <p>根据您所在地区的法律法规，您可能享有以下权利：</p>
+                        
+                        <h3>6.1 GDPR（欧盟用户）</h3>
+                        <ul>
+                            <li><strong>访问权：</strong>了解我们持有关于您的哪些数据</li>
+                            <li><strong>更正权：</strong>要求更正不准确的数据</li>
+                            <li><strong>删除权：</strong>要求删除您的数据（"被遗忘权"）</li>
+                            <li><strong>限制处理权：</strong>限制对数据的处理</li>
+                            <li><strong>数据可携带权：</strong>以通用格式获取您的数据</li>
+                            <li><strong>反对权：</strong>反对某些类型的数据处理</li>
+                        </ul>
+                        
+                        <h3>6.2 CCPA（加利福尼亚州用户）</h3>
+                        <ul>
+                            <li>了解我们收集的个人信息的类别和具体片段</li>
+                            <li>了解个人信息的来源类别</li>
+                            <li>了解收集个人信息的目的</li>
+                            <li>了解我们与之共享个人信息的第三方类别</li>
+                            <li>要求删除我们收集的个人信息</li>
+                            <li>不因行使隐私权而受到歧视</li>
+                        </ul>
+                        
+                        <h3>6.3 如何行使您的权利</h3>
+                        <p>由于我们仅收集极少量的匿名化数据，大多数用户权利请求可通过以下方式实现：</p>
+                        <ul>
+                            <li>在 iOS 设置中重置广告标识符</li>
+                            <li>卸载应用以删除所有本地数据</li>
+                            <li>通过下方联系方式联系我们提出特定请求</li>
+                        </ul>
+                        <p>我们将在 30 天内响应所有合理的权利请求。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. 儿童隐私</h2>
+                        <p>本应用不面向 13 岁以下儿童。我们不会故意收集 13 岁以下儿童的个人信息。如果您发现我们可能收集了儿童的信息，请立即联系我们，我们将采取措施删除此类信息。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. 数据安全</h2>
+                        <p>我们采取适当的技术和组织措施保护您的数据：</p>
+                        <ul>
+                            <li>使用 iOS 标准沙盒机制保护应用数据</li>
+                            <li>遵循 Apple 的安全最佳实践</li>
+                            <li>定期更新应用以修复安全漏洞</li>
+                            <li>使用 iOS 标准安全机制保护应用数据</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. 隐私政策的变更</h2>
+                        <p>我们可能会不时更新本隐私政策。任何重大变更将通过应用内通知或更新日志告知您。我们建议您定期查看本页面以了解最新信息。</p>
+                        <p>本隐私政策的变更在发布到本页面时立即生效。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. 联系我们</h2>
+                        <p>如果您对本隐私政策有任何疑问、顾虑或请求，请通过以下方式联系我们：</p>
+                    </section>
+                    
+                    <div class="contact-box">
+                        <h2>📧 联系支持团队</h2>
+                        <p>我们将在 48 小时内回复您的消息</p>
+                        <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="ja">
+            <div class="last-updated">
+                        <span>📅</span>
+                        <strong>最終更新日：</strong>2026年2月26日
+                    </div>
+                    
+                    <div class="privacy-highlight">
+                        <h2>🔐 プライバシーに関する核心的な約束</h2>
+                        <p><strong>お客様の画像は常にデバイス上でローカルに処理され、いかなるサーバーにもアップロードされることはありません。</strong>プライバシー最優先の設計思想を採用し、お客様の個人データが完全にお客様の管理下にあることを保証します。</p>
+                    </div>
+                    
+                    <section>
+                        <h2>1. はじめに</h2>
+                        <p>本プライバシーポリシーは、独立した開発者が運営する Image Converter アプリ（以下「本アプリ」といいます）に適用されます。私たちはユーザーのプライバシーを非常に重視しており、お客様の情報をどのように収集、使用、保護するかについて、透明性のある方法で説明することをお約束します。</p>
+                        <p>本アプリを使用することにより、お客様は本プライバシーポリシーに記載された取り扱いに同意したものとみなされます。同意いただけない場合は、本アプリの使用を中止してください。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. 収集する情報</h2>
+                        <p>私たちは<strong>データ最小化の原則</strong>に従い、アプリの正常な動作に必要な最低限の情報のみを収集します：</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>データの種類</th>
+                                    <th>目的</th>
+                                    <th>個人を特定可能か</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>アプリの利用データ</td>
+                                    <td>製品機能とユーザーエクスペリエンスの改善</td>
+                                    <td>いいえ（匿名化済み）</td>
+                                </tr>
+                                <tr>
+                                    <td>デバイス情報</td>
+                                    <td>技術的問題の診断とパフォーマンスの最適化</td>
+                                    <td>いいえ</td>
+                                </tr>
+                                <tr>
+                                    <td>クラッシュログ</td>
+                                    <td>アプリのエラー修正</td>
+                                    <td>いいえ</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>2.1 収集しない情報</h3>
+                        <p>明確にするため、私たちは以下の情報を<strong>絶対に</strong>収集しません：</p>
+                        <ul>
+                            <li>お客様が変換する画像の内容</li>
+                            <li>お客様の氏名、住所、電話番号などの個人を特定できる情報</li>
+                            <li>正確な位置情報</li>
+                            <li>連絡先情報</li>
+                            <li>支払い情報（すべての購入は Apple を通じて処理されます）</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>3. フォトライブラリのアクセス許可について</h2>
+                        <p>本アプリは、コア機能を提供するためにフォトライブラリへのアクセスが必要です。アクセス許可の使用方法は以下の通りです：</p>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">📷</span> フォトライブラリの読み取りアクセス</h4>
+                            <p>変換する画像を選択するために使用します。お客様が能動的に選択した画像のみを読み取り、フォトライブラリ全体をスキャンまたはアップロードすることはありません。</p>
+                        </div>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">💾</span> フォトライブラリの書き込みアクセス</h4>
+                            <p>変換後の画像をフォトライブラリに保存するために使用します。変換結果は、お客様の確認後にのみライブラリに書き込まれます。</p>
+                        </div>
+                        
+                        <p><strong>重要なお知らせ：</strong>すべての画像処理はお客様のデバイス上でローカルに完了します。元の画像も変換後の画像も、お客様のデバイスから外部に送信されることはありません。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. データの保存と処理</h2>
+                        <h3>4.1 ローカル処理の原則</h3>
+                        <p>Image Converter は<strong>完全なローカル処理</strong>アーキテクチャを採用しています：</p>
+                        <ul>
+                            <li>すべての画像形式の変換はお客様のデバイス上で実行されます</li>
+                            <li>コア機能の使用にインターネット接続は不要です</li>
+                            <li>画像をクラウドサーバーにアップロードすることはありません</li>
+                            <li>変換中に生成される一時ファイルは、デバイスのローカルサンドボックス内にのみ保存されます</li>
+                        </ul>
+                        
+                        <h3>4.2 一時ファイル</h3>
+                        <p>アプリは変換中に一時ファイルを生成する場合があります。これらのファイルは以下の特徴を持ちます：</p>
+                        <ul>
+                            <li>アプリのサンドボックスディレクトリ内にのみ保存されます</li>
+                            <li>変換完了後に自動的に削除されます</li>
+                            <li>アプリのアンインストール時に完全に削除されます</li>
+                            <li>他のアプリからアクセスすることはできません</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>5. 第三者サービス</h2>
+                        <p>Image Converter は、いかなる第三者の分析 SDK や広告 SDK も統合していません。すべてのデータはお客様のデバイス上にローカルに保持され、第三者サービスに送信されることはありません。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. お客様の権利</h2>
+                        <p>お客様が居住されている地域の法令に応じて、以下の権利を有する場合があります：</p>
+                        
+                        <h3>6.1 GDPR（欧州連合のユーザー）</h3>
+                        <ul>
+                            <li><strong>アクセス権：</strong>私たちがお客様について保持しているデータを知る権利</li>
+                            <li><strong>訂正権：</strong>不正確なデータの訂正を求める権利</li>
+                            <li><strong>削除権：</strong>お客様のデータの削除を求める権利（「忘れられる権利」）</li>
+                            <li><strong>処理制限権：</strong>データの処理を制限する権利</li>
+                            <li><strong>データポータビリティの権利：</strong>汎用フォーマットでデータを取得する権利</li>
+                            <li><strong>異議申し立て権：</strong>特定のタイプのデータ処理に異議を申し立てる権利</li>
+                        </ul>
+                        
+                        <h3>6.2 CCPA（カリフォルニア州のユーザー）</h3>
+                        <ul>
+                            <li>私たちが収集する個人情報のカテゴリと具体的な内容を知る権利</li>
+                            <li>個人情報の収集元のカテゴリを知る権利</li>
+                            <li>個人情報の収集目的を知る権利</li>
+                            <li>個人情報を共有する第三者のカテゴリを知る権利</li>
+                            <li>収集した個人情報の削除を求める権利</li>
+                            <li>プライバシー権を行使したことによる差別を受けない権利</li>
+                        </ul>
+                        
+                        <h3>6.3 権利の行使方法</h3>
+                        <p>私たちは極めて少量の匿名化データのみを収集しているため、ほとんどのユーザー権利リクエストは以下の方法で対応可能です：</p>
+                        <ul>
+                            <li>iOS の設定で広告 ID をリセットする</li>
+                            <li>アプリをアンインストールしてすべてのローカルデータを削除する</li>
+                            <li>以下の連絡先から特定のリクエストをお問い合わせください</li>
+                        </ul>
+                        <p>すべての合理的な権利リクエストには、30日以内に対応いたします。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. 子どものプライバシー</h2>
+                        <p>本アプリは13歳未満の子どもを対象としていません。私たちは故意に13歳未満の子どもの個人情報を収集することはありません。子どもの情報を収集している可能性があると思われる場合は、直ちにご連絡ください。当該情報の削除に必要な措置を講じます。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. データセキュリティ</h2>
+                        <p>私たちはお客様のデータを保護するため、適切な技術的および組織的対策を講じています：</p>
+                        <ul>
+                            <li>iOS 標準のサンドボックスメカニズムを使用してアプリデータを保護</li>
+                            <li>Apple のセキュリティベストプラクティスに準拠</li>
+                            <li>セキュリティ脆弱性の修正のため、アプリを定期的に更新</li>
+                            <li>iOS 標準のセキュリティメカニズムを使用してアプリデータを保護</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. プライバシーポリシーの変更</h2>
+                        <p>私たちは、本プライバシーポリシーを随時更新する場合があります。重要な変更は、アプリ内通知またはリリースノートを通じてお知らせします。最新情報については、本ページを定期的にご確認いただくことをお勧めします。</p>
+                        <p>本プライバシーポリシーの変更は、本ページへの掲載時に直ちに有効となります。</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. お問い合わせ</h2>
+                        <p>本プライバシーポリシーに関するご質問、懸念事項、またはリクエストがある場合は、以下の連絡先からお問い合わせください：</p>
+                    </section>
+                    
+                    <div class="contact-box">
+                        <h2>📧 サポートチームにお問い合わせ</h2>
+                        <p>48時間以内にご返信いたします</p>
+                        <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="ko">
+            <div class="last-updated">
+                        <span>📅</span>
+                        <strong>최종 업데이트 날짜:</strong> 2026년 2월 26일
+                    </div>
+                    
+                    <div class="privacy-highlight">
+                        <h2>🔐 핵심 개인정보 보호 약속</h2>
+                        <p><strong>귀하의 이미지는 항상 기기에서 로컬로 처리되며, 어떤 서버에도 업로드되지 않습니다.</strong> 개인정보 보호를 최우선으로 하는 설계 철학을 채택하여 귀하의 개인 데이터가 전적으로 귀하의 통제 하에 있도록 보장합니다.</p>
+                    </div>
+                    
+                    <section>
+                        <h2>1. 소개</h2>
+                        <p>본 개인정보 처리방침은 독립 개발자가 운영하는 Image Converter 앱(이하 "본 앱")에 적용됩니다. 저희는 사용자의 개인정보를 매우 중요하게 생각하며, 귀하의 정보를 수집, 사용 및 보호하는 방식에 대해 투명하게 설명하는 것을 약속드립니다.</p>
+                        <p>본 앱을 사용함으로써 귀하는 본 개인정보 처리방침에 기술된 방식에 동의하는 것으로 간주됩니다. 동의하지 않으시면 본 앱의 사용을 중단해 주십시오.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. 수집하는 정보</h2>
+                        <p>저희는<strong>데이터 최소화 원칙</strong>을 준수하며, 앱의 정상적인 작동에 필요한 최소한의 정보만 수집합니다:</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>데이터 유형</th>
+                                    <th>목적</th>
+                                    <th>개인 식별 가능 여부</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>앱 상호작용 데이터</td>
+                                    <td>제품 기능 및 사용자 경험 개선</td>
+                                    <td>아니오(익명화됨)</td>
+                                </tr>
+                                <tr>
+                                    <td>기기 정보</td>
+                                    <td>기술적 문제 진단 및 성능 최적화</td>
+                                    <td>아니오</td>
+                                </tr>
+                                <tr>
+                                    <td>충돌 로그</td>
+                                    <td>앱 오류 수정</td>
+                                    <td>아니오</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>2.1 수집하지 않는 정보</h3>
+                        <p>명확히 하기 위해, 저희는 다음 정보를<strong>절대로</strong> 수집하지 않습니다:</p>
+                        <ul>
+                            <li>귀하가 변환하는 이미지의 내용</li>
+                            <li>귀하의 성명, 주소, 전화번호 등 개인을 식별할 수 있는 정보</li>
+                            <li>정확한 위치 정보</li>
+                            <li>연락처 정보</li>
+                            <li>결제 정보(모든 구매는 Apple을 통해 처리됨)</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>3. 사진 라이브러리 권한 사용 안내</h2>
+                        <p>본 앱은 핵심 기능을 제공하기 위해 사진 라이브러리에 접근해야 합니다. 권한 사용 방식은 다음과 같습니다:</p>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">📷</span> 사진 라이브러리 읽기 권한</h4>
+                            <p>변환할 형식의 이미지를 선택하는 데 사용됩니다. 귀하가 직접 선택한 이미지만 읽으며, 전체 사진 라이브러리를 스캔하거나 업로드하지 않습니다.</p>
+                        </div>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">💾</span> 사진 라이브러리 쓰기 권한</h4>
+                            <p>변환된 이미지를 사진 라이브러리에 저장하는 데 사용됩니다. 귀하의 확인 후에만 변환 결과가 라이브러리에 기록됩니다.</p>
+                        </div>
+                        
+                        <p><strong>중요 안내:</strong> 모든 이미지 처리는 귀하의 기기에서 로컬로 완료되며, 원본 이미지와 변환된 이미지 모두 귀하의 기기를 벗어나지 않습니다.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. 데이터 저장 및 처리</h2>
+                        <h3>4.1 로컬 처리 원칙</h3>
+                        <p>Image Converter는<strong>완전한 로컬 처리</strong> 아키텍처를 채택하고 있습니다:</p>
+                        <ul>
+                            <li>모든 이미지 형식 변환은 귀하의 기기에서 수행됩니다</li>
+                            <li>핵심 기능 사용에 인터넷 연결이 필요하지 않습니다</li>
+                            <li>이미지를 클라우드 서버에 업로드하지 않습니다</li>
+                            <li>변환 과정에서 생성되는 임시 파일은 기기의 로컬 샌드박스에만 저장됩니다</li>
+                        </ul>
+                        
+                        <h3>4.2 임시 파일</h3>
+                        <p>앱은 변환 과정에서 임시 파일을 생성할 수 있으며, 이 파일들은 다음과 같은 특징을 가집니다:</p>
+                        <ul>
+                            <li>앱 샌드박스 디렉터리 내에만 저장됩니다</li>
+                            <li>변환 완료 후 자동으로 정리됩니다</li>
+                            <li>앱 제거 시 완전히 삭제됩니다</li>
+                            <li>다른 앱에서 접근할 수 없습니다</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>5. 제3자 서비스</h2>
+                        <p>Image Converter는 어떠한 제3자 분석 SDK나 광고 SDK도 통합하지 않습니다. 모든 데이터는 귀하의 기기에 로컬로 유지되며, 제3자 서비스로 전송되지 않습니다.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. 귀하의 권리</h2>
+                        <p>귀하가 거주하는 지역의 법률 및 규정에 따라, 귀하는 다음과 같은 권리를 가질 수 있습니다:</p>
+                        
+                        <h3>6.1 GDPR(유럽 연합 사용자)</h3>
+                        <ul>
+                            <li><strong>접근권:</strong> 저희가 귀하에 대해 보유하고 있는 데이터를 알 권리</li>
+                            <li><strong>정정권:</strong> 부정확한 데이터의 정정을 요구할 권리</li>
+                            <li><strong>삭제권:</strong> 귀하의 데이터 삭제를 요구할 권리("잊혀질 권리")</li>
+                            <li><strong>처리 제한권:</strong> 데이터 처리를 제한할 권리</li>
+                            <li><strong>데이터 이동권:</strong> 일반적인 형식으로 데이터를 얻을 권리</li>
+                            <li><strong>이의 제기권:</strong> 특정 유형의 데이터 처리에 이의를 제기할 권리</li>
+                        </ul>
+                        
+                        <h3>6.2 CCPA(캘리포니아주 사용자)</h3>
+                        <ul>
+                            <li>저희가 수집하는 개인정보의 카테고리와 구체적인 내용을 알 권리</li>
+                            <li>개인정보 수집 출처의 카테고리를 알 권리</li>
+                            <li>개인정보 수집 목적을 알 권리</li>
+                            <li>개인정보를 공유하는 제3자의 카테고리를 알 권리</li>
+                            <li>수집한 개인정보의 삭제를 요구할 권리</li>
+                            <li>개인정보 보호 권리를 행사했다는 이유로 차별받지 않을 권리</li>
+                        </ul>
+                        
+                        <h3>6.3 권리 행사 방법</h3>
+                        <p>저희는 극소량의 익명화된 데이터만 수집하므로, 대부분의 사용자 권리 요청은 다음 방법으로 이행할 수 있습니다:</p>
+                        <ul>
+                            <li>iOS 설정에서 광고 식별자 재설정</li>
+                            <li>앱을 제거하여 모든 로컬 데이터 삭제</li>
+                            <li>아래 연락처를 통해 특정 요청을 문의</li>
+                        </ul>
+                        <p>모든 합리적인 권리 요청에 대해 30일 이내에 대응하겠습니다.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. 어린이 개인정보 보호</h2>
+                        <p>본 앱은 13세 미만 어린이를 대상으로 하지 않습니다. 저희는 13세 미만 어린이의 개인정보를 고의로 수집하지 않습니다. 어린이의 정보를 수집했을 가능성이 있다고 생각되시면 즉시 연락해 주십시오. 해당 정보를 삭제하기 위한 조치를 취하겠습니다.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. 데이터 보안</h2>
+                        <p>저희는 귀하의 데이터를 보호하기 위해 적절한 기술적 및 조직적 조치를 취하고 있습니다:</p>
+                        <ul>
+                            <li>iOS 표준 샌드박스 메커니즘을 사용하여 앱 데이터 보호</li>
+                            <li>Apple의 보안 모범 사례 준수</li>
+                            <li>보안 취약점 수정을 위해 앱을 정기적으로 업데이트</li>
+                            <li>iOS 표준 보안 메커니즘을 사용하여 앱 데이터 보호</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. 개인정보 처리방침의 변경</h2>
+                        <p>저희는 본 개인정보 처리방침을 수시로 업데이트할 수 있습니다. 중대한 변경 사항은 앱 내 알림 또는 업데이트 로그를 통해 안내해 드립니다. 최신 정보를 확인하기 위해 본 페이지를 정기적으로 검토하시기를 권장합니다.</p>
+                        <p>본 개인정보 처리방침의 변경 사항은 본 페이지에 게시되는 즉시 효력을 발생합니다.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. 문의하기</h2>
+                        <p>본 개인정보 처리방침에 대해 궁금한 점, 우려 사항 또는 요청이 있으시면 아래 연락처로 문의해 주십시오:</p>
+                    </section>
+                    
+                    <div class="contact-box">
+                        <h2>📧 지원팀에 문의하기</h2>
+                        <p>48시간 이내에 답변드리겠습니다</p>
+                        <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+                    </div>
+        </div>
+        <div class="lang-content" data-lang="de">
+            <div class="last-updated">
+                        <span>📅</span>
+                        <strong>Zuletzt aktualisiert:</strong> 26. Februar 2026
+                    </div>
+                    
+                    <div class="privacy-highlight">
+                        <h2>🔐 Zentrale Datenschutz-Zusage</h2>
+                        <p><strong>Ihre Bilder werden stets lokal auf Ihrem Gerät verarbeitet und niemals auf einen Server hochgeladen.</strong> Wir verfolgen einen datenschutzorientierten Designansatz, der sicherstellt, dass Ihre persönlichen Daten vollständig unter Ihrer Kontrolle bleiben.</p>
+                    </div>
+                    
+                    <section>
+                        <h2>1. Einleitung</h2>
+                        <p>Diese Datenschutzerklärung gilt für die Image Converter-Anwendung (nachfolgend "die App" genannt), die von einem unabhängigen Entwickler betrieben wird. Wir legen großen Wert auf die Privatsphäre unserer Nutzer und verpflichten uns, auf transparente Weise darzulegen, wie wir Ihre Informationen erheben, verwenden und schützen.</p>
+                        <p>Durch die Nutzung der App erklären Sie sich mit den in dieser Datenschutzerklärung beschriebenen Verfahrensweisen einverstanden. Sollten Sie nicht einverstanden sein, beenden Sie bitte die Nutzung der App.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. Von uns erhobene Informationen</h2>
+                        <p>Wir halten uns an das Prinzip der <strong>Datenminimierung</strong> und erheben nur die für den ordnungsgemäßen Betrieb der App erforderlichen Mindestinformationen:</p>
+                        
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Datentyp</th>
+                                    <th>Zweck</th>
+                                    <th>Personenbezogen</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>App-Interaktionsdaten</td>
+                                    <td>Verbesserung von Produktfunktionen und Nutzererfahrung</td>
+                                    <td>Nein (anonymisiert)</td>
+                                </tr>
+                                <tr>
+                                    <td>Geräteinformationen</td>
+                                    <td>Diagnose technischer Probleme und Optimierung der Leistung</td>
+                                    <td>Nein</td>
+                                </tr>
+                                <tr>
+                                    <td>Absturzprotokolle</td>
+                                    <td>Behebung von App-Fehlern</td>
+                                    <td>Nein</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <h3>2.1 Informationen, die wir nicht erheben</h3>
+                        <p>Zur Klarstellung erheben wir <strong>niemals</strong> die folgenden Informationen:</p>
+                        <ul>
+                            <li>Den Inhalt der von Ihnen konvertierten Bilder</li>
+                            <li>Ihren Namen, Ihre Adresse, Ihre Telefonnummer oder andere personenbezogene Daten</li>
+                            <li>Präzise Standortinformationen</li>
+                            <li>Kontaktinformationen</li>
+                            <li>Zahlungsinformationen (alle Käufe werden über Apple abgewickelt)</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>3. Berechtigung für den Fotobibliothekszugriff</h2>
+                        <p>Die App benötigt Zugriff auf Ihre Fotobibliothek, um ihre Kernfunktionen bereitzustellen. Die Berechtigungen werden wie folgt verwendet:</p>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">📷</span> Lesezugriff auf die Fotobibliothek</h4>
+                            <p>Wird verwendet, um Bilder zur Formatkonvertierung auszuwählen. Wir lesen nur die von Ihnen aktiv ausgewählten Bilder und scannen oder laden nicht Ihre gesamte Fotobibliothek hoch.</p>
+                        </div>
+                        
+                        <div class="permission-card">
+                            <h4><span class="icon">💾</span> Schreibzugriff auf die Fotobibliothek</h4>
+                            <p>Wird verwendet, um konvertierte Bilder in Ihrer Fotobibliothek zu speichern. Konvertierte Ergebnisse werden nur nach Ihrer Bestätigung in die Bibliothek geschrieben.</p>
+                        </div>
+                        
+                        <p><strong>Wichtiger Hinweis:</strong> Die gesamte Bildverarbeitung erfolgt lokal auf Ihrem Gerät. Weder Ihre Originalbilder noch die konvertierten Bilder verlassen Ihr Gerät.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. Datenspeicherung und -verarbeitung</h2>
+                        <h3>4.1 Prinzip der lokalen Verarbeitung</h3>
+                        <p>Image Converter verwendet eine <strong>vollständig lokale Verarbeitungsarchitektur</strong>:</p>
+                        <ul>
+                            <li>Alle Bildformatkonvertierungen werden auf Ihrem Gerät durchgeführt</li>
+                            <li>Für die Nutzung der Kernfunktionen ist keine Internetverbindung erforderlich</li>
+                            <li>Bilder werden nicht auf Cloud-Server hochgeladen</li>
+                            <li>Temporäre Dateien während der Konvertierung werden nur im lokalen Sandbox-Speicher des Geräts abgelegt</li>
+                        </ul>
+                        
+                        <h3>4.2 Temporäre Dateien</h3>
+                        <p>Die App kann während der Konvertierung temporäre Dateien erzeugen. Diese Dateien:</p>
+                        <ul>
+                            <li>Werden nur im Sandbox-Verzeichnis der App gespeichert</li>
+                            <li>Werden nach Abschluss der Konvertierung automatisch bereinigt</li>
+                            <li>Werden bei Deinstallation der App vollständig gelöscht</li>
+                            <li>Sind für andere Anwendungen nicht zugänglich</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>5. Drittanbieter-Dienste</h2>
+                        <p>Image Converter integriert keine Analyse-SDKs oder Werbe-SDKs von Drittanbietern. Alle Daten verbleiben lokal auf Ihrem Gerät und werden nicht an Drittanbieter-Dienste übertragen.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. Ihre Rechte</h2>
+                        <p>Je nach den in Ihrem Wohnsitzland geltenden Gesetzen und Vorschriften können Sie die folgenden Rechte ausüben:</p>
+                        
+                        <h3>6.1 DSGVO (Nutzer in der Europäischen Union)</h3>
+                        <ul>
+                            <li><strong>Recht auf Auskunft:</strong> Informationen darüber zu erhalten, welche Daten wir über Sie gespeichert haben</li>
+                            <li><strong>Recht auf Berichtigung:</strong> Die Berichtigung unrichtiger Daten zu verlangen</li>
+                            <li><strong>Recht auf Löschung:</strong> Die Löschung Ihrer Daten zu verlangen ("Recht auf Vergessenwerden")</li>
+                            <li><strong>Recht auf Einschränkung der Verarbeitung:</strong> Die Verarbeitung Ihrer Daten einzuschränken</li>
+                            <li><strong>Recht auf Datenübertragbarkeit:</strong> Ihre Daten in einem gängigen Format zu erhalten</li>
+                            <li><strong>Widerspruchsrecht:</strong> Gegen bestimmte Arten der Datenverarbeitung Widerspruch einzulegen</li>
+                        </ul>
+                        
+                        <h3>6.2 CCPA (Nutzer in Kalifornien)</h3>
+                        <ul>
+                            <li>Die Kategorien und konkreten Informationen der von uns erhobenen personenbezogenen Daten zu kennen</li>
+                            <li>Die Kategorien der Quellen zu kennen, aus denen personenbezogene Daten erhoben werden</li>
+                            <li>Die Zwecke zu kennen, für die personenbezogene Daten erhoben werden</li>
+                            <li>Die Kategorien der Drittanbieter zu kennen, mit denen wir personenbezogene Daten teilen</li>
+                            <li>Die Löschung der von uns erhobenen personenbezogenen Daten zu verlangen</li>
+                            <li>Nicht aufgrund der Ausübung Ihrer Datenschutzrechte diskriminiert zu werden</li>
+                        </ul>
+                        
+                        <h3>6.3 Ausübung Ihrer Rechte</h3>
+                        <p>Da wir nur eine minimale Menge an anonymisierten Daten erheben, können die meisten Nutzerrechte wie folgt ausgeübt werden:</p>
+                        <ul>
+                            <li>Zurücksetzen der Werbe-ID in den iOS-Einstellungen</li>
+                            <li>Deinstallation der App, um alle lokalen Daten zu löschen</li>
+                            <li>Kontaktaufnahme mit uns über die unten angegebenen Kontaktdaten für spezifische Anfragen</li>
+                        </ul>
+                        <p>Wir werden innerhalb von 30 Tagen auf alle berechtigten Anfragen reagieren.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. Datenschutz von Kindern</h2>
+                        <p>Die App richtet sich nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 13 Jahren. Sollten Sie der Ansicht sein, dass wir möglicherweise Informationen von einem Kind erfasst haben, kontaktieren Sie uns bitte umgehend, damit wir Maßnahmen zum Löschen dieser Informationen ergreifen können.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. Datensicherheit</h2>
+                        <p>Wir treffen geeignete technische und organisatorische Maßnahmen zum Schutz Ihrer Daten:</p>
+                        <ul>
+                            <li>Nutzung der iOS-Standard-Sandbox-Mechanismen zum Schutz von App-Daten</li>
+                            <li>Einhaltung der Sicherheits-Best Practices von Apple</li>
+                            <li>Regelmäßige Aktualisierung der App zur Behebung von Sicherheitslücken</li>
+                            <li>Nutzung der iOS-Standard-Sicherheitsmechanismen zum Schutz von App-Daten</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. Änderungen dieser Datenschutzerklärung</h2>
+                        <p>Wir können diese Datenschutzerklärung von Zeit zu Zeit aktualisieren. Über wesentliche Änderungen werden Sie durch eine In-App-Benachrichtigung oder über die Versionshinweise informiert. Wir empfehlen Ihnen, diese Seite regelmäßig auf die neuesten Informationen zu überprüfen.</p>
+                        <p>Änderungen dieser Datenschutzerklärung treten sofort mit der Veröffentlichung auf dieser Seite in Kraft.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. Kontakt</h2>
+                        <p>Bei Fragen, Bedenken oder Anfragen bezüglich dieser Datenschutzerklärung kontaktieren Sie uns bitte über die folgenden Kontaktdaten:</p>
+                    </section>
+                    
+                    <div class="contact-box">
+                        <h2>📧 Support-Team kontaktieren</h2>
+                        <p>Wir werden innerhalb von 48 Stunden auf Ihre Nachricht antworten</p>
+                        <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+                    </div>
         </div>
     </div>
+
+    <footer>
+        <div class="footer-links lang-content active" data-lang="en">
+            <a href="privacy.html">Privacy Policy</a>
+                        <a href="terms.html">Terms of Service</a>
+                        <a href="support.html">Support Center</a>
+        </div>
+        <div class="footer-links lang-content" data-lang="zh">
+            <a href="privacy.html">隐私政策</a>
+                        <a href="terms.html">服务条款</a>
+                        <a href="support.html">支持中心</a>
+        </div>
+        <div class="footer-links lang-content" data-lang="ja">
+            <a href="privacy.html">プライバシーポリシー</a>
+                        <a href="terms.html">利用規約</a>
+                        <a href="support.html">サポートセンター</a>
+        </div>
+        <div class="footer-links lang-content" data-lang="ko">
+            <a href="privacy.html">개인정보 처리방침</a>
+                        <a href="terms.html">서비스 약관</a>
+                        <a href="support.html">지원 센터</a>
+        </div>
+        <div class="footer-links lang-content" data-lang="de">
+            <a href="privacy.html">Datenschutzerklärung</a>
+                        <a href="terms.html">Nutzungsbedingungen</a>
+                        <a href="support.html">Support-Center</a>
+        </div>
+        <div class="lang-content active" data-lang="en"><p>&copy; 2026 Image Converter. All rights reserved.</p></div>
+        <div class="lang-content" data-lang="zh"><p>&copy; 2026 Image Converter. 保留所有权利。</p></div>
+        <div class="lang-content" data-lang="ja"><p>&copy; 2026 Image Converter. All rights reserved.</p></div>
+        <div class="lang-content" data-lang="ko"><p>&copy; 2026 Image Converter. All rights reserved.</p></div>
+        <div class="lang-content" data-lang="de"><p>&copy; 2026 Image Converter. Alle Rechte vorbehalten.</p></div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const buttons = document.querySelectorAll('.lang-switcher button');
+            const contents = document.querySelectorAll('.lang-content');
+
+            function switchLang(lang) {
+                contents.forEach(c => c.classList.remove('active'));
+                document.querySelector('.lang-content[data-lang="' + lang + '"]').classList.add('active');
+                buttons.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+                document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+                history.replaceState(null, null, '#lang=' + lang);
+            }
+
+            buttons.forEach(btn => {
+                btn.addEventListener('click', () => switchLang(btn.dataset.lang));
+            });
+
+            const hash = location.hash.match(/lang=(\w+)/);
+            const defaultLang = hash ? hash[1] : 'en';
+            switchLang(defaultLang);
+        });
+    </script>
 </body>
 </html>

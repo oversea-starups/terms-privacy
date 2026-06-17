@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter 利用規約 - 利用条件">
+    <title>利用規約 - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-red: #FF3B30;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Hiragino Sans", "Noto Sans JP", sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        .language-switcher {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+        }
+        
+        .language-switcher a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .language-switcher a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-left: 4px solid var(--accent-red);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .notice-box h2 {
+            color: #E65100;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notice-box p {
+            color: #BF360C;
+            font-size: 0.95rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .definition-list {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1rem;
+        }
+        
+        .definition-list dt:first-child {
+            margin-top: 0;
+        }
+        
+        .definition-list dd {
+            margin-left: 0;
+            margin-top: 0.25rem;
+            color: var(--text-secondary);
+        }
+        
+        .subscription-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+        
+        .subscription-table th,
+        .subscription-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .subscription-table th {
+            background: var(--text-primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .subscription-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .highlight-box h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .subscription-table {
+                font-size: 0.85rem;
+            }
+            
+            .subscription-table th,
+            .subscription-table td {
+                padding: 0.75rem;
+            }
+            
+            .language-switcher a {
+                margin: 0 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="terms.html">English</a>
+        <a href="terms-zh.html">简体中文</a>
+        <a href="terms-ja.html" class="active">日本語</a>
+        <a href="terms-ko.html">한국어</a>
+        <a href="terms-de.html">Deutsch</a>
+    </div>
+
+    <header>
+        <h1>利用規約</h1>
+        <p>Image Converter をご利用いただく前に必ずお読みください</p>
+    </header>
+    
+    <div class="container">
+        <div class="last-updated">
+            <span>📅</span>
+            <strong>最終更新日：</strong>2026年2月26日
+            <strong style="margin-left: auto;">発効日：</strong>2026年2月26日
+        </div>
+        
+        <div class="notice-box">
+            <h2>⚠️ 重要なお知らせ</h2>
+            <p>Image Converter アプリ（以下「本アプリ」）をダウンロード、インストール、またはご利用いただくことで、本利用規約に同意されたものとみなされます。本規約に同意いただけない場合は、本アプリをご利用にならないでください。</p>
+        </div>
+        
+        <section>
+            <h2>1. 定義</h2>
+            <p class="section-intro">本利用規約において、以下の用語は次の意味を有するものとします。</p>
+            
+            <dl class="definition-list">
+                <dt>「アプリ」または「本アプリ」</dt>
+                <dd>Image Converter iOS アプリケーションおよびそのすべての機能、コンテンツ、サービスを指します。</dd>
+                
+                <dt>「当社」または「開発者」</dt>
+                <dd>Image Converter アプリの開発者および運営者を指します。</dd>
+                
+                <dt>「ユーザー」または「お客様」</dt>
+                <dd>本アプリをダウンロード、インストール、アクセス、またはご利用になるすべての個人または法人を指します。</dd>
+                
+                <dt>「コンテンツ」</dt>
+                <dd>ユーザーが本アプリを通じて作成、アップロード、変換、またはエクスポートするすべての画像、ファイル、その他の資料を指します。</dd>
+                
+                <dt>「サブスクリプション」</dt>
+                <dd>ユーザーが購入した Image Converter Pro サブスクリプションサービスを指します。</dd>
+                
+                <dt>「アプリストア」</dt>
+                <dd>ユーザーが本アプリをダウンロードする Apple App Store を指します。</dd>
+            </dl>
+        </section>
+        
+        <section>
+            <h2>2. ライセンスおよび利用権</h2>
+            
+            <h3>2.1 限定ライセンス</h3>
+            <p>お客様が本利用規約を遵守することを条件として、当社はお客様の iOS デバイスに本アプリをダウンロード、インストール、および使用するための、個人的、非排他的、譲渡不能、取消可能な限定ライセンスを付与します。</p>
+            
+            <h3>2.2 ライセンスの制限</h3>
+            <p>お客様は以下の行為を行ってはならず、第三者に行わせてはなりません。</p>
+            <ul>
+                <li>本アプリを複製、改変、翻案、翻訳、または派生作品を作成すること</li>
+                <li>本アプリをリバースエンジニアリング、逆コンパイル、逆アセンブル、またはその他の方法でソースコードを発見しようとすること</li>
+                <li>本アプリの権利を賃貸、貸与、売却、サブライセンス、配布、または譲渡すること</li>
+                <li>本アプリ上の著作権、商標、その他の所有権表示を削除、変更、または隠蔽すること</li>
+                <li>本アプリを違法活動または適用される法令違反の目的で使用すること</li>
+                <li>本アプリのセキュリティ、完全性、または性能を妨害または破壊すること</li>
+                <li>自動プログラム、ボット、または類似のツールを使用して本アプリにアクセスすること</li>
+            </ul>
+            
+            <h3>2.3 所有権</h3>
+            <p>本アプリおよびそのすべての複製に関するすべての権利、権原、および利益は当社に帰属します。本利用規約は、お客様に本アプリの所有権上の権益を付与するものではありません。</p>
+        </section>
+        
+        <section>
+            <h2>3. サブスクリプション条項</h2>
+            
+            <h3>3.1 サブスクリプションの種類</h3>
+            <p>本アプリでは以下のサブスクリプションオプションを提供しています。</p>
+            
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>サブスクリプションの種類</th>
+                        <th>課金サイクル</th>
+                        <th>含まれる機能</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>無料版</td>
+                        <td>無料</td>
+                        <td>基本的な変換機能、限定的なバッチ処理</td>
+                    </tr>
+                    <tr>
+                        <td>Pro 月額サブスクリプション</td>
+                        <td>月額課金</td>
+                        <td>すべての機能、無制限のバッチ変換</td>
+                    </tr>
+                    <tr>
+                        <td>Pro 年額サブスクリプション</td>
+                        <td>年額課金</td>
+                        <td>すべての機能、無制限のバッチ変換、お得な価格</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>3.2 課金および支払い</h3>
+            <ul>
+                <li>すべてのサブスクリプション料金はお客様の Apple ID を通じて請求され、App Store の利用規約が適用されます</li>
+                <li>サブスクリプションは現在の課金期間終了の 24 時間以内に自動更新されます</li>
+                <li>お客様は現在のサブスクリプション期間終了の少なくとも 24 時間前に自動更新をオフにすることができます</li>
+                <li>サブスクリプション料金が変更される場合は事前に通知します</li>
+            </ul>
+            
+            <h3>3.3 解約</h3>
+            <p>お客様は以下の手順でいつでもサブスクリプションを解約できます。</p>
+            <ol>
+                <li>iOS デバイスの「設定」アプリを開く</li>
+                <li>お客様のお名前をタップする</li>
+                <li>「サブスクリプション」を選択する</li>
+                <li>Image Converter Pro を選択する</li>
+                <li>「サブスクリプションを解約」をタップする</li>
+            </ol>
+            <p>解約後も、現在のサブスクリプション期間終了まですべての Pro 機能をご利用いただけます。</p>
+            
+            <h3>3.4 無料トライアル</h3>
+            <p>当社は Pro 機能の無料トライアル期間を提供する場合があります。トライアル期間終了後、解約しない場合は自動的に有料サブスクリプションに移行します。無料トライアルは Apple ID ごとに 1 回限りです。</p>
+        </section>
+        
+        <section>
+            <h2>4. 返金ポリシー</h2>
+            
+            <h3>4.1 返金の申請</h3>
+            <p>すべての返金申請は Apple を通じて処理する必要があります。Apple のポリシーに基づき：</p>
+            <ul>
+                <li>サブスクリプション料金の返金は、Apple のポリシーに従って Apple が判断します</li>
+                <li>返金を申請するには <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> をご覧ください</li>
+            </ul>
+            
+            <h3>4.2 当社が直接返金できない場合</h3>
+            <p>すべての取引は Apple を通じて処理されるため、当社は直接返金を処理することができません。返金に関するサポートについては Apple サポートにお問い合わせください。</p>
+        </section>
+        
+        <section>
+            <h2>5. ユーザーコンテンツおよび行為</h2>
+            
+            <h3>5.1 お客様のコンテンツ</h3>
+            <p>お客様は、本アプリを通じて処理されたコンテンツに関するすべての権利を保持します。当社はお客様が処理した画像コンテンツを収集、保存、またはアクセスすることはありません。すべての処理はお客様のデバイス上でローカルに行われます。</p>
+            
+            <h3>5.2 コンテンツに関する責任</h3>
+            <p>お客様は、本アプリを使用して処理されたコンテンツについて一切の責任を負います。お客様は以下を表明し、保証します。</p>
+            <ul>
+                <li>お客様はコンテンツを処理するために必要なすべての権利を有している、または取得している</li>
+                <li>お客様のコンテンツはいかなる法令違反も含まない</li>
+                <li>お客様のコンテンツは第三者の知的財産権その他の権利を侵害しない</li>
+                <li>お客様のコンテンツはマルウェア、ウイルス、その他の有害なコードを含まない</li>
+            </ul>
+            
+            <h3>5.3 禁止コンテンツ</h3>
+            <p>お客様は、以下の種類のコンテンツを本アプリで処理してはなりません。</p>
+            <ul>
+                <li>違法、有害、脅迫的、虐待的、嫌がらせ、誹謗中傷、わいせつ、その他の不快なコンテンツ</li>
+                <li>第三者の知的財産権を侵害するコンテンツ</li>
+                <li>児童の搾取または虐待を含むコンテンツ</li>
+                <li>詐欺、欺瞞、または誤認を目的としたコンテンツ</li>
+                <li>適用される法令違反となるコンテンツ</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>6. 免責事項</h2>
+            
+            <h3>6.1 「現状有姿」での提供</h3>
+            <p>本アプリは「現状有姿」および「提供可能な状態」で提供され、明示または黙示を問わずいかなる保証も行われません。当社は以下を保証しません。</p>
+            <ul>
+                <li>本アプリがお客様の特定の要件または期待を満たすこと</li>
+                <li>本アプリが中断なく、適時に、安全に、またはエラーなく動作すること</li>
+                <li>変換結果がお客様の要件を完全に満たすこと</li>
+                <li>本アプリの欠陥がすべて修正されること</li>
+            </ul>
+            
+            <h3>6.2 リスクの負担</h3>
+            <p>お客様は、本アプリの使用に関するリスクを自らの責任で負うことに明示的に同意します。重要な変換を行う前に、元のファイルをバックアップすることをお勧めします。</p>
+            
+            <h3>6.3 第三者サービス</h3>
+            <p>本アプリには第三者のウェブサイトまたはサービスへのリンクが含まれる場合があります。当社はいかなる第三者のコンテンツ、製品、またはサービスについても責任を負いません。</p>
+        </section>
+        
+        <section>
+            <h2>7. 責任の制限</h2>
+            
+            <h3>7.1 損害の種類に対する制限</h3>
+            <p>法律で許容される最大限の範囲で、当社は以下に対して責任を負いません。</p>
+            <ul>
+                <li>いかなる間接的、付随的、特別、結果的、または懲罰的損害</li>
+                <li>データ、コンテンツ、またはファイルの紛失または破損</li>
+                <li>利益、収益、商誉、または期待される節約の損失</li>
+                <li>代替品または代替サービスの費用</li>
+            </ul>
+            
+            <h3>7.2 責任の上限</h3>
+            <p>当社のお客様に対する総責任（契約、不法行為（過失を含む）、その他いかなる形態であっても）は、請求原因が生じた日の前 12 か月間にお客様が本アプリの使用に対して支払った総額、またはお客様が料金を支払っていない場合は 100 米ドルを超えません。</p>
+            
+            <h3>7.3 例外</h3>
+            <p>一部の司法管轄区では、特定の損害の除外または制限が認められていないため、上記の制限がお客様に適用されない場合があります。</p>
+        </section>
+        
+        <section>
+            <h2>8. 知的財産権</h2>
+            
+            <h3>8.1 当社の知的財産権</h3>
+            <p>本アプリおよびそのオリジナルのコンテンツ、機能、デザインは当社の独占的財産であり、国際的な著作権、商標、特許、営業秘密、その他の知的財産法によって保護されています。</p>
+            
+            <h3>8.2 商標</h3>
+            <p>「Image Converter」という名称、ロゴ、およびすべての関連する名称、ロゴ、製品およびサービス名は当社の商標であり、当社の事前の書面による同意なく使用することはできません。</p>
+            
+            <h3>8.3 フィードバック</h3>
+            <p>お客様から当社に提供されたフィードバック、提案、アイデアはすべて非機密情報とみなされ、当社はお客様に対していかなる対価または帰属義務を負うことなく自由に使用することができます。</p>
+        </section>
+        
+        <section>
+            <h2>9. 終了</h2>
+            
+            <h3>9.1 お客様による終了</h3>
+            <p>お客様はいつでも本アプリをアンインストールすることで使用を終了することができます。サブスクリプションの解約は自動的にアプリを削除するものではありません。</p>
+            
+            <h3>9.2 当社による終了</h3>
+            <p>お客様が本利用規約に違反した場合、当社は事前の通知または責任を負うことなく、お客様の本アプリへのアクセスを直ちに終了または停止することができます。</p>
+            
+            <h3>9.3 終了の効力</h3>
+            <p>本利用規約のうち、性質上終了後も存続すべき条項（所有権に関する条項、免責事項、責任の制限を含むがこれに限られない）は、終了後も存続します。</p>
+        </section>
+        
+        <section>
+            <h2>10. 準拠法</h2>
+            
+            <h3>10.1 準拠法</h3>
+            <p>本利用規約は、中華人民共和国の法律に準拠し、同法に従って解釈されるものとします。法律の抵触原則は考慮されません。</p>
+            
+            <h3>10.2 紛争解決</h3>
+            <p>本利用規約に起因し、または関連する紛争については、当事者間でまず誠意をもって協議により解決に努めるものとします。協議によって解決できない場合、いずれの当事者も管轄権を有する裁判所に訴訟を提起することができます。</p>
+            
+            <h3>10.3 国際的な利用</h3>
+            <p>本アプリは全世界での使用を目的としていますが、一部の機能は特定の地域では利用できない場合があります。お客様は、お客様の居住する司法管轄区のすべての適用される法令を遵守する責任を負います。</p>
+        </section>
+        
+        <section>
+            <h2>11. 規約の変更</h2>
+            <p>当社は、いつでも本利用規約を修正または変更する権利を留保します。重大な変更は、アプリ内通知またはリリースノートを通じてお知らせします。変更の発効日以降も本アプリを継続してご利用いただくことで、お客様は変更後の規約に同意したものとみなされます。</p>
+        </section>
+        
+        <section>
+            <h2>12. 分離可能性</h2>
+            <p>本利用規約のいずれかの条項が管轄権を有する裁判所または仲裁人によって無効または執行不能と判断された場合、当該条項は必要最小限の範囲で制限または削除され、残りの条項は完全な効力をもって継続します。</p>
+        </section>
+        
+        <section>
+            <h2>13. 完全合意</h2>
+            <p>本利用規約は、本アプリに関するお客様と当社との間の完全な合意を構成し、本アプリに関するすべての事前または同時期の書面または口頭の合意、連絡、および提案に優先します。</p>
+        </section>
+        
+        <section>
+            <h2>14. お問い合わせ</h2>
+            <p>本利用規約に関するご質問やご懸念がある場合は、以下までお問い合わせください。</p>
+        </section>
+        
+        <div class="contact-box">
+            <h2>📧 サポートへのお問い合わせ</h2>
+            <p>48 時間以内にご返信いたします</p>
+            <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-ja.html">プライバシーポリシー</a>
+            <a href="terms-ja.html">利用規約</a>
+            <a href="support-ja.html">サポートセンター</a>
+        </div>
+        <p>&copy; 2026 Image Converter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

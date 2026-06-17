@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter プライバシーポリシー - お客様のデータの保護について">
+    <title>プライバシーポリシー - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-green: #34C759;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .app-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(255,255,255,0.15);
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+        }
+        
+        .lang-switcher a {
+            color: var(--primary-color);
+            text-decoration: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 0.25rem;
+        }
+        
+        .lang-switcher a.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .lang-switcher a:hover:not(.active) {
+            text-decoration: underline;
+        }
+        
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .privacy-highlight {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-left: 4px solid var(--accent-green);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .privacy-highlight h2 {
+            color: #2E7D32;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .privacy-highlight p {
+            color: #388E3C;
+            font-size: 0.95rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+        
+        .data-table th,
+        .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .data-table th {
+            background: var(--text-primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .data-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .permission-card {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .permission-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .permission-card p {
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+        
+        .icon {
+            width: 20px;
+            height: 20px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .data-table {
+                font-size: 0.85rem;
+            }
+            
+            .data-table th,
+            .data-table td {
+                padding: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>プライバシーポリシー</h1>
+        <p>Image Converter はお客様のプライバシーを保護することをお約束します</p>
+        <div class="app-badge">
+            <span>🔒</span>
+            <span>プライバシー最優先の設計</span>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="lang-switcher">
+            <a href="privacy.html">English</a>
+            <a href="privacy-zh.html">中文</a>
+            <a href="privacy-ja.html" class="active">日本語</a>
+            <a href="privacy-ko.html">한국어</a>
+            <a href="privacy-de.html">Deutsch</a>
+        </div>
+        
+        <div class="last-updated">
+            <span>📅</span>
+            <strong>最終更新日：</strong>2026年2月26日
+        </div>
+        
+        <div class="privacy-highlight">
+            <h2>🔐 プライバシーに関する核心的な約束</h2>
+            <p><strong>お客様の画像は常にデバイス上でローカルに処理され、いかなるサーバーにもアップロードされることはありません。</strong>プライバシー最優先の設計思想を採用し、お客様の個人データが完全にお客様の管理下にあることを保証します。</p>
+        </div>
+        
+        <section>
+            <h2>1. はじめに</h2>
+            <p>本プライバシーポリシーは、独立した開発者が運営する Image Converter アプリ（以下「本アプリ」といいます）に適用されます。私たちはユーザーのプライバシーを非常に重視しており、お客様の情報をどのように収集、使用、保護するかについて、透明性のある方法で説明することをお約束します。</p>
+            <p>本アプリを使用することにより、お客様は本プライバシーポリシーに記載された取り扱いに同意したものとみなされます。同意いただけない場合は、本アプリの使用を中止してください。</p>
+        </section>
+        
+        <section>
+            <h2>2. 収集する情報</h2>
+            <p>私たちは<strong>データ最小化の原則</strong>に従い、アプリの正常な動作に必要な最低限の情報のみを収集します：</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>データの種類</th>
+                        <th>目的</th>
+                        <th>個人を特定可能か</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>アプリの利用データ</td>
+                        <td>製品機能とユーザーエクスペリエンスの改善</td>
+                        <td>いいえ（匿名化済み）</td>
+                    </tr>
+                    <tr>
+                        <td>デバイス情報</td>
+                        <td>技術的問題の診断とパフォーマンスの最適化</td>
+                        <td>いいえ</td>
+                    </tr>
+                    <tr>
+                        <td>クラッシュログ</td>
+                        <td>アプリのエラー修正</td>
+                        <td>いいえ</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>2.1 収集しない情報</h3>
+            <p>明確にするため、私たちは以下の情報を<strong>絶対に</strong>収集しません：</p>
+            <ul>
+                <li>お客様が変換する画像の内容</li>
+                <li>お客様の氏名、住所、電話番号などの個人を特定できる情報</li>
+                <li>正確な位置情報</li>
+                <li>連絡先情報</li>
+                <li>支払い情報（すべての購入は Apple を通じて処理されます）</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>3. フォトライブラリのアクセス許可について</h2>
+            <p>本アプリは、コア機能を提供するためにフォトライブラリへのアクセスが必要です。アクセス許可の使用方法は以下の通りです：</p>
+            
+            <div class="permission-card">
+                <h4><span class="icon">📷</span> フォトライブラリの読み取りアクセス</h4>
+                <p>変換する画像を選択するために使用します。お客様が能動的に選択した画像のみを読み取り、フォトライブラリ全体をスキャンまたはアップロードすることはありません。</p>
+            </div>
+            
+            <div class="permission-card">
+                <h4><span class="icon">💾</span> フォトライブラリの書き込みアクセス</h4>
+                <p>変換後の画像をフォトライブラリに保存するために使用します。変換結果は、お客様の確認後にのみライブラリに書き込まれます。</p>
+            </div>
+            
+            <p><strong>重要なお知らせ：</strong>すべての画像処理はお客様のデバイス上でローカルに完了します。元の画像も変換後の画像も、お客様のデバイスから外部に送信されることはありません。</p>
+        </section>
+        
+        <section>
+            <h2>4. データの保存と処理</h2>
+            <h3>4.1 ローカル処理の原則</h3>
+            <p>Image Converter は<strong>完全なローカル処理</strong>アーキテクチャを採用しています：</p>
+            <ul>
+                <li>すべての画像形式の変換はお客様のデバイス上で実行されます</li>
+                <li>コア機能の使用にインターネット接続は不要です</li>
+                <li>画像をクラウドサーバーにアップロードすることはありません</li>
+                <li>変換中に生成される一時ファイルは、デバイスのローカルサンドボックス内にのみ保存されます</li>
+            </ul>
+            
+            <h3>4.2 一時ファイル</h3>
+            <p>アプリは変換中に一時ファイルを生成する場合があります。これらのファイルは以下の特徴を持ちます：</p>
+            <ul>
+                <li>アプリのサンドボックスディレクトリ内にのみ保存されます</li>
+                <li>変換完了後に自動的に削除されます</li>
+                <li>アプリのアンインストール時に完全に削除されます</li>
+                <li>他のアプリからアクセスすることはできません</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>5. 第三者サービス</h2>
+            <p>Image Converter は、いかなる第三者の分析 SDK や広告 SDK も統合していません。すべてのデータはお客様のデバイス上にローカルに保持され、第三者サービスに送信されることはありません。</p>
+        </section>
+        
+        <section>
+            <h2>6. お客様の権利</h2>
+            <p>お客様が居住されている地域の法令に応じて、以下の権利を有する場合があります：</p>
+            
+            <h3>6.1 GDPR（欧州連合のユーザー）</h3>
+            <ul>
+                <li><strong>アクセス権：</strong>私たちがお客様について保持しているデータを知る権利</li>
+                <li><strong>訂正権：</strong>不正確なデータの訂正を求める権利</li>
+                <li><strong>削除権：</strong>お客様のデータの削除を求める権利（「忘れられる権利」）</li>
+                <li><strong>処理制限権：</strong>データの処理を制限する権利</li>
+                <li><strong>データポータビリティの権利：</strong>汎用フォーマットでデータを取得する権利</li>
+                <li><strong>異議申し立て権：</strong>特定のタイプのデータ処理に異議を申し立てる権利</li>
+            </ul>
+            
+            <h3>6.2 CCPA（カリフォルニア州のユーザー）</h3>
+            <ul>
+                <li>私たちが収集する個人情報のカテゴリと具体的な内容を知る権利</li>
+                <li>個人情報の収集元のカテゴリを知る権利</li>
+                <li>個人情報の収集目的を知る権利</li>
+                <li>個人情報を共有する第三者のカテゴリを知る権利</li>
+                <li>収集した個人情報の削除を求める権利</li>
+                <li>プライバシー権を行使したことによる差別を受けない権利</li>
+            </ul>
+            
+            <h3>6.3 権利の行使方法</h3>
+            <p>私たちは極めて少量の匿名化データのみを収集しているため、ほとんどのユーザー権利リクエストは以下の方法で対応可能です：</p>
+            <ul>
+                <li>iOS の設定で広告 ID をリセットする</li>
+                <li>アプリをアンインストールしてすべてのローカルデータを削除する</li>
+                <li>以下の連絡先から特定のリクエストをお問い合わせください</li>
+            </ul>
+            <p>すべての合理的な権利リクエストには、30日以内に対応いたします。</p>
+        </section>
+        
+        <section>
+            <h2>7. 子どものプライバシー</h2>
+            <p>本アプリは13歳未満の子どもを対象としていません。私たちは故意に13歳未満の子どもの個人情報を収集することはありません。子どもの情報を収集している可能性があると思われる場合は、直ちにご連絡ください。当該情報の削除に必要な措置を講じます。</p>
+        </section>
+        
+        <section>
+            <h2>8. データセキュリティ</h2>
+            <p>私たちはお客様のデータを保護するため、適切な技術的および組織的対策を講じています：</p>
+            <ul>
+                <li>iOS 標準のサンドボックスメカニズムを使用してアプリデータを保護</li>
+                <li>Apple のセキュリティベストプラクティスに準拠</li>
+                <li>セキュリティ脆弱性の修正のため、アプリを定期的に更新</li>
+                <li>iOS 標準のセキュリティメカニズムを使用してアプリデータを保護</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>9. プライバシーポリシーの変更</h2>
+            <p>私たちは、本プライバシーポリシーを随時更新する場合があります。重要な変更は、アプリ内通知またはリリースノートを通じてお知らせします。最新情報については、本ページを定期的にご確認いただくことをお勧めします。</p>
+            <p>本プライバシーポリシーの変更は、本ページへの掲載時に直ちに有効となります。</p>
+        </section>
+        
+        <section>
+            <h2>10. お問い合わせ</h2>
+            <p>本プライバシーポリシーに関するご質問、懸念事項、またはリクエストがある場合は、以下の連絡先からお問い合わせください：</p>
+        </section>
+        
+        <div class="contact-box">
+            <h2>📧 サポートチームにお問い合わせ</h2>
+            <p>48時間以内にご返信いたします</p>
+            <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-ja.html">プライバシーポリシー</a>
+            <a href="terms-ja.html">利用規約</a>
+            <a href="support-ja.html">サポートセンター</a>
+        </div>
+        <p>&copy; 2026 Image Converter. All rights reserved.</p>
+    </footer>
+</body>
+</html>

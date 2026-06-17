@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter Nutzungsbedingungen - Nutzungsbedingungen">
+    <title>Nutzungsbedingungen - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-red: #FF3B30;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        .language-switcher {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+        }
+        
+        .language-switcher a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .language-switcher a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-left: 4px solid var(--accent-red);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .notice-box h2 {
+            color: #E65100;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notice-box p {
+            color: #BF360C;
+            font-size: 0.95rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .definition-list {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1rem;
+        }
+        
+        .definition-list dt:first-child {
+            margin-top: 0;
+        }
+        
+        .definition-list dd {
+            margin-left: 0;
+            margin-top: 0.25rem;
+            color: var(--text-secondary);
+        }
+        
+        .subscription-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+        
+        .subscription-table th,
+        .subscription-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .subscription-table th {
+            background: var(--text-primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .subscription-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .highlight-box h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .subscription-table {
+                font-size: 0.85rem;
+            }
+            
+            .subscription-table th,
+            .subscription-table td {
+                padding: 0.75rem;
+            }
+            
+            .language-switcher a {
+                margin: 0 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switcher">
+        <a href="terms.html">English</a>
+        <a href="terms-zh.html">简体中文</a>
+        <a href="terms-ja.html">日本語</a>
+        <a href="terms-ko.html">한국어</a>
+        <a href="terms-de.html" class="active">Deutsch</a>
+    </div>
+
+    <header>
+        <h1>Nutzungsbedingungen</h1>
+        <p>Bitte lesen Sie diese Bedingungen sorgfältig, bevor Sie Image Converter verwenden</p>
+    </header>
+    
+    <div class="container">
+        <div class="last-updated">
+            <span>📅</span>
+            <strong>Zuletzt aktualisiert:</strong> 26. Februar 2026
+            <strong style="margin-left: auto;">Inkrafttreten:</strong> 26. Februar 2026
+        </div>
+        
+        <div class="notice-box">
+            <h2>⚠️ Wichtiger Hinweis</h2>
+            <p>Durch das Herunterladen, Installieren oder Verwenden der Image Converter App ("App") erklären Sie sich mit diesen Nutzungsbedingungen einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, verwenden Sie die App bitte nicht.</p>
+        </div>
+        
+        <section>
+            <h2>1. Begriffsdefinitionen</h2>
+            <p class="section-intro">In diesen Nutzungsbedingungen haben die folgenden Begriffe die unten festgelegten Bedeutungen:</p>
+            
+            <dl class="definition-list">
+                <dt>"App"</dt>
+                <dd>Bezieht sich auf die Image Converter iOS-Anwendung, einschließlich aller Funktionen, Inhalte und Dienste.</dd>
+                
+                <dt>"Wir", "Uns" oder "Entwickler"</dt>
+                <dd>Bezieht sich auf den Entwickler und Betreiber der Image Converter App.</dd>
+                
+                <dt>"Sie" oder "Nutzer"</dt>
+                <dd>Bezieht sich auf jede Person oder Einheit, die die App herunterlädt, installiert, darauf zugreift oder sie verwendet.</dd>
+                
+                <dt>"Inhalt"</dt>
+                <dd>Bezieht sich auf alle Bilder, Dateien und sonstigen Materialien, die von Ihnen über die App erstellt, hochgeladen, konvertiert oder exportiert werden.</dd>
+                
+                <dt>"Abonnement"</dt>
+                <dd>Bezieht sich auf den vom Nutzer erworbenen Image Converter Pro-Abonnementdienst.</dd>
+                
+                <dt>"App Store"</dt>
+                <dd>Bezieht sich auf den Apple App Store, über den Sie die App herunterladen.</dd>
+            </dl>
+        </section>
+        
+        <section>
+            <h2>2. Lizenz- und Nutzungsrechte</h2>
+            
+            <h3>2.1 Eingeschränkte Lizenz</h3>
+            <p>Vorbehaltlich Ihrer Einhaltung dieser Nutzungsbedingungen gewähren wir Ihnen eine persönliche, nicht ausschließliche, nicht übertragbare, widerrufliche eingeschränkte Lizenz zum Herunterladen, Installieren und Verwenden der App auf Ihrem iOS-Gerät.</p>
+            
+            <h3>2.2 Lizenzbeschränkungen</h3>
+            <p>Sie dürfen nicht und dürfen keinem Dritten gestatten:</p>
+            <ul>
+                <li>die App zu kopieren, zu modifizieren, anzupassen, zu übersetzen oder abgeleitete Werke zu erstellen</li>
+                <li>die App zu reverse-engineeren, zu dekompilieren, zu disassemblieren oder auf andere Weise zu versuchen, den Quellcode zu entdecken</li>
+                <li>Rechte an der App zu vermieten, zu verleasen, zu verleihen, zu verkaufen, zu sublicensieren, zu vertreiben oder zu übertragen</li>
+                <li>Urheberrechts-, Marken- oder andere Eigentumshinweise auf der App zu entfernen, zu ändern oder zu verschleiern</li>
+                <li>die App für rechtswidrige Aktivitäten oder im Widerspruch zu geltenden Gesetzen oder Vorschriften zu verwenden</li>
+                <li>die Sicherheit, Integrität oder Leistung der App zu beeinträchtigen oder zu stören</li>
+                <li>automatisierte Programme, Bots oder ähnliche Tools zu verwenden, um auf die App zuzugreifen</li>
+            </ul>
+            
+            <h3>2.3 Eigentum</h3>
+            <p>Alle Rechte, Ansprüche und Interessen an der App und allen Kopien davon sind unser Eigentum. Diese Nutzungsbedingungen gewähren Ihnen kein Eigentumsrecht an der App.</p>
+        </section>
+        
+        <section>
+            <h2>3. Abonnementbedingungen</h2>
+            
+            <h3>3.1 Abonnementarten</h3>
+            <p>Die App bietet die folgenden Abonnementoptionen:</p>
+            
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>Abonnementart</th>
+                        <th>Abrechnungszyklus</th>
+                        <th>Enthaltene Funktionen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Kostenlos</td>
+                        <td>Kostenlos</td>
+                        <td>Grundlegende Konvertierungsfunktionen, eingeschränkte Stapelverarbeitung</td>
+                    </tr>
+                    <tr>
+                        <td>Pro Monatlich</td>
+                        <td>Monatliche Abrechnung</td>
+                        <td>Alle Funktionen, unbegrenzte Stapelkonvertierung</td>
+                    </tr>
+                    <tr>
+                        <td>Pro Jährlich</td>
+                        <td>Jährliche Abrechnung</td>
+                        <td>Alle Funktionen, unbegrenzte Stapelkonvertierung, besseres Preis-Leistungs-Verhältnis</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>3.2 Abrechnung und Zahlung</h3>
+            <ul>
+                <li>Alle Abonnementgebühren werden über Ihre Apple ID berechnet und unterliegen den App Store-Nutzungsbedingungen</li>
+                <li>Abonnements verlängern sich automatisch innerhalb von 24 Stunden vor Ende des aktuellen Abrechnungszeitraums</li>
+                <li>Sie können die automatische Verlängerung mindestens 24 Stunden vor Ende des aktuellen Abonnementzeitraums deaktivieren</li>
+                <li>Sie werden im Voraus über alle Abonnementpreisänderungen informiert</li>
+            </ul>
+            
+            <h3>3.3 Kündigung</h3>
+            <p>Sie können Ihr Abonnement jederzeit kündigen, indem Sie die folgenden Schritte ausführen:</p>
+            <ol>
+                <li>Öffnen Sie die App "Einstellungen" auf Ihrem iOS-Gerät</li>
+                <li>Tippen Sie auf Ihren Namen</li>
+                <li>Wählen Sie "Abonnements"</li>
+                <li>Wählen Sie Image Converter Pro</li>
+                <li>Tippen Sie auf "Abonnement kündigen"</li>
+            </ol>
+            <p>Nach der Kündigung haben Sie weiterhin Zugriff auf die Pro-Funktionen bis zum Ende des aktuellen Abonnementzeitraums.</p>
+            
+            <h3>3.4 Kostenlose Testversion</h3>
+            <p>Wir können eine kostenlose Testversion der Pro-Funktionen anbieten. Nach Ablauf des Testzeitraums wird das Abonnement automatisch in ein kostenpflichtiges Abonnement umgewandelt, sofern es nicht gekündigt wird. Kostenlose Testversionen sind auf eine pro Apple ID begrenzt.</p>
+        </section>
+        
+        <section>
+            <h2>4. Rückgaberecht</h2>
+            
+            <h3>4.1 Rückerstattungsanfragen</h3>
+            <p>Alle Rückerstattungsanfragen müssen über Apple bearbeitet werden. Gemäß Apples Richtlinien:</p>
+            <ul>
+                <li>Abonnementrückerstattungen werden von Apple gemäß dessen Richtlinien festgelegt</li>
+                <li>Bitte besuchen Sie <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a>, um eine Rückerstattung zu beantragen</li>
+            </ul>
+            
+            <h3>4.2 Einschränkungen</h3>
+            <p>Da alle Transaktionen über Apple abgewickelt werden, können wir keine Rückerstattungen direkt bearbeiten. Bitte wenden Sie sich für Unterstützung bei Rückerstattungen an den Apple Support.</p>
+        </section>
+        
+        <section>
+            <h2>5. Nutzerinhalte und Verhalten</h2>
+            
+            <h3>5.1 Ihre Inhalte</h3>
+            <p>Sie behalten alle Rechte an allen Inhalten, die über die App verarbeitet werden. Wir erheben, speichern oder greifen nicht auf die von Ihnen verarbeiteten Bilder zu. Die gesamte Verarbeitung erfolgt lokal auf Ihrem Gerät.</p>
+            
+            <h3>5.2 Inhaltsverantwortung</h3>
+            <p>Sie sind allein verantwortlich für alle Inhalte, die mit der App verarbeitet werden. Sie erklären und garantieren, dass:</p>
+            <ul>
+                <li>Sie alle erforderlichen Rechte besitzen oder erworben haben, um die Inhalte zu verarbeiten</li>
+                <li>Ihre Inhalte keine Gesetze oder Vorschriften verletzen</li>
+                <li>Ihre Inhalte keine Rechte an geistigem Eigentum oder andere Rechte Dritter verletzen</li>
+                <li>Ihre Inhalte keine Malware, Viren oder anderen schädlichen Code enthalten</li>
+            </ul>
+            
+            <h3>5.3 Verbotene Inhalte</h3>
+            <p>Sie dürfen die App nicht verwenden, um die folgenden Arten von Inhalten zu verarbeiten:</p>
+            <ul>
+                <li>Inhalte, die rechtswidrig, schädlich, bedrohlich, beleidigend, belästigend, verleumderisch, obszön oder anderweitig unangemessen sind</li>
+                <li>Inhalte, die Rechte an geistigem Eigentum Dritter verletzen</li>
+                <li>Inhalte, die Kinder ausbeuten oder missbrauchen</li>
+                <li>Inhalte, die für betrügerische, täuschende oder irreführende Zwecke verwendet werden</li>
+                <li>Inhalte, die geltende Gesetze oder Vorschriften verletzen</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>6. Haftungsausschluss</h2>
+            
+            <h3>6.1 Im Ist-Zustand</h3>
+            <p>Die App wird im Ist-Zustand und soweit verfügbar ohne jegliche ausdrückliche oder stillschweigende Garantien bereitgestellt. Wir garantieren nicht, dass:</p>
+            <ul>
+                <li>die App Ihren besonderen Anforderungen oder Erwartungen entspricht</li>
+                <li>die App unterbrechungsfrei, rechtzeitig, sicher oder fehlerfrei ist</li>
+                <li>die Konvertierungsergebnisse Ihre Anforderungen vollständig erfüllen</li>
+                <li>Mängel in der App behoben werden</li>
+            </ul>
+            
+            <h3>6.2 Risikoübernahme</h3>
+            <p>Sie stimmen ausdrücklich zu, dass die Nutzung der App auf Ihr alleiniges Risiko erfolgt. Wir empfehlen Ihnen, Ihre Originaldateien vor wichtigen Konvertierungen zu sichern.</p>
+            
+            <h3>6.3 Drittanbieter-Dienste</h3>
+            <p>Die App kann Links zu Websites oder Diensten Dritter enthalten. Wir sind nicht für Inhalte, Produkte oder Dienste Dritter verantwortlich.</p>
+        </section>
+        
+        <section>
+            <h2>7. Haftungsbeschränkung</h2>
+            
+            <h3>7.1 Beschränkung der Schadensarten</h3>
+            <p>Im vom Gesetz zulässigen Höchstmaß haften wir nicht für:</p>
+            <ul>
+                <li>indirekte, beiläufige, besondere, Folge- oder Strafschäden</li>
+                <li>Verlust oder Beschädigung von Daten, Inhalten oder Dateien</li>
+                <li>Verlust von Gewinnen, Einnahmen, Geschäftsbeziehungen oder erwarteten Einsparungen</li>
+                <li>die Kosten für Ersatzwaren oder -dienstleistungen</li>
+            </ul>
+            
+            <h3>7.2 Haftungsobergrenze</h3>
+            <p>Unsere Gesamthaftung gegenüber Ihnen, unabhängig davon, ob vertraglich, außervertraglich (einschließlich Fahrlässigkeit) oder anderweitig, übersteigt nicht den Gesamtbetrag, den Sie für die Nutzung der App in den 12 Monaten vor dem haftungsbegründenden Ereignis gezahlt haben, oder USD 100, wenn Sie keine Gebühren gezahlt haben.</p>
+            
+            <h3>7.3 Ausnahmen</h3>
+            <p>Einige Gerichtsbarkeiten erlauben den Ausschluss oder die Begrenzung bestimmter Schäden nicht, sodass die oben genannten Einschränkungen für Sie möglicherweise nicht gelten.</p>
+        </section>
+        
+        <section>
+            <h2>8. Geistiges Eigentum</h2>
+            
+            <h3>8.1 Unser geistiges Eigentum</h3>
+            <p>Die App und ihre ursprünglichen Inhalte, Funktionen und das Design sind unser alleiniges Eigentum und werden durch internationale Urheberrechts-, Marken-, Patent-, Geschäftsgeheimnis- und andere Gesetze zum Schutz geistigen Eigentums geschützt.</p>
+            
+            <h3>8.2 Markenzeichen</h3>
+            <p>Der Name "Image Converter", das Logo und alle zugehörigen Namen, Logos, Produkt- und Dienstnamen sind unsere Markenzeichen und dürfen ohne unsere vorherige schriftliche Zustimmung nicht verwendet werden.</p>
+            
+            <h3>8.3 Feedback</h3>
+            <p>Jedes Feedback, jeder Vorschlag oder jede Idee, die Sie uns zur Verfügung stellen, gilt als nicht vertraulich, und wir können sie frei verwenden, ohne Ihnen gegenüber zu einer Vergütung oder Nennung verpflichtet zu sein.</p>
+        </section>
+        
+        <section>
+            <h2>9. Kündigung</h2>
+            
+            <h3>9.1 Kündigung durch Sie</h3>
+            <p>Sie können Ihre Nutzung der App jederzeit durch Deinstallation der App beenden. Die Kündigung Ihres Abonnements löscht die App nicht automatisch.</p>
+            
+            <h3>9.2 Kündigung durch uns</h3>
+            <p>Wir können Ihren Zugriff auf die App bei Verstoß gegen diese Nutzungsbedingungen ohne vorherige Ankündigung oder Haftung sofort beenden oder aussetzen.</p>
+            
+            <h3>9.3 Wirkung der Kündigung</h3>
+            <p>Bestimmungen dieser Nutzungsbedingungen, die ihrer Natur nach auch nach einer Kündigung gelten sollten (einschließlich, aber nicht beschränkt auf Eigentumsvorschriften, Haftungsausschlüsse und Haftungsbeschränkungen), gelten auch nach einer Kündigung weiter.</p>
+        </section>
+        
+        <section>
+            <h2>10. Anwendbares Recht</h2>
+            
+            <h3>10.1 Anwendbares Recht</h3>
+            <p>Diese Nutzungsbedingungen unterliegen den Gesetzen des US-Bundesstaates Delaware und sind in Übereinstimmung mit diesen auszulegen, ungeachtet seiner Kollisionsnormen.</p>
+            
+            <h3>10.2 Streitbeilegung</h3>
+            <p>Jeder Streit, der sich aus diesen Nutzungsbedingungen ergibt oder mit ihnen in Zusammenhang steht, soll zunächst durch Verhandlungen in guten Glauben beigelegt werden. Schlägt eine solche Verhandlung fehl, kann jede Partei Klage vor den Staats- oder Bundesgerichten im US-Bundesstaat Delaware erheben.</p>
+            
+            <h3>10.3 Internationale Nutzung</h3>
+            <p>Die App ist für die weltweite Nutzung vorgesehen, bestimmte Funktionen sind jedoch in einigen Regionen möglicherweise nicht verfügbar. Sie sind dafür verantwortlich, alle geltenden Gesetze in Ihrer Gerichtsbarkeit einzuhalten.</p>
+        </section>
+        
+        <section>
+            <h2>11. Änderungen der Bedingungen</h2>
+            <p>Wir behalten uns das Recht vor, diese Nutzungsbedingungen jederzeit zu ändern oder zu ersetzen. Wesentliche Änderungen werden über In-App-Benachrichtigungen oder Versionshinweise mitgeteilt. Ihre fortgesetzte Nutzung der App nach dem Inkrafttreten von Änderungen stellt Ihre Annahme der geänderten Bedingungen dar.</p>
+        </section>
+        
+        <section>
+            <h2>12. Salvatorische Klausel</h2>
+            <p>Sollte eine Bestimmung dieser Nutzungsbedingungen von einem zuständigen Gericht für ungültig oder nicht durchsetzbar erachtet werden, ist diese Bestimmung in dem erforderlichen Mindestmaß einzuschränken oder zu beseitigen, und die übrigen Bestimmungen bleiben in vollem Umfang gültig und wirksam.</p>
+        </section>
+        
+        <section>
+            <h2>13. Vollständige Vereinbarung</h2>
+            <p>Diese Nutzungsbedingungen stellen die vollständige Vereinbarung zwischen Ihnen und uns bezüglich der App dar und ersetzen alle vorherigen oder gleichzeitigen Vereinbarungen, Mitteilungen und Vorschläge, sei es mündlich oder schriftlich.</p>
+        </section>
+        
+        <section>
+            <h2>14. Kontakt</h2>
+            <p>Wenn Sie Fragen oder Bedenken zu diesen Nutzungsbedingungen haben, kontaktieren Sie uns bitte:</p>
+        </section>
+        
+        <div class="contact-box">
+            <h2>📧 Support kontaktieren</h2>
+            <p>Wir werden innerhalb von 48 Stunden auf Ihre Nachricht antworten</p>
+            <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-de.html">Datenschutzerklärung</a>
+            <a href="terms-de.html">Nutzungsbedingungen</a>
+            <a href="support-de.html">Support-Center</a>
+        </div>
+        <p>&copy; 2026 Image Converter. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>

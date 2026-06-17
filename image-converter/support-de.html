@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter Support-Center - Hilfe und Benutzerhandbücher">
+    <title>Support-Center - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-green: #34C759;
+            --accent-orange: #FF9500;
+            --accent-red: #FF3B30;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .search-box {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .quick-link {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .quick-link .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-link h3 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .faq-item {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0,0,0,0.02);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .faq-answer-content ul {
+            margin: 0.75rem 0 0 1.5rem;
+        }
+        
+        .faq-answer-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .guide-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .step-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-list li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.75rem;
+            height: 1.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .troubleshoot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .troubleshoot-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-orange);
+        }
+        
+        .troubleshoot-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        .troubleshoot-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .troubleshoot-card .solution {
+            background: rgba(52, 199, 89, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .troubleshoot-card .solution strong {
+            color: var(--accent-green);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #E8E8ED 100%);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            justify-content: center;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .contact-method {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .contact-method.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .feature-request {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-request h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-request p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .feature-form input,
+        .feature-form textarea {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .feature-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .feature-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .feature-form button:hover {
+            background: #0051D5;
+        }
+        
+        .version-info {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .version-info span {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .language-bar {
+            background: var(--bg-secondary);
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .language-bar a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.3rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        .language-bar a:hover {
+            color: var(--primary-color);
+            background: rgba(0,122,255,0.1);
+        }
+        .language-bar a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+            background: rgba(0,122,255,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .troubleshoot-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+            
+            .language-bar {
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+            .language-bar a {
+                margin: 0 0.15rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-bar">
+        <a href="support.html">English</a>
+        <a href="support-zh.html">中文</a>
+        <a href="support-ja.html">日本語</a>
+        <a href="support-ko.html">한국어</a>
+        <a href="support-de.html" class="active">Deutsch</a>
+    </div>
+    
+    <header>
+        <h1>Support-Center</h1>
+        <p>Hilfe erhalten, Anleitungen durchsuchen oder uns kontaktieren</p>
+        <div class="search-box">
+            <input type="text" placeholder="Antworten suchen..." id="searchInput">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="quick-links">
+            <a href="#faq" class="quick-link">
+                <div class="icon">❓</div>
+                <h3>FAQ</h3>
+            </a>
+            <a href="#guide" class="quick-link">
+                <div class="icon">📖</div>
+                <h3>Benutzerhandbuch</h3>
+            </a>
+            <a href="#troubleshoot" class="quick-link">
+                <div class="icon">🔧</div>
+                <h3>Fehlerbehebung</h3>
+            </a>
+            <a href="#contact" class="quick-link">
+                <div class="icon">✉️</div>
+                <h3>Kontakt</h3>
+            </a>
+        </div>
+        
+        <section id="faq">
+            <h2><span>❓</span> Häufig gestellte Fragen</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Welche Bildformate unterstützt Image Converter?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Image Converter unterstützt die Konvertierung zwischen folgenden Formaten:
+                        <ul>
+                            <li><strong>Eingabeformate:</strong> JPG, JPEG, PNG, HEIC, HEIF, WebP, PDF</li>
+                            <li><strong>Ausgabeformate:</strong> JPG, PNG, WebP, PDF</li>
+                        </ul>
+                        Wir erweitern stetig die Unterstützung für neue Formate. Wenn Sie ein bestimmtes Format benötigen, teilen Sie uns dies über eine Funktionsanfrage mit.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Wird die Bildqualität bei der Konvertierung komprimiert?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sie haben die volle Kontrolle über die Ausgabequalität:
+                        <ul>
+                            <li>JPG-Format: Einstellbare Kompressionsqualität (1–100 %)</li>
+                            <li>PNG-Format: Verlustfreie Kompression, bewahrt die Originalqualität</li>
+                            <li>WebP-Format: Wahl zwischen verlustbehafteter oder verlustfreier Kompression</li>
+                            <li>HEIC-Format: Erhält hohe Qualität bei reduzierter Dateigröße</li>
+                        </ul>
+                        Die Standardeinstellungen bieten ein gutes Gleichgewicht zwischen Qualität und Dateigröße.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Werden meine Bilder auf einen Server hochgeladen?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <strong>Auf keinen Fall.</strong> Image Converter verwendet eine vollständig lokale Verarbeitungsarchitektur:
+                        <ul>
+                            <li>Alle Konvertierungen werden auf Ihrem Gerät durchgeführt</li>
+                            <li>Für die Nutzung der App ist keine Internetverbindung erforderlich</li>
+                            <li>Ihre Bilder verlassen niemals Ihr Gerät</li>
+                            <li>Wir folgen einer Datenschutz-first-Designphilosophie</li>
+                        </ul>
+                        Ihre Daten befinden sich vollständig unter Ihrer Kontrolle.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Werden Stapelkonvertierungen unterstützt?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ja! Image Converter unterstützt leistungsstarke Stapelkonvertierungen:
+                        <ul>
+                            <li>Mehrere Bilder auf einmal auswählen</li>
+                            <li>Dieselben Konvertierungseinstellungen auf alle Bilder anwenden</li>
+                            <li>Stapel-Export zu Fotos oder Dateien</li>
+                            <li>Ursprüngliche Dateiorganisation beibehalten</li>
+                        </ul>
+                        Die kostenlose Version hat ein Limit für die Stapelgröße. Upgraden Sie auf Pro für unbegrenzte Stapelkonvertierungen.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Wo werden konvertierte Bilder gespeichert?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sie können wählen, wo Ihre Bilder gespeichert werden:
+                        <ul>
+                            <li><strong>Fotos:</strong> Direkt in der iOS-Fotobibliothek speichern</li>
+                            <li><strong>Dateien:</strong> In iCloud Drive oder lokale Dateien speichern</li>
+                            <li><strong>Teilen:</strong> Direkt mit anderen Apps teilen</li>
+                        </ul>
+                        Sie können in den Einstellungen einen Standardspeicherort festlegen oder bei jeder Konvertierung wählen.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Welche Funktionen sind im Pro-Abonnement enthalten?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Ein Pro-Abonnement schaltet alle Premium-Funktionen frei:
+                        <ul>
+                            <li>Unbegrenzte Stapelkonvertierungen</li>
+                            <li>Alle Ausgabeformate</li>
+                            <li>Erweiterte Qualitätseinstellungen</li>
+                            <li>Benutzerdefinierte Ausgabemaße</li>
+                            <li>Werbeentfernung</li>
+                            <li>Priorisierter technischer Support</li>
+                        </ul>
+                        Abonnements werden über den App Store verwaltet und können jederzeit gekündigt werden.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Wie kündige ich mein Abonnement?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Sie können Ihr Abonnement wie folgt kündigen:
+                        <ol>
+                            <li>Öffnen Sie die Einstellungen-App auf Ihrem iOS-Gerät</li>
+                            <li>Tippen Sie oben auf Ihren Namen</li>
+                            <li>Wählen Sie „Abonnements“</li>
+                            <li>Suchen Sie Image Converter Pro</li>
+                            <li>Tippen Sie auf „Abonnement kündigen“</li>
+                        </ol>
+                        Nach der Kündigung können Sie die Pro-Funktionen bis zum Ende des aktuellen Abonnementzeitraums weiter nutzen.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Was soll ich tun, wenn die App abstürzt?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Wenn die App abstürzt, versuchen Sie die folgenden Schritte:
+                        <ol>
+                            <li>Schließen Sie die App vollständig (entfernen Sie sie aus dem App-Switcher) und öffnen Sie sie erneut</li>
+                            <li>Starten Sie Ihr Gerät neu</li>
+                            <li>Suchen Sie nach App-Updates</li>
+                            <li>Suchen Sie nach iOS-Systemupdates</li>
+                            <li>Löschen Sie die App und installieren Sie sie neu (Hinweis: Dies löscht keine gespeicherten Bilder)</li>
+                        </ol>
+                        Wenn das Problem weiterhin besteht, kontaktieren Sie bitte unser Support-Team mit Ihrem Gerätemodell und iOS-Version.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Welche iOS-Versionen werden unterstützt?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Image Converter unterstützt iOS 15.0 und neuer.
+                        <br><br>
+                        Für die beste Erfahrung empfehlen wir:
+                        <ul>
+                            <li>Die neueste iOS-Version zu verwenden</li>
+                            <li>Die App auf dem neuesten Stand zu halten</li>
+                            <li>Sicherzustellen, dass Ihr Gerät über ausreichend Speicherplatz verfügt</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Wie beantrage ich eine Rückerstattung?</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Rückerstattungsanfragen müssen über Apple bearbeitet werden:
+                        <ol>
+                            <li>Besuchen Sie <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a></li>
+                            <li>Melden Sie sich mit Ihrer Apple ID an</li>
+                            <li>Suchen Sie das Image Converter-Abonnement oder den Kauf</li>
+                            <li>Tippen Sie auf „Problem melden“</li>
+                            <li>Wählen Sie einen Rückerstattungsgrund und senden Sie ihn ab</li>
+                        </ol>
+                        Die Genehmigung von Rückerstattungen liegt im Ermessen von Apple. Bei Fragen können Sie auch direkt den Apple Support kontaktieren.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="guide">
+            <h2><span>📖</span> Benutzerhandbuch</h2>
+            
+            <div class="guide-card">
+                <h3><span>🔄</span> Schnellstart: Einzelnes Bild konvertieren</h3>
+                <ol class="step-list">
+                    <li>Öffnen Sie die Image Converter-App</li>
+                    <li>Tippen Sie auf dem Hauptbildschirm auf die „+“-Schaltfläche oder „Bild auswählen“</li>
+                    <li>Wählen Sie das Bild, das Sie aus Ihrer Fotobibliothek konvertieren möchten</li>
+                    <li>Wählen Sie das Zielformat (JPG, PNG, WebP oder PDF)</li>
+                    <li>Passen Sie Qualitäts- und Größeneinstellungen an (optional)</li>
+                    <li>Tippen Sie auf die Schaltfläche „Konvertieren“</li>
+                    <li>Wählen Sie einen Speicherort (Fotos oder Dateien)</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>📦</span> Mehrere Bilder stapelweise konvertieren</h3>
+                <ol class="step-list">
+                    <li>Tippen Sie auf die Option „Stapelkonvertierung“</li>
+                    <li>Wählen Sie mehrere Bilder aus (zum Mehrfachauswahl wischen)</li>
+                    <li>Bestätigen Sie Ihre Auswahl und tippen Sie auf „Weiter“</li>
+                    <li>Legen Sie ein einheitliches Ausgabeformat und eine Qualität fest</li>
+                    <li>Tippen Sie auf „Stapelkonvertierung starten“</li>
+                    <li>Warten Sie, bis die Verarbeitung abgeschlossen ist</li>
+                    <li>Speichern oder teilen Sie die konvertierten Bilder stapelweise</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>⚙️</span> Benutzerdefinierte Konvertierungseinstellungen</h3>
+                <ol class="step-list">
+                    <li>Tippen Sie auf dem Konvertierungsbildschirm auf das Einstellungs-Zahnrad-Symbol</li>
+                    <li>Passen Sie den Ausgabequalitäts-Schieberegler an (nur JPG/WebP)</li>
+                    <li>Legen Sie die Ausgabemaße fest (Original, Benutzerdefiniert oder Voreingestellt)</li>
+                    <li>Wählen Sie den Standardspeicherort</li>
+                    <li>Aktivieren/deaktivieren Sie die Option, das Original nach der Konvertierung zu löschen</li>
+                    <li>Einstellungen werden automatisch gespeichert und auf zukünftige Konvertierungen angewendet</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>📤</span> Exportieren &amp; Teilen</h3>
+                <ol class="step-list">
+                    <li>Tippen Sie nach Abschluss der Konvertierung auf die Vorschau</li>
+                    <li>Tippen Sie auf die Teilen-Schaltfläche</li>
+                    <li>Wählen Sie ein Ziel zum Teilen (Soziale Medien, E-Mail, Nachrichten usw.)</li>
+                    <li>Oder verwenden Sie „In Dateien speichern“, um an einem bestimmten Ort zu exportieren</li>
+                    <li>Unterstützt AirDrop für schnelle Übertragung auf einen Mac oder andere Geräte</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="troubleshoot">
+            <h2><span>🔧</span> Fehlerbehebung</h2>
+            
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <h4>Konvertierung schlägt fehl oder friert ein</h4>
+                    <p>Das Bild ist möglicherweise beschädigt oder in einem nicht unterstützten Format</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> Versuchen Sie, ein anderes Bild auszuwählen, oder konvertieren Sie das Bild zunächst in ein gängiges Format (z. B. JPG) und versuchen Sie es erneut.
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>Speichern in Fotos fehlgeschlagen</h4>
+                    <p>Die App hat möglicherweise keine Schreibberechtigung für die Fotobibliothek</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> Gehen Sie zu iOS-Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Fotos &gt; Image Converter und stellen Sie sicher, dass die Berechtigung auf „Alle Fotos“ eingestellt ist.
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>Bilder können nicht ausgewählt werden</h4>
+                    <p>Die App hat möglicherweise keinen Zugriff auf die Fotobibliothek</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> Gehen Sie zu iOS-Einstellungen &gt; Datenschutz &amp; Sicherheit &gt; Fotos &gt; Image Converter und gewähren Sie die Berechtigung „Alle Fotos“ oder „Ausgewählte Fotos“.
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>Ausgabedatei zu groß</h4>
+                    <p>Die Qualitätseinstellung ist möglicherweise zu hoch</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> Verringern Sie die Qualitätseinstellung für JPG/WebP (empfohlen 70–85 %), oder verwenden Sie das WebP/HEIC-Format für eine bessere Kompression.
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>Stapelkonvertierung unterbrochen</h4>
+                    <p>Unzureichender Gerätespeicher oder die App wurde in den Hintergrund geschickt</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> Stellen Sie sicher, dass Ihr Gerät über genügend Speicher verfügt, halten Sie die App während der Konvertierung im Vordergrund, oder verarbeiten Sie die Bilder in kleineren Stapeln.
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>HEIC-Konvertierung fehlgeschlagen</h4>
+                    <p>Pro-Funktion oder nicht unterstützte iOS-Version</p>
+                    <div class="solution">
+                        <strong>Lösung:</strong> HEIC wird nur als Eingabeformat unterstützt. Es ist nicht als Ausgabeformat verfügbar.
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="contact-section">
+                <h2><span>✉️</span> Kontakt</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    Finden Sie nicht, wonach Sie suchen? Unser Support-Team hilft Ihnen gerne.
+                </p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:service.bj8791@gmail.com" class="contact-method primary">
+                        <span>📧</span>
+                        <span>E-Mail senden</span>
+                    </a>
+                    <a href="https://twitter.com/imageconverter" class="contact-method" target="_blank">
+                        <span>🐦</span>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    In der Regel Antwort innerhalb von 48 Stunden<br>
+                    Geschäftszeiten: Montag–Freitag 9:00–18:00 Uhr (GMT+8)
+                </p>
+            </div>
+            
+            <div class="feature-request">
+                <h3>💡 Funktionsanfrage</h3>
+                <p>Haben Sie eine Idee, um Image Converter zu verbessern? Sagen Sie es uns!</p>
+                <form class="feature-form" onsubmit="event.preventDefault(); alert('Vielen Dank für Ihr Feedback! Wir werden Ihren Vorschlag sorgfältig prüfen.');">
+                    <input type="email" placeholder="Ihre E-Mail (optional)" required>
+                    <textarea placeholder="Beschreiben Sie die gewünschte Funktion..." required></textarea>
+                    <button type="submit">Funktionsanfrage senden</button>
+                </form>
+            </div>
+        </section>
+        
+        <div class="version-info">
+            <span>App-Version: 2.1.0</span>
+            <span>Zuletzt aktualisiert: Februar 2026</span>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy-de.html">Datenschutzrichtlinie</a>
+            <a href="terms-of-service-de.html">Nutzungsbedingungen</a>
+            <a href="support-de.html">Support-Center</a>
+        </div>
+        <p>&copy; 2026 Image Converter. Alle Rechte vorbehalten.</p>
+    </footer>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

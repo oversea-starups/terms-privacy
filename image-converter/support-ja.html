@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter サポートセンター - ヘルプとご利用ガイド">
+    <title>サポートセンター - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-green: #34C759;
+            --accent-orange: #FF9500;
+            --accent-red: #FF3B30;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .search-box {
+            max-width: 500px;
+            margin: 2rem auto 0;
+            position: relative;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border: none;
+            border-radius: 2rem;
+            font-size: 1rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        
+        .search-box input::placeholder {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .quick-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .quick-link {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            text-decoration: none;
+            color: var(--text-primary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .quick-link:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+        
+        .quick-link .icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .quick-link h3 {
+            font-size: 1rem;
+            font-weight: 600;
+        }
+        
+        section {
+            margin-bottom: 3rem;
+        }
+        
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .faq-item {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.25rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .faq-question:hover {
+            background: rgba(0,0,0,0.02);
+        }
+        
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            transition: transform 0.2s;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+        
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+        
+        .faq-answer-content {
+            padding: 0 1.25rem 1.25rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        .faq-answer-content ul {
+            margin: 0.75rem 0 0 1.5rem;
+        }
+        
+        .faq-answer-content li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .guide-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .guide-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .step-list {
+            counter-reset: step;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .step-list li {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-list li::before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 1.75rem;
+            height: 1.75rem;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .troubleshoot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+        
+        .troubleshoot-card {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border-left: 4px solid var(--accent-orange);
+        }
+        
+        .troubleshoot-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        .troubleshoot-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .troubleshoot-card .solution {
+            background: rgba(52, 199, 89, 0.1);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            margin-top: 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .troubleshoot-card .solution strong {
+            color: var(--accent-green);
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, #E8E8ED 100%);
+            border-radius: 1.5rem;
+            padding: 2.5rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            justify-content: center;
+        }
+        
+        .contact-methods {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        
+        .contact-method {
+            background: white;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .contact-method.primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .feature-request {
+            background: var(--bg-secondary);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        
+        .feature-request h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-request p {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .feature-form input,
+        .feature-form textarea {
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        
+        .feature-form textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .feature-form button {
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 0.75rem;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        
+        .feature-form button:hover {
+            background: #0051D5;
+        }
+        
+        .version-info {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 0.75rem;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .version-info span {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        .language-bar {
+            background: var(--bg-secondary);
+            padding: 0.75rem;
+            text-align: center;
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .language-bar a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.3rem;
+            padding: 0.3rem 0.6rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s;
+        }
+        .language-bar a:hover {
+            color: var(--primary-color);
+            background: rgba(0,122,255,0.1);
+        }
+        .language-bar a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+            background: rgba(0,122,255,0.1);
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .quick-links {
+                grid-template-columns: 1fr;
+            }
+            
+            .troubleshoot-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+            }
+            
+            .language-bar {
+                font-size: 0.8rem;
+                padding: 0.5rem;
+            }
+            .language-bar a {
+                margin: 0 0.15rem;
+                padding: 0.2rem 0.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-bar">
+        <a href="support.html">English</a>
+        <a href="support-zh.html">中文</a>
+        <a href="support-ja.html" class="active">日本語</a>
+        <a href="support-ko.html">한국어</a>
+        <a href="support-de.html">Deutsch</a>
+    </div>
+    
+    <header>
+        <h1>サポートセンター</h1>
+        <p>ヘルプの検索、ガイドの閲覧、またはお問い合わせ</p>
+        <div class="search-box">
+            <input type="text" placeholder="回答を検索..." id="searchInput">
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="quick-links">
+            <a href="#faq" class="quick-link">
+                <div class="icon">❓</div>
+                <h3>よくある質問</h3>
+            </a>
+            <a href="#guide" class="quick-link">
+                <div class="icon">📖</div>
+                <h3>ユーザーガイド</h3>
+            </a>
+            <a href="#troubleshoot" class="quick-link">
+                <div class="icon">🔧</div>
+                <h3>トラブルシューティング</h3>
+            </a>
+            <a href="#contact" class="quick-link">
+                <div class="icon">✉️</div>
+                <h3>お問い合わせ</h3>
+            </a>
+        </div>
+        
+        <section id="faq">
+            <h2><span>❓</span> よくある質問</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">Image Converter はどの画像形式をサポートしていますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Image Converter は以下の形式間の変換をサポートしています：
+                        <ul>
+                            <li><strong>入力形式：</strong>JPG、JPEG、PNG、HEIC、HEIF、WebP、PDF</li>
+                            <li><strong>出力形式：</strong>JPG、PNG、WebP、PDF</li>
+                        </ul>
+                        新しい形式のサポートを随時追加しています。特定の形式が必要な場合は、機能リクエストでお知らせください。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">変換時に画質は圧縮されますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        出力画質は完全に制御できます：
+                        <ul>
+                            <li>JPG 形式：圧縮品質を調整可能（1～100％）</li>
+                            <li>PNG 形式：非可逆圧縮、元の画質を保持</li>
+                            <li>WebP 形式：非可逆または可逆圧縮を選択</li>
+                            <li>HEIC 形式：高画質を維持しながらファイルサイズを削減</li>
+                        </ul>
+                        デフォルト設定は画質とファイルサイズのバランスを取っています。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">画像はサーバーにアップロードされますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        <strong>絶対にアップロードされません。</strong>Image Converter は完全なローカル処理アーキテクチャを採用しています：
+                        <ul>
+                            <li>すべての変換はお使いのデバイス上で実行されます</li>
+                            <li>アプリの使用にインターネット接続は不要です</li>
+                            <li>画像がデバイス外に出ることはありません</li>
+                            <li>プライバシー最重視の設計思想を採用しています</li>
+                        </ul>
+                        データは完全にあなたの管理下にあります。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">一括変換はサポートされていますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        はい！Image Converter は強力な一括変換をサポートしています：
+                        <ul>
+                            <li>複数の画像を一度に選択</li>
+                            <li>すべての画像に同じ変換設定を適用</li>
+                            <li>Photos または Files に一括エクスポート</li>
+                            <li>元のファイル構成を維持</li>
+                        </ul>
+                        無料版には一括変換の上限があります。Pro にアップグレードすると無制限の一括変換が可能になります。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">変換後の画像はどこに保存されますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        画像の保存先を選択できます：
+                        <ul>
+                            <li><strong>Photos：</strong>iOS の写真ライブラリに直接保存</li>
+                            <li><strong>Files：</strong>iCloud Drive またはローカルファイルに保存</li>
+                            <li><strong>共有：</strong>他のアプリに直接共有</li>
+                        </ul>
+                        設定でデフォルトの保存先を設定することも、変換のたびに選択することもできます。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">Pro サブスクリプションにはどの機能が含まれていますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Pro サブスクリプションですべてのプレミアム機能が利用可能になります：
+                        <ul>
+                            <li>無制限の一括変換</li>
+                            <li>すべての出力形式</li>
+                            <li>高度な品質設定</li>
+                            <li>カスタム出力サイズ</li>
+                            <li>広告の削除</li>
+                            <li>優先テクニカルサポート</li>
+                        </ul>
+                        サブスクリプションは App Store で管理され、いつでもキャンセルできます。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">サブスクリプションをキャンセルするにはどうすればよいですか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        以下の手順でサブスクリプションをキャンセルできます：
+                        <ol>
+                            <li>iOS デバイスの「設定」アプリを開く</li>
+                            <li>上部の名前をタップ</li>
+                            <li>「サブスクリプション」を選択</li>
+                            <li>Image Converter Pro を見つける</li>
+                            <li>「サブスクリプションをキャンセル」をタップ</li>
+                        </ol>
+                        キャンセル後も、現在のサブスクリプション期間が終了するまで Pro 機能をご利用いただけます。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">アプリがクラッシュした場合はどうすればよいですか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        アプリがクラッシュした場合は、以下の手順をお試しください：
+                        <ol>
+                            <li>アプリを完全に閉じて（アプリスイッチャーから削除）、再度開く</li>
+                            <li>デバイスを再起動する</li>
+                            <li>アプリの更新を確認する</li>
+                            <li>iOS のシステム更新を確認する</li>
+                            <li>アプリを削除して再インストールする（保存されている画像は削除されません）</li>
+                        </ol>
+                        問題が解決しない場合は、デバイスモデルと iOS バージョンを添えてサポートチームにお問い合わせください。
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">どの iOS バージョンがサポートされていますか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Image Converter は iOS 15.0 以降をサポートしています。
+                        <br><br>
+                        最適な体験のために、以下を推奨します：
+                        <ul>
+                            <li>最新の iOS バージョンを使用する</li>
+                            <li>アプリを最新版に保つ</li>
+                            <li>デバイスに十分なストレージ容量があることを確認する</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">返金をリクエストするにはどうすればよいですか？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        返金リクエストは Apple を通じて処理される必要があります：
+                        <ol>
+                            <li><a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> にアクセス</li>
+                            <li>Apple ID でサインイン</li>
+                            <li>Image Converter のサブスクリプションまたは購入を見つける</li>
+                            <li>「問題を報告」をタップ</li>
+                            <li>返金理由を選択して送信</li>
+                        </ol>
+                        返金の承認は Apple の裁量によります。ご質問がある場合は、Apple サポートに直接お問い合わせいただくこともできます。
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="guide">
+            <h2><span>📖</span> ユーザーガイド</h2>
+            
+            <div class="guide-card">
+                <h3><span>🔄</span> クイックスタート：1枚の画像を変換する</h3>
+                <ol class="step-list">
+                    <li>Image Converter アプリを開く</li>
+                    <li>メイン画面の「＋」ボタンまたは「画像を選択」をタップ</li>
+                    <li>写真ライブラリから変換したい画像を選択</li>
+                    <li>対象の形式を選択（JPG、PNG、WebP、または PDF）</li>
+                    <li>品質とサイズの設定を調整（オプション）</li>
+                    <li>「変換」ボタンをタップ</li>
+                    <li>保存先を選択（Photos または Files）</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>📦</span> 複数の画像を一括変換</h3>
+                <ol class="step-list">
+                    <li>「一括変換」オプションをタップ</li>
+                    <li>複数の画像を選択（スワイプで複数選択）</li>
+                    <li>選択を確認して「次へ」をタップ</li>
+                    <li>統一した出力形式と品質を設定</li>
+                    <li>「一括変換を開始」をタップ</li>
+                    <li>処理が完了するのを待つ</li>
+                    <li>変換後の画像を一括で保存または共有</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>⚙️</span> カスタム変換設定</h3>
+                <ol class="step-list">
+                    <li>変換画面の設定（歯車）アイコンをタップ</li>
+                    <li>出力品質スライダーを調整（JPG/WebP のみ）</li>
+                    <li>出力サイズを設定（元のサイズ、カスタム、またはプリセット）</li>
+                    <li>デフォルトの保存先を選択</li>
+                    <li>変換後に元のファイルを削除するオプションを切り替え</li>
+                    <li>設定は自動的に保存され、今後の変換に適用されます</li>
+                </ol>
+            </div>
+            
+            <div class="guide-card">
+                <h3><span>📤</span> エクスポートと共有</h3>
+                <ol class="step-list">
+                    <li>変換完了後にプレビューをタップ</li>
+                    <li>共有ボタンをタップ</li>
+                    <li>共有先を選択（SNS、メール、メッセージなど）</li>
+                    <li>または「Files に保存」を使用して特定の場所にエクスポート</li>
+                    <li>Mac やその他のデバイスへの高速転送に AirDrop をサポート</li>
+                </ol>
+            </div>
+        </section>
+        
+        <section id="troubleshoot">
+            <h2><span>🔧</span> トラブルシューティング</h2>
+            
+            <div class="troubleshoot-grid">
+                <div class="troubleshoot-card">
+                    <h4>変換に失敗する、またはフリーズする</h4>
+                    <p>画像が破損しているか、非対応の形式である可能性があります</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>別の画像を選択するか、まず一般的な形式（JPG など）に変換してから再度お試しください。
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>Photos への保存に失敗</h4>
+                    <p>アプリが写真ライブラリへの書き込み権限を持っていない可能性があります</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>iOS の「設定」＞「プライバシーとセキュリティ」＞「写真」＞「Image Converter」に移動し、権限が「すべての写真」に設定されていることを確認してください。
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>画像を選択できない</h4>
+                    <p>アプリが写真ライブラリにアクセスできない可能性があります</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>iOS の「設定」＞「プライバシーとセキュリティ」＞「写真」＞「Image Converter」に移動し、「すべての写真」または「選択した写真」の権限を付与してください。
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>出力ファイルが大きすぎる</h4>
+                    <p>品質設定が高すぎる可能性があります</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>JPG/WebP の品質設定を下げる（推奨 70～85％）、またはより良い圧縮のために WebP/HEIC 形式を使用してください。
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>一括変換が中断された</h4>
+                    <p>デバイスのストレージ容量が不足しているか、アプリがバックグラウンドに移行しました</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>デバイスに十分なストレージがあることを確認し、変換中はアプリをフォアグラウンドに保つか、より小さなバッチで画像を処理してください。
+                    </div>
+                </div>
+                
+                <div class="troubleshoot-card">
+                    <h4>HEIC 変換に失敗</h4>
+                    <p>Pro 機能、または非対応の iOS バージョン</p>
+                    <div class="solution">
+                        <strong>解決方法：</strong>HEIC は入力形式としてのみサポートされています。出力形式としては利用できません。
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="contact-section">
+                <h2><span>✉️</span> お問い合わせ</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    お探しの情報が見つかりませんか？サポートチームがお手伝いします。
+                </p>
+                
+                <div class="contact-methods">
+                    <a href="mailto:service.bj8791@gmail.com" class="contact-method primary">
+                        <span>📧</span>
+                        <span>メールを送信</span>
+                    </a>
+                    <a href="https://twitter.com/imageconverter" class="contact-method" target="_blank">
+                        <span>🐦</span>
+                        <span>Twitter</span>
+                    </a>
+                </div>
+                
+                <p style="color: var(--text-secondary); font-size: 0.9rem;">
+                    通常48時間以内に返信<br>
+                    営業時間：月曜日～金曜日 9:00～18:00（GMT+8）
+                </p>
+            </div>
+            
+            <div class="feature-request">
+                <h3>💡 機能リクエスト</h3>
+                <p>Image Converter をより良くするアイデアがありますか？ぜひお聞かせください！</p>
+                <form class="feature-form" onsubmit="event.preventDefault(); alert('フィードバックありがとうございます！ご提案を慎重に検討させていただきます。');">
+                    <input type="email" placeholder="メールアドレス（オプション）" required>
+                    <textarea placeholder="ご希望の機能をご記入ください..." required></textarea>
+                    <button type="submit">機能リクエストを送信</button>
+                </form>
+            </div>
+        </section>
+        
+        <div class="version-info">
+            <span>アプリバージョン：2.1.0</span>
+            <span>最終更新：2026年2月</span>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-ja.html">プライバシーポリシー</a>
+            <a href="terms-of-service-ja.html">利用規約</a>
+            <a href="support-ja.html">サポートセンター</a>
+        </div>
+        <p>&copy; 2026 Image Converter. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(faq => {
+                    faq.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+        
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

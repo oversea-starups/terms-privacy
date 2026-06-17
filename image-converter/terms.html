@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Image Converter Terms of Service - Terms and Conditions of Use">
+    <title>Terms of Service - Image Converter</title>
+    <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-primary: #1D1D1F;
+            --text-secondary: #6E6E73;
+            --bg-primary: #FFFFFF;
+            --bg-secondary: #F5F5F7;
+            --border-color: #D2D2D7;
+            --accent-red: #FF3B30;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--bg-primary);
+        }
+        
+        .language-switcher {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+        }
+        
+        .language-switcher a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        
+        .language-switcher a.active {
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .language-switcher a:hover {
+            text-decoration: underline;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #1D1D1F 0%, #434344 100%);
+            color: white;
+            padding: 4rem 1.5rem;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        
+        .last-updated {
+            background: var(--bg-secondary);
+            padding: 1rem 1.5rem;
+            border-radius: 0.75rem;
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .notice-box {
+            background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+            border-left: 4px solid var(--accent-red);
+            padding: 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            margin-bottom: 2rem;
+        }
+        
+        .notice-box h2 {
+            color: #E65100;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .notice-box p {
+            color: #BF360C;
+            font-size: 0.95rem;
+        }
+        
+        section {
+            margin-bottom: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+        }
+        
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.75rem;
+            color: var(--text-primary);
+        }
+        
+        h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--text-primary);
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin: 1rem 0 1rem 1.5rem;
+            color: var(--text-secondary);
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        .section-intro {
+            font-size: 1.05rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .definition-list {
+            background: var(--bg-secondary);
+            padding: 1.5rem;
+            border-radius: 0.75rem;
+            margin: 1rem 0;
+        }
+        
+        .definition-list dt {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-top: 1rem;
+        }
+        
+        .definition-list dt:first-child {
+            margin-top: 0;
+        }
+        
+        .definition-list dd {
+            margin-left: 0;
+            margin-top: 0.25rem;
+            color: var(--text-secondary);
+        }
+        
+        .subscription-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            overflow: hidden;
+        }
+        
+        .subscription-table th,
+        .subscription-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .subscription-table th {
+            background: var(--text-primary);
+            color: white;
+            font-weight: 500;
+        }
+        
+        .subscription-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .highlight-box {
+            background: var(--bg-secondary);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .highlight-box h4 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-box {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0051D5 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .contact-box h2 {
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-box p {
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 1rem;
+        }
+        
+        .email-link {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .email-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            margin-top: 2rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.75rem;
+            }
+            
+            .container {
+                padding: 1.5rem 1rem;
+            }
+            
+            .subscription-table {
+                font-size: 0.85rem;
+            }
+            
+            .subscription-table th,
+            .subscription-table td {
+                padding: 0.75rem;
+            }
+            
+            .language-switcher a {
+                margin: 0 0.5rem;
+                font-size: 0.8rem;
+            }
+        }
+        .lang-suggest-bar {
+            display: none;
+            background: linear-gradient(135deg, #007AFF 0%, #0051D5 100%);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-align: center;
+            font-size: 0.95rem;
+            position: relative;
+        }
+        .lang-suggest-bar.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .lang-suggest-bar a {
+            color: white;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+        .lang-suggest-bar .close-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 0.5rem;
+        }
+        .lang-suggest-bar .close-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+        @media (max-width: 600px) {
+            .lang-suggest-bar.show {
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 0.75rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="langSuggestBar" class="lang-suggest-bar">
+        <span id="langSuggestText"></span>
+        <a id="langSuggestLink" href="#"></a>
+        <button class="close-btn" onclick="dismissLangSuggest()" aria-label="Dismiss">×</button>
+    </div>
+    <div class="language-switcher">
+        <a href="terms.html" class="active">English</a>
+        <a href="terms-zh.html">简体中文</a>
+        <a href="terms-ja.html">日本語</a>
+        <a href="terms-ko.html">한국어</a>
+        <a href="terms-de.html">Deutsch</a>
+    </div>
+
+    <header>
+        <h1>Terms of Service</h1>
+        <p>Please read carefully before using Image Converter</p>
+    </header>
+    
+    <div class="container">
+        <div class="last-updated">
+            <span>📅</span>
+            <strong>Last Updated:</strong> February 26, 2026
+            <strong style="margin-left: auto;">Effective Date:</strong> February 26, 2026
+        </div>
+        
+        <div class="notice-box">
+            <h2>⚠️ Important Notice</h2>
+            <p>By downloading, installing, or using the Image Converter app (the "App"), you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use the App.</p>
+        </div>
+        
+        <section>
+            <h2>1. Definitions</h2>
+            <p class="section-intro">In these Terms of Service, the following terms shall have the meanings set forth below:</p>
+            
+            <dl class="definition-list">
+                <dt>"App"</dt>
+                <dd>Refers to the Image Converter iOS application, including all features, content, and services.</dd>
+                
+                <dt>"We," "Us," or "Developer"</dt>
+                <dd>Refers to the developer and operator of the Image Converter app.</dd>
+                
+                <dt>"You" or "User"</dt>
+                <dd>Refers to any individual or entity that downloads, installs, accesses, or uses the App.</dd>
+                
+                <dt>"Content"</dt>
+                <dd>Refers to all images, files, and other materials created, uploaded, converted, or exported by you through the App.</dd>
+                
+                <dt>"Purchase"</dt>
+                <dd>Refers to the Image Converter Pro one-time purchase made by the User.</dd>
+                
+                <dt>"App Store"</dt>
+                <dd>Refers to the Apple App Store through which you download the App.</dd>
+            </dl>
+        </section>
+        
+        <section>
+            <h2>2. License and Usage Rights</h2>
+            
+            <h3>2.1 Limited License</h3>
+            <p>Subject to your compliance with these Terms of Service, we grant you a personal, non-exclusive, non-transferable, revocable limited license to download, install, and use the App on your iOS device.</p>
+            
+            <h3>2.2 License Restrictions</h3>
+            <p>You shall not, and shall not permit any third party to:</p>
+            <ul>
+                <li>Copy, modify, adapt, translate, or create derivative works of the App</li>
+                <li>Reverse engineer, decompile, disassemble, or otherwise attempt to discover the source code of the App</li>
+                <li>Rent, lease, lend, sell, sublicense, distribute, or transfer any rights in the App</li>
+                <li>Remove, alter, or obscure any copyright, trademark, or other proprietary notices on the App</li>
+                <li>Use the App for any unlawful activity or in violation of any applicable laws or regulations</li>
+                <li>Interfere with or disrupt the security, integrity, or performance of the App</li>
+                <li>Use automated programs, bots, or similar tools to access the App</li>
+            </ul>
+            
+            <h3>2.3 Ownership</h3>
+            <p>All rights, title, and interest in and to the App and all copies thereof are owned by us. These Terms of Service do not grant you any ownership interest in the App.</p>
+        </section>
+        
+        <section>
+            <h2>3. Purchase Terms</h2>
+            
+            <h3>3.1 Purchase Options</h3>
+            <p>The App offers the following purchase options:</p>
+            
+            <table class="subscription-table">
+                <thead>
+                    <tr>
+                        <th>Purchase Type</th>
+                        <th>Price</th>
+                        <th>Features Included</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Free</td>
+                        <td>Free</td>
+                        <td>Basic conversion features, limited batch processing (3 photos per batch)</td>
+                    </tr>
+                    <tr>
+                        <td>Lifetime Pro</td>
+                        <td>$9.99 one-time purchase</td>
+                        <td>All features, unlimited batch conversion, all formats unlocked permanently</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>3.2 Payment and Purchase</h3>
+            <ul>
+                <li>All purchases are processed through your Apple ID and are subject to the App Store Terms and Conditions</li>
+                <li>Lifetime Pro is a one-time purchase with no recurring charges</li>
+                <li>Once purchased, Pro features are unlocked permanently</li>
+                <li>Purchases can be restored on any device using the same Apple ID</li>
+            </ul>
+            
+            <h3>3.3 Restore Purchase</h3>
+            <p>If you previously purchased Lifetime Pro, you can restore your purchase at any time:</p>
+            <ol>
+                <li>Open the Image Converter app</li>
+                <li>Tap the Settings gear icon</li>
+                <li>Tap "Restore Purchase"</li>
+            </ol>
+            <p>This will verify your purchase with Apple and unlock all Pro features on your current device.</p>
+        </section>
+        
+        <section>
+            <h2>4. Refund Policy</h2>
+            
+            <h3>4.1 Refund Requests</h3>
+            <p>All refund requests must be processed through Apple. Under Apple's standard refund policies:</p>
+            <ul>
+                <li>Refund requests are determined by Apple in accordance with its policies</li>
+                <li>Please visit <a href="https://reportaproblem.apple.com" target="_blank">reportaproblem.apple.com</a> to request a refund</li>
+                <li>Apple's standard refund policy applies to all purchases</li>
+            </ul>
+            
+            <h3>4.2 Purchase Restoration</h3>
+            <p>Because all transactions are processed through Apple, we are unable to process refunds directly. Please contact Apple Support for assistance with refunds. Your purchase can be restored on any device using the same Apple ID through the "Restore Purchase" feature in the app.</p>
+        </section>
+        
+        <section>
+            <h2>5. User Content and Conduct</h2>
+            
+            <h3>5.1 Your Content</h3>
+            <p>You retain all rights to any Content processed through the App. We do not collect, store, or access the images you process. All processing is performed locally on your device.</p>
+            
+            <h3>5.2 Content Responsibility</h3>
+            <p>You are solely responsible for any Content processed using the App. You represent and warrant that:</p>
+            <ul>
+                <li>You own or have obtained all necessary rights to process the Content</li>
+                <li>Your Content does not violate any laws or regulations</li>
+                <li>Your Content does not infringe any third-party intellectual property or other rights</li>
+                <li>Your Content does not contain malware, viruses, or other harmful code</li>
+            </ul>
+            
+            <h3>5.3 Prohibited Content</h3>
+            <p>You may not use the App to process the following types of content:</p>
+            <ul>
+                <li>Content that is illegal, harmful, threatening, abusive, harassing, defamatory, obscene, or otherwise objectionable</li>
+                <li>Content that infringes any third-party intellectual property rights</li>
+                <li>Content that contains child exploitation or abuse</li>
+                <li>Content used for fraudulent, deceptive, or misleading purposes</li>
+                <li>Content that violates any applicable laws or regulations</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>6. Disclaimers</h2>
+            
+            <h3>6.1 As Is Basis</h3>
+            <p>The App is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not warrant that:</p>
+            <ul>
+                <li>The App will meet your particular requirements or expectations</li>
+                <li>The App will be uninterrupted, timely, secure, or error-free</li>
+                <li>Conversion results will fully meet your requirements</li>
+                <li>Any defects in the App will be corrected</li>
+            </ul>
+            
+            <h3>6.2 Assumption of Risk</h3>
+            <p>You expressly agree that your use of the App is at your sole risk. We recommend that you back up your original files before performing important conversions.</p>
+            
+            <h3>6.3 Third-Party Services</h3>
+            <p>The App may contain links to third-party websites or services. We are not responsible for any third-party content, products, or services.</p>
+        </section>
+        
+        <section>
+            <h2>7. Limitation of Liability</h2>
+            
+            <h3>7.1 Limitation on Types of Damages</h3>
+            <p>To the maximum extent permitted by law, we shall not be liable for:</p>
+            <ul>
+                <li>Any indirect, incidental, special, consequential, or punitive damages</li>
+                <li>Loss or corruption of data, content, or files</li>
+                <li>Loss of profits, revenue, goodwill, or anticipated savings</li>
+                <li>The cost of substitute goods or services</li>
+            </ul>
+            
+            <h3>7.2 Liability Cap</h3>
+            <p>Our total liability to you, whether in contract, tort (including negligence), or otherwise, shall not exceed the total amount you paid for use of the App in the 12 months preceding the event giving rise to liability, or USD $100 if you have not paid any fees.</p>
+            
+            <h3>7.3 Exceptions</h3>
+            <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so the above limitations may not apply to you.</p>
+        </section>
+        
+        <section>
+            <h2>8. Intellectual Property</h2>
+            
+            <h3>8.1 Our Intellectual Property</h3>
+            <p>The App and its original content, features, and design are our exclusive property and are protected by international copyright, trademark, patent, trade secret, and other intellectual property laws.</p>
+            
+            <h3>8.2 Trademarks</h3>
+            <p>The "Image Converter" name, logo, and all related names, logos, product and service names are our trademarks and may not be used without our prior written consent.</p>
+            
+            <h3>8.3 Feedback</h3>
+            <p>Any feedback, suggestions, or ideas you provide to us shall be deemed non-confidential, and we may use them freely without any obligation to compensate or attribute you.</p>
+        </section>
+        
+        <section>
+            <h2>9. Termination</h2>
+            
+            <h3>9.1 Termination by You</h3>
+            <p>You may terminate your use of the App at any time by uninstalling the App. Cancelling your subscription does not automatically delete the App.</p>
+            
+            <h3>9.2 Termination by Us</h3>
+            <p>We may immediately terminate or suspend your access to the App without prior notice or liability if you violate these Terms of Service.</p>
+            
+            <h3>9.3 Effect of Termination</h3>
+            <p>Provisions of these Terms of Service which by their nature should survive termination (including, without limitation, ownership provisions, disclaimers, and limitations of liability) shall survive termination.</p>
+        </section>
+        
+        <section>
+            <h2>10. Governing Law</h2>
+            
+            <h3>10.1 Governing Law</h3>
+            <p>These Terms of Service shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law principles.</p>
+            
+            <h3>10.2 Dispute Resolution</h3>
+            <p>Any dispute arising out of or relating to these Terms of Service shall first be resolved through good faith negotiation. If such negotiation fails, either party may bring an action in the state or federal courts located in Delaware, United States.</p>
+            
+            <h3>10.3 International Use</h3>
+            <p>The App is intended for global use, but certain features may not be available in some regions. You are responsible for complying with all applicable laws in your jurisdiction.</p>
+        </section>
+        
+        <section>
+            <h2>11. Changes to Terms</h2>
+            <p>We reserve the right to modify or replace these Terms of Service at any time. Material changes will be communicated through in-app notifications or release notes. Your continued use of the App after the effective date of any changes constitutes your acceptance of the modified terms.</p>
+        </section>
+        
+        <section>
+            <h2>12. Severability</h2>
+            <p>If any provision of these Terms of Service is held to be invalid or unenforceable by a court of competent jurisdiction, such provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall continue in full force and effect.</p>
+        </section>
+        
+        <section>
+            <h2>13. Entire Agreement</h2>
+            <p>These Terms of Service constitute the entire agreement between you and us regarding the App and supersede all prior or contemporaneous agreements, communications, and proposals, whether oral or written.</p>
+        </section>
+        
+        <section>
+            <h2>14. Contact Us</h2>
+            <p>If you have any questions or concerns about these Terms of Service, please contact us:</p>
+        </section>
+        
+        <div class="contact-box">
+            <h2>📧 Contact Support</h2>
+            <p>We will respond to your message within 48 hours</p>
+            <a href="mailto:service.bj8791@gmail.com" class="email-link">service.bj8791@gmail.com</a>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-links">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a>
+            <a href="support.html">Support Center</a>
+        </div>
+        <p>&copy; 2026 Image Converter. All rights reserved.</p>
+    </footer>
+    <script>
+        (function() {
+            if (localStorage.getItem('langSuggestDismissed')) return;
+            var navLang = (navigator.language || navigator.userLanguage || '').toLowerCase();
+            var page = window.location.pathname.split('/').pop() || 'terms.html';
+            var map = {
+                'zh': { name: '中文', suffix: '-zh' },
+                'ja': { name: '日本語', suffix: '-ja' },
+                'ko': { name: '한국어', suffix: '-ko' },
+                'de': { name: 'Deutsch', suffix: '-de' }
+            };
+            var matched = null;
+            for (var key in map) {
+                if (navLang.indexOf(key) === 0) { matched = map[key]; break; }
+            }
+            if (matched) {
+                var bar = document.getElementById('langSuggestBar');
+                var text = document.getElementById('langSuggestText');
+                var link = document.getElementById('langSuggestLink');
+                if (bar && text && link) {
+                    text.textContent = 'This page is also available in ' + matched.name + '.';
+                    link.textContent = 'Switch to ' + matched.name;
+                    link.href = page.replace('.html', matched.suffix + '.html');
+                    bar.classList.add('show');
+                }
+            }
+        })();
+        function dismissLangSuggest() {
+            var bar = document.getElementById('langSuggestBar');
+            if (bar) bar.style.display = 'none';
+            localStorage.setItem('langSuggestDismissed', '1');
+        }
+    </script>
+</body>
+</html>
