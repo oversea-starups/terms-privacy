@@ -15,6 +15,14 @@ This repository hosts legal documents for our apps.
 - [Privacy Policy](https://oversea-starups.github.io/terms-privacy/devmanager-pro/privacy.html)
 - [Terms of Service](https://oversea-starups.github.io/terms-privacy/devmanager-pro/terms.html)
 
+### SimplyDraw
+- [Privacy Policy](https://oversea-starups.github.io/terms-privacy/simplydraw/privacy.html)
+- [Terms of Service](https://oversea-starups.github.io/terms-privacy/simplydraw/terms.html)
+
+### Material Bounce
+- [Privacy Policy](https://oversea-starups.github.io/terms-privacy/material-bounce/privacy.html)
+- [Terms of Service](https://oversea-starups.github.io/terms-privacy/material-bounce/terms.html)
+
 ## Structure
 
 ```
@@ -25,6 +33,12 @@ This repository hosts legal documents for our apps.
 │   ├── privacy.html
 │   └── terms.html
 ├── devmanager-pro/
+│   ├── privacy.html
+│   └── terms.html
+├── simplydraw/
+│   ├── privacy.html
+│   └── terms.html
+├── material-bounce/
 │   ├── privacy.html
 │   └── terms.html
 └── [other-apps]/
