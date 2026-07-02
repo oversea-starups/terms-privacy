@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NeonCheer Legal Center | NeonCheer</title>
+  <meta name="description" content="NeonCheer Legal Center for NeonCheer">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">NeonCheer</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>NeonCheer Legal Center</h1>
+          <p class="meta">Last updated: 2026-07-02</p>
+          <p>Review the privacy policy and terms of service for NeonCheer.</p>
+          <ul>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+          <div class="notice">
+            <strong>Contact:</strong> <a href="mailto:support@neoncheer.app">support@neoncheer.app</a>
+          </div>
+          <h2>Draft Assumptions</h2>
+          <ul><li>Contact email is support@neoncheer.app.</li>
+<li>The service is not directed to children under 13 unless project facts say otherwise.</li>
+<li>Account features: No.</li>
+<li>Purchases or subscriptions: Yes.</li>
+<li>Analytics or crash reporting: Yes.</li>
+<li>Advertising or attribution: No.</li>
+<li>Cloud sync or server storage: No.</li>
+<li>AI features: No.</li>
+<li>Third-party services listed: Apple In-App Purchase.</li>
+<li>This page is scoped to the iOS standalone v1.0 release.</li>
+<li>NeonCheer does not provide accounts social features public sharing advertising Android distribution or WeChat mini program payment in this iOS v1.0 policy scope.</li>
+<li>User-entered sign text is stored locally on the device and should not be uploaded in analytics.</li>
+<li>Network access may be used for App Store product loading purchase verification entitlement restore support links and minimal product quality events.</li>
+<li>NeonCheer does not intentionally collect official identity documents precise location contacts photos microphone audio health data financial account data or address book data.</li></ul>
+        </section>
+        <section data-lang="zh">
+          <h1>NeonCheer 法律中心</h1>
+          <p class="meta">最后更新：2026-07-02</p>
+          <p>请查看 NeonCheer 的隐私政策和服务条款。</p>
+          <ul>
+            <li><a href="./privacy.html">隐私政策</a></li>
+            <li><a href="./terms.html">服务条款</a></li>
+          </ul>
+          <div class="notice">
+            <strong>联系邮箱：</strong> <a href="mailto:support@neoncheer.app">support@neoncheer.app</a>
+          </div>
+          <h2>草案假设</h2>
+          <ul><li>联系邮箱为 support@neoncheer.app。</li>
+<li>除非项目事实另有说明，本服务并非面向 13 岁以下儿童。</li>
+<li>账号功能：否。</li>
+<li>购买或订阅：是。</li>
+<li>分析或崩溃报告：是。</li>
+<li>广告或归因：否。</li>
+<li>云同步或服务端存储：否。</li>
+<li>AI 功能：否。</li>
+<li>列出的第三方服务：Apple In-App Purchase。</li>
+<li>本页面范围限定为 iOS 单机版 v1.0。</li>
+<li>在本 iOS v1.0 政策范围内，NeonCheer 不提供账号社交功能公开分享广告 Android 分发或微信小程序支付。</li>
+<li>用户输入的灯牌文字保存在设备本地，不应通过分析事件上传。</li>
+<li>网络访问可能用于加载 App Store 商品购买校验恢复权益支持链接以及最小化产品质量事件。</li>
+<li>NeonCheer 不会有意收集身份证件精确位置通讯录照片麦克风音频健康数据金融账户数据或地址簿数据。</li></ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-02</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
