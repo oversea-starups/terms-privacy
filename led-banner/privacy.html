@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | LED Banner</title>
+  <meta name="description" content="Privacy Policy for LED Banner">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">LED Banner</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For LED Banner. Last updated: 2026-07-14.</p>
+          <p>LED Banner operates LED Banner. This Privacy Policy explains how information is collected, used, disclosed, and protected when you use the app, website, or related services.</p>
+
+          <h2>Information We Collect</h2>
+          <ul><li>Core interaction events using predefined identifiers and categories; banner text and other user-created content are excluded.</li>
+<li>Crash and diagnostic information such as stack traces, app state, device model, operating-system version, installation identifiers, and session metadata.</li>
+<li>Verified StoreKit transaction values used for aggregate purchase measurement.</li>
+<li>Purchase, subscription, or entitlement information processed through app stores or payment providers.</li>
+<li>Banner text and display settings stored only on the user's device.</li></ul>
+          <p>We collect information only as needed to provide, maintain, secure, and improve LED Banner.</p>
+
+          <h2>How We Use Information</h2>
+          <ul>
+            <li>Provide and operate the service.</li>
+            <li>Maintain security, prevent abuse, and troubleshoot issues.</li>
+            <li>Respond to support, privacy, or legal requests.</li>
+            <li>Improve features, performance, and user experience.</li>
+            <li>Process purchases or subscriptions when applicable.</li>
+          </ul>
+
+          <h2>Third-Party Services</h2>
+          <p>LED Banner uses the following third-party services for app distribution, subscriptions, limited analytics, and crash diagnostics. It does not use advertising or cross-app tracking services.</p>
+          <ul><li>Apple App Store and StoreKit</li>
+<li>Firebase Analytics</li>
+<li>Firebase Crashlytics</li></ul>
+
+          <h2>Data Sharing</h2>
+          <p>We do not sell personal information. We may share information with service providers, app stores, legal authorities when required, or as part of a business transfer, only as permitted by applicable law.</p>
+
+          <h2>Data Retention</h2>
+          <p>Locally saved signs remain on the device until the user deletes them or removes the app. Apple controls subscription-record retention. Firebase Analytics and Crashlytics data follow the retention settings and controls provided by the associated Google and Firebase services.</p>
+
+          <h2>Your Choices And Rights</h2>
+          <p>You may request access, correction, deletion, or other privacy assistance by contacting us. Some rights depend on your location and applicable law.</p>
+
+          <h2>Children</h2>
+          <p>LED Banner is not directed to children under 13 unless explicitly stated in the service. If you believe a child provided personal information, contact us so we can take appropriate action.</p>
+
+          <h2>International Users</h2>
+          <p>Your information may be processed in countries other than where you live. We use reasonable safeguards where required by applicable law.</p>
+
+          <h2>Changes</h2>
+          <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new last-updated date.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于 LED Banner。最后更新：2026-07-14。</p>
+          <p>LED Banner 运营 LED Banner。本隐私政策说明你在使用应用、网站或相关服务时，我们如何收集、使用、披露和保护信息。</p>
+
+          <h2>我们收集的信息</h2>
+          <ul><li>使用预定义标识符和分类记录的核心交互事件；不包含弹幕文字或其他用户创建内容。</li>
+<li>崩溃与诊断信息，例如堆栈、应用状态、设备型号、操作系统版本、安装标识符和会话元数据。</li>
+<li>用于汇总购买衡量的已验证 StoreKit 交易值。</li>
+<li>通过应用商店或支付服务商处理的购买、订阅或权益信息。</li>
+<li>分析、诊断、性能和崩溃信息。</li></ul>
+          <p>我们仅在提供、维护、保护和改进 LED Banner 所需范围内收集信息。</p>
+
+          <h2>我们如何使用信息</h2>
+          <ul>
+            <li>提供和运营服务。</li>
+            <li>维护安全、防止滥用并排查问题。</li>
+            <li>回应支持、隐私或法律请求。</li>
+            <li>改进功能、性能和用户体验。</li>
+            <li>在适用时处理购买或订阅。</li>
+          </ul>
+
+          <h2>第三方服务</h2>
+          <p>LED Banner 使用以下第三方服务进行应用分发、订阅、有限的使用分析和崩溃诊断。本应用不使用广告或跨应用跟踪服务。</p>
+          <ul><li>Apple App Store and StoreKit</li>
+<li>Firebase Analytics</li>
+<li>Firebase Crashlytics</li></ul>
+
+          <h2>数据共享</h2>
+          <p>我们不会出售个人信息。我们可能会在适用法律允许的范围内，与服务提供商、应用商店、依法有权的机构共享信息，或在业务转让中共享必要信息。</p>
+
+          <h2>数据保留</h2>
+          <p>本地保存的弹幕会保留在设备上，直到用户删除或卸载应用。订阅记录的保留由 Apple 管理。Firebase Analytics 和 Crashlytics 数据遵循相关 Google 与 Firebase 服务提供的保留设置和控制。</p>
+
+          <h2>你的选择和权利</h2>
+          <p>你可以联系我们请求访问、更正、删除信息或获得其他隐私协助。部分权利取决于你的所在地和适用法律。</p>
+
+          <h2>儿童</h2>
+          <p>除非服务中另有明确说明，LED Banner 并非面向 13 岁以下儿童。如果你认为儿童向我们提供了个人信息，请联系我们以便采取适当措施。</p>
+
+          <h2>国际用户</h2>
+          <p>你的信息可能会在你居住地以外的国家或地区处理。我们会在适用法律要求时采取合理保护措施。</p>
+
+          <h2>变更</h2>
+          <p>我们可能不时更新本隐私政策。更新后的版本会发布在本页面，并标注新的最后更新日期。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-14</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
