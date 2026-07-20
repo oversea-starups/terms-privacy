@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Period Tracker: Cycle &amp; Mood</title>
+  <meta name="description" content="Privacy Policy for Period Tracker: Cycle &amp; Mood">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Period Tracker: Cycle &amp; Mood</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For Period Tracker: Cycle &amp; Mood. Last updated: 2026-07-20.</p>
+          <p>Oversea Startups provides Period Tracker: Cycle &amp; Mood. This Privacy Policy explains how information is handled when you use the app.</p>
+
+          <h2>Information Processed On Your Device</h2>
+          <ul><li>Cycle settings, period dates, daily signals, temperature, optional profile name, and notes are stored in an AES-GCM encrypted vault on your device. The encryption key is stored in the iOS Keychain.</li></ul>
+          <p>Period Tracker: Cycle &amp; Mood does not transmit this information to Oversea Startups. We do not operate an account system or developer backend and do not use analytics, advertising, attribution, or crash-reporting SDKs in version 1.0.</p>
+
+          <h2>How The App Uses Local Information</h2>
+          <ul>
+            <li>Calculate estimated cycle days, phases, period timing, and fertile-window timing.</li>
+            <li>Display your daily journal, calendar, and settings.</li>
+            <li>Create a password-protected encrypted backup, privacy-safe diagnostic summary, or cycle snapshot only when you request one.</li>
+          </ul>
+
+          <h2>Backups And Operating-System Services</h2>
+          <p>The app's encrypted vault is excluded from automatic cloud backup. You may explicitly create a password-protected encrypted backup and choose a destination through the iOS share sheet. Oversea Startups does not receive that backup and cannot recover your password or journal. A destination you choose handles the encrypted file under its own privacy practices.</p>
+
+          <h2>Data Sharing</h2>
+          <p>We do not sell, rent, collect, or share your period journal data because it is not transmitted to us. A user-initiated backup, diagnostic export, or cycle snapshot is controlled by you and the selected destination.</p>
+
+          <h2>Data Retention</h2>
+          <p>Local information remains on your device until you erase local data in the app, uninstall the app, or erase the device. The in-app erase action deletes the local encryption key and journal. Separately exported encrypted backup files remain wherever you saved them until you delete them there.</p>
+
+          <h2>Your Choices And Rights</h2>
+          <p>You can review data in the app, create a password-protected encrypted backup, export a diagnostic summary that excludes health values, or erase local data from the You screen. Because Oversea Startups has no server copy, we cannot retrieve or delete data stored only on your device. Contact us for privacy questions.</p>
+
+          <h2>Children</h2>
+          <p>Period Tracker: Cycle &amp; Mood is intended for adults and is not directed to children under 13. We do not knowingly collect personal information from children.</p>
+
+          <h2>International Users</h2>
+          <p>Oversea Startups does not receive or internationally transfer your local journal data. A destination you choose for an encrypted backup or explicit share may process its copy under its own terms.</p>
+
+          <h2>Changes</h2>
+          <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new last-updated date.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于 Period Tracker: Cycle &amp; Mood。最后更新：2026-07-20。</p>
+          <p>Oversea Startups 提供 Period Tracker: Cycle &amp; Mood。本隐私政策说明你使用应用时，相关信息如何被处理。</p>
+
+          <h2>在设备上处理的信息</h2>
+          <ul><li>周期设置、经期日期、每日信号、体温、可选昵称和备注保存在设备上的 AES-GCM 加密保险库中，加密密钥存放在 iOS 钥匙串。</li></ul>
+          <p>Period Tracker: Cycle &amp; Mood 不会把这些信息传输给 Oversea Startups。1.0 版本没有账号系统或开发者后端，也不使用分析、广告、归因或崩溃报告 SDK。</p>
+
+          <h2>应用如何使用本地信息</h2>
+          <ul>
+            <li>计算预估周期日、阶段、经期时间与易孕窗口。</li>
+            <li>显示你的每日记录、日历和设置。</li>
+            <li>仅在你主动请求时创建密码保护的加密备份、不含健康值的诊断摘要或周期快照。</li>
+          </ul>
+
+          <h2>备份与操作系统服务</h2>
+          <p>应用的加密保险库不会进入自动云备份。你可以主动创建密码保护的加密备份，并通过 iOS 分享面板自行选择保存位置。Oversea Startups 不会收到该备份，也无法恢复你的密码或日记。你选择的目标应用会依据其自身隐私规则处理加密文件。</p>
+
+          <h2>数据共享</h2>
+          <p>由于经期日记数据不会传输给我们，我们不会出售、出租、收集或共享这些数据。用户主动发起的加密备份、诊断导出或周期快照由用户及所选接收方控制。</p>
+
+          <h2>数据保留</h2>
+          <p>本地信息会保留在设备上，直到你在应用内抹掉本地数据、卸载应用或抹掉设备。应用内抹掉操作会删除本地加密密钥和日记。已另行导出的加密备份会保留在你选择的位置，直到你在那里删除。</p>
+
+          <h2>你的选择和权利</h2>
+          <p>你可以在应用内查看数据、创建密码保护的加密备份、导出不含健康值的诊断摘要，或在“你”页面抹掉本地数据。由于 Oversea Startups 没有服务器副本，我们无法读取或删除仅存于你设备上的数据。如有隐私问题，请联系我们。</p>
+
+          <h2>儿童</h2>
+          <p>Period Tracker: Cycle &amp; Mood 面向成年人，不面向 13 岁以下儿童。我们不会故意收集儿童的个人信息。</p>
+
+          <h2>国际用户</h2>
+          <p>Oversea Startups 不会接收或跨境传输你的本地日记数据。你主动选择的加密备份或分享接收方可能依据其自身条款处理相应副本。</p>
+
+          <h2>变更</h2>
+          <p>我们可能不时更新本隐私政策。更新后的版本会发布在本页面，并标注新的最后更新日期。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-20</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
