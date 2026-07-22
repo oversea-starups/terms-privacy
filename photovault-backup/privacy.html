@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | PhotoVault Backup</title>
+  <meta name="description" content="Privacy Policy for PhotoVault Backup">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">PhotoVault Backup</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For PhotoVault Backup. Last updated: 2026-07-22.</p>
+          <p>Beijing baqijiuyi Technology Co., Ltd provides PhotoVault Backup. PhotoVault is a local, read-only Photos export utility. It has no account, advertising, analytics, tracking, developer-operated export server, or in-app purchase in version 1.0.</p>
+
+          <h2>Data We Do Not Collect</h2>
+          <p>We do not collect your photos, videos, Photos-library metadata, original filenames, locations, albums, export manifests, job history, checksums, destination paths, security-scoped bookmarks, or diagnostic packages. The app does not sell personal information or track you across apps or websites.</p>
+
+          <h2>Photos Access</h2>
+          <p>PhotoVault requests Photos read access only to scan and export items available under the permission you grant in iOS. Limited Access limits the app to the items you select. PhotoVault does not delete, edit, hide, or reorganize your Photos library, and version 1.0 does not import an export package back into Photos.</p>
+
+          <h2>Information Stored Locally</h2>
+          <p>Job checkpoints, resource identifiers, error history, settings, and local diagnostic records stay in the app container. Exported media, available filename and date metadata, per-resource manifests, checksums, and reports are written to the folder or drive you select. Exported media may retain metadata embedded by its source. You control and are responsible for protecting the destination.</p>
+
+          <h2>Network And Apple Services</h2>
+          <p>PhotoVault does not upload export content to us. When an original is stored in iCloud Photos rather than locally on the iPhone, Apple Photos and iCloud Photos may use the network to deliver it under your Apple settings and relationship with Apple. Apple also distributes the app through the App Store. The app includes no third-party advertising or analytics SDK.</p>
+
+          <h2>Diagnostics And Support</h2>
+          <p>PhotoVault can create a diagnostic package locally. By default it excludes media, thumbnails, original filenames, raw Photos identifiers, locations, album names, raw destination paths, and security-scoped bookmark data. Creating a package does not send it to us; it leaves the device only if you deliberately share it.</p>
+          <p>If you email support, we receive the address, message, attachments, and other information you choose to provide. We use that correspondence only to respond, troubleshoot, protect the app, and comply with law. We do not sell it and retain it only as reasonably necessary for those purposes and legal obligations. You may request deletion by email where applicable.</p>
+
+          <h2>Retention And Deletion</h2>
+          <p>Local job history and settings remain until you clear supported history, delete the app, or iOS removes app data. Diagnostic and export packages remain where you save them until you delete them. Clearing app history or deleting PhotoVault does not delete packages stored outside the app container.</p>
+
+          <h2>Your Choices And Rights</h2>
+          <p>You can deny or limit Photos access, change it in iOS Settings, choose the destination, pause or cancel a job, clear supported local history, and decide whether to create or share diagnostics. For support information you voluntarily sent, you may request access, correction, or deletion where applicable by contacting us.</p>
+
+          <h2>Security And Integrity Limits</h2>
+          <p>PhotoVault uses iOS sandboxing, system-selected file access, local persistence, and SHA-256 destination rereads to reduce accidental errors. No storage medium or software can be guaranteed permanently secure or error-free. A verification report confirms only the checks stated in that report at completion. Keep your Photos originals and independently test important files.</p>
+
+          <h2>Children And International Use</h2>
+          <p>PhotoVault is a general utility and is not directed to children under 13. Photos processing occurs on your device and selected destination. Support information you voluntarily send may be processed where the developer and the email services you choose operate, subject to applicable law.</p>
+
+          <h2>Changes</h2>
+          <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new last-updated date.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于 PhotoVault Backup。最后更新：2026-07-22。</p>
+          <p>PhotoVault Backup 由 Beijing baqijiuyi Technology Co., Ltd 提供。PhotoVault 是在本地运行、只读访问照片的导出工具。1.0 版本无需账号，不含广告、分析或跟踪，不使用开发者运营的导出服务器，也没有 App 内购买。</p>
+
+          <h2>我们不收集的数据</h2>
+          <p>我们不会收集你的照片、视频、图库元数据、原文件名、位置、相簿、导出清单、任务历史、校验值、目标路径、安全作用域书签或诊断包。App 不会出售个人信息，也不会跨 App 或网站跟踪你。</p>
+
+          <h2>照片权限</h2>
+          <p>PhotoVault 只申请照片读取权限，用于扫描和导出当前 iOS 权限范围内的项目。“有限访问”会把 App 限制为你选择的项目。PhotoVault 不会删除、编辑、隐藏或整理照片图库，1.0 版本也不会把导出包重新导入“照片”。</p>
+
+          <h2>本地保存的信息</h2>
+          <p>任务检查点、资源标识、错误历史、设置和本地诊断记录保留在 App 容器中。导出的媒体、可获得的文件名和日期元数据、逐资源清单、校验值和报告会写入你选择的文件夹或硬盘。导出媒体可能保留来源嵌入的元数据。目标位置由你控制，并由你负责保护。</p>
+
+          <h2>网络和 Apple 服务</h2>
+          <p>PhotoVault 不会把导出内容上传给我们。原件位于 iCloud Photos 而非 iPhone 本地时，Apple 的“照片”和 iCloud Photos 可能会根据你的 Apple 设置及你与 Apple 的关系联网提供原件。Apple 也通过 App Store 分发本 App。App 不含第三方广告或分析 SDK。</p>
+
+          <h2>诊断与支持</h2>
+          <p>PhotoVault 可以在本地创建诊断包。默认诊断不包含媒体、缩略图、原文件名、原始 Photos 标识、位置、相簿名、原始目标路径或安全作用域书签数据。创建诊断包不会自动发送给我们；只有当你主动分享时，它才会离开设备。</p>
+          <p>如果你发送支持邮件，我们会收到你主动提供的邮箱地址、正文、附件及其他信息。我们只将支持通信用于回复、排障、保护 App 和履行法律义务；不会出售这些信息，并仅在上述目的和法律义务合理需要的期限内保留。在适用法律允许时，你可以通过邮件请求删除。</p>
+
+          <h2>保留与删除</h2>
+          <p>本地任务历史和设置会保留到你清除 App 支持的历史、删除 App，或 iOS 移除 App 数据。诊断包和导出包会保留在你保存的位置，直到你删除。清除 App 历史或删除 PhotoVault 不会删除位于 App 容器外的导出包。</p>
+
+          <h2>你的选择和权利</h2>
+          <p>你可以拒绝或限制照片权限、在 iOS“设置”中修改权限、选择目标位置、暂停或取消任务、清除支持的本地历史，并决定是否创建或分享诊断。对于你主动发送的支持信息，你可以在适用情况下联系我们请求访问、更正或删除。</p>
+
+          <h2>安全和完整性限制</h2>
+          <p>PhotoVault 使用 iOS 沙盒、系统选择的文件访问、本地持久化和 SHA-256 目标重读来减少意外错误。任何存储介质或软件都无法保证永久安全或永不出错。校验报告只确认完成时报告中说明的检查。请保留图库原件，并独立测试重要文件。</p>
+
+          <h2>儿童与国际使用</h2>
+          <p>PhotoVault 是通用工具，不以 13 岁以下儿童为目标。照片处理发生在你的设备和所选目标位置。你主动发送的支持信息可能会在开发者及你选择的邮件服务运营地按适用法律处理。</p>
+
+          <h2>变更</h2>
+          <p>我们可能不时更新本隐私政策。更新后的版本会发布在本页面，并标注新的最后更新日期。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-22</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>

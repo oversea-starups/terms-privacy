@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Support | PhotoVault Backup</title>
+  <meta name="description" content="PhotoVault Backup support, troubleshooting, privacy policy, and terms of service">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">PhotoVault Backup</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>PhotoVault Backup Support</h1>
+          <p class="meta">Last updated: 2026-07-22</p>
+          <p>PhotoVault is a read-only export tool. It never deletes or edits your Photos originals.</p>
+          <div class="notice">
+            <strong>Support:</strong> <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>
+          </div>
+          <h2>Quick Checks</h2>
+          <ol>
+            <li>Confirm Photos access is Full, or that the needed items are included in Limited Access.</li>
+            <li>If an original is in iCloud, connect to an allowed network and keep PhotoVault open.</li>
+            <li>Reconnect the same destination and use the system folder picker again if iOS asks.</li>
+            <li>Confirm the destination is writable and has enough capacity plus the displayed reserve.</li>
+            <li>Open the issue list, resolve the indicated condition, and retry eligible resources.</li>
+          </ol>
+
+          <h2>What “Verified” Means</h2>
+          <p>For each verified resource, PhotoVault reread the destination file and matched its byte count and SHA-256 to the bytes Photos delivered during that export. This confirms the file at that moment; it does not guarantee future drive health or recreate every Photos-only feature.</p>
+
+          <h2>Common Issues</h2>
+          <ul>
+            <li><strong>Waiting for iCloud:</strong> confirm network access, keep the iPhone powered, and retry. PhotoVault does not substitute a lower-quality preview for an unavailable original.</li>
+            <li><strong>Destination disconnected:</strong> reconnect the drive, cable, hub, and power; confirm the location appears in Files; then locate the same package.</li>
+            <li><strong>Not enough space or read-only:</strong> free capacity or select a writable compatible destination. Previously verified files remain recorded.</li>
+            <li><strong>Checksum mismatch:</strong> do not rely on that resource as verified. Retry it and, if the mismatch repeats, try another cable or drive while keeping the Photos original.</li>
+            <li><strong>App closed or suspended:</strong> reopen the unfinished job, reconnect the same destination, and resume. The interrupted resource restarts from its file boundary.</li>
+            <li><strong>Live Photo incomplete:</strong> retry the failed still-image or paired-video component.</li>
+          </ul>
+
+          <h2>Diagnostics</h2>
+          <p>Open PhotoVault → Settings → Diagnostics. The default package excludes personal media, filenames, Photos identifiers, locations, album names, raw destination paths, and security-scoped bookmarks. It is never sent automatically; share it only if you choose.</p>
+
+          <h2>Legal</h2>
+          <ul>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+        </section>
+        <section data-lang="zh">
+          <h1>PhotoVault Backup 支持</h1>
+          <p class="meta">最后更新：2026-07-22</p>
+          <p>PhotoVault 是只读导出工具，绝不删除或编辑照片图库中的原件。</p>
+          <div class="notice">
+            <strong>支持邮箱：</strong> <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>
+          </div>
+          <h2>快速检查</h2>
+          <ol>
+            <li>确认照片权限为“完全访问”，或所需项目已包含在“有限访问”范围中。</li>
+            <li>若原件位于 iCloud，请连接允许使用的网络，并保持 PhotoVault 在前台。</li>
+            <li>重新连接同一目标位置；若 iOS 要求，再次使用系统文件夹选择器定位。</li>
+            <li>确认目标位置可写，并有足够容量和界面显示的预留空间。</li>
+            <li>打开问题列表，解决提示条件后重试符合条件的资源。</li>
+          </ol>
+
+          <h2>“已校验”的含义</h2>
+          <p>对于每个已校验资源，PhotoVault 会重新读取目标文件，并确认字节数和 SHA-256 与本次导出中“照片”提供的字节一致。这只确认当时的文件，不保证硬盘未来健康，也不保证重建“照片”独有的全部特性。</p>
+
+          <h2>常见问题</h2>
+          <ul>
+            <li><strong>等待 iCloud：</strong>确认网络访问，保持 iPhone 供电并重试。PhotoVault 不会用低质量预览替代不可用原件。</li>
+            <li><strong>目标位置断开：</strong>重新连接硬盘、线缆、集线器和电源，在“文件”中确认目标可见，然后定位同一导出包。</li>
+            <li><strong>空间不足或目标只读：</strong>释放容量，或选择可写的兼容目标位置。先前已校验的文件仍会保留记录。</li>
+            <li><strong>校验值不一致：</strong>不要把该资源视为已校验。请重试；若再次发生，请尝试其他线缆或硬盘，并保留图库原件。</li>
+            <li><strong>App 被关闭或挂起：</strong>重新打开未完成任务，连接同一目标位置并继续。中断资源会从文件边界重新开始。</li>
+            <li><strong>实况照片不完整：</strong>重试失败的静态图片或配对视频组成部分。</li>
+          </ul>
+
+          <h2>诊断</h2>
+          <p>进入 PhotoVault → 设置 → 诊断。默认诊断包不包含个人媒体、文件名、Photos 标识、位置、相簿名、原始目标路径或安全作用域书签。它不会自动发送；只有在你选择时才会分享。</p>
+
+          <h2>法律文件</h2>
+          <ul>
+            <li><a href="./privacy.html">隐私政策</a></li>
+            <li><a href="./terms.html">服务条款</a></li>
+          </ul>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-22</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
