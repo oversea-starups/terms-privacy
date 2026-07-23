@@ -122,6 +122,15 @@
       padding: 24px 0;
       background: var(--panel);
     }
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px 24px;
+    }
+    .footer-links {
+      margin: 0;
+    }
   </style>
 </head>
 <body data-current-lang="en">
@@ -143,7 +152,7 @@
       <article class="document">
         <section data-lang="en">
           <h1>PhotoVault Backup Support</h1>
-          <p class="meta">Last updated: 2026-07-22</p>
+          <p class="meta">Last updated: 2026-07-24</p>
           <p>PhotoVault is a read-only export tool. It never deletes or edits your Photos originals.</p>
           <div class="notice">
             <strong>Support:</strong> <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>
@@ -181,7 +190,7 @@
         </section>
         <section data-lang="zh">
           <h1>PhotoVault Backup 支持</h1>
-          <p class="meta">最后更新：2026-07-22</p>
+          <p class="meta">最后更新：2026-07-24</p>
           <p>PhotoVault 是只读导出工具，绝不删除或编辑照片图库中的原件。</p>
           <div class="notice">
             <strong>支持邮箱：</strong> <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>
@@ -221,7 +230,22 @@
     </div>
   </main>
   <footer>
-    <div class="wrap">Last updated: 2026-07-22</div>
+    <div class="wrap footer-content">
+      <span data-lang="en">Last updated: 2026-07-24</span>
+      <span data-lang="zh">最后更新：2026-07-24</span>
+      <p class="footer-links" data-lang="en">
+        Other guides from our team:
+        <a href="https://growgarden2guide.com/">Grow a Garden 2 Guide</a>
+        ·
+        <a href="https://mygiantsandwichguide.com/">My Giant Sandwich Guide</a>
+      </p>
+      <p class="footer-links" data-lang="zh">
+        团队其他攻略站：
+        <a href="https://growgarden2guide.com/">Grow a Garden 2 攻略</a>
+        ·
+        <a href="https://mygiantsandwichguide.com/">My Giant Sandwich 攻略</a>
+      </p>
+    </div>
   </footer>
   <script>
     (function () {
