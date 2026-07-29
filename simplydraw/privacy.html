@@ -1,234 +1,294 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隐私政策 - SimplyDraw</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.6; color: #1d1d1f; background: #f5f5f7; padding: 20px;
-        }
-        .container {
-            max-width: 800px; margin: 0 auto; background: white;
-            padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        h1 { font-size: 32px; font-weight: 700; color: #1d1d1f; margin-bottom: 10px; }
-        .effective-date { color: #86868b; font-size: 14px; margin-bottom: 30px; }
-        h2 { font-size: 24px; font-weight: 600; color: #1d1d1f; margin-top: 40px; margin-bottom: 16px; }
-        h3 { font-size: 18px; margin-top: 20px; margin-bottom: 12px; color: #1d1d1f; }
-        p { margin-bottom: 16px; color: #424245; }
-        ul { margin-left: 20px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; color: #424245; }
-        .highlight {
-            background: #f5f5f7; padding: 16px; border-radius: 8px; margin: 20px 0;
-        }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        table { width: 100%; border-collapse: collapse; margin: 16px 0; }
-        th, td { text-align: left; padding: 12px; border-bottom: 1px solid #e5e5e7; }
-        th { font-weight: 600; color: #1d1d1f; }
-        td { color: #424245; }
-        @media (max-width: 600px) {
-            .container { padding: 20px; }
-            h1 { font-size: 28px; }
-            h2 { font-size: 20px; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Learn to Draw on Paper</title>
+  <meta name="description" content="Privacy Policy for Learn to Draw on Paper">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>SimplyDraw 隐私政策</h1>
-        <p class="effective-date">生效日期：2026年6月12日</p>
-
-        <h2>1. 概述</h2>
-        <p>SimplyDraw（"我们"、"我们的"或"本应用"）是一款专为儿童设计的绘画学习应用程序。我们深知保护儿童隐私的重要性，并致力于遵守所有适用的儿童隐私保护法律法规，包括美国的《儿童在线隐私保护法》(COPPA) 和中国的《儿童个人信息网络保护规定》。</p>
-
-        <div class="highlight">
-            <strong>核心隐私保护原则：</strong>
-            <ul>
-                <li>未经可验证的家长同意，我们不会有意收集13岁以下儿童的个人信息</li>
-                <li>我们不会出售儿童的个人信息</li>
-                <li>我们不会投放针对儿童的第三方广告</li>
-                <li>数据收集仅限于应用程序教育功能所需的范围</li>
-                <li>家长可以随时查看、修改或删除其孩子的数据</li>
-            </ul>
-        </div>
-
-        <h2>2. 信息收集</h2>
-
-        <h3>2.1 账户信息</h3>
-        <p>当您注册账户时，我们会收集：</p>
-        <ul>
-            <li>邮箱地址（用于登录和通知）</li>
-            <li>认证提供商信息（如通过第三方认证登录）</li>
-        </ul>
-
-        <h3>2.2 档案信息</h3>
-        <p>为提供个性化学习体验，我们会收集：</p>
-        <ul>
-            <li>显示名称</li>
-            <li>头像</li>
-            <li>绘画兴趣偏好</li>
-            <li>技能水平</li>
-        </ul>
-
-        <h3>2.3 学习数据</h3>
-        <p>为支持学习进度跟踪和个性化指导，我们会收集：</p>
-        <ul>
-            <li>学习进度和成就</li>
-            <li>绘画作品和练习记录</li>
-            <li>练习时间和频率</li>
-            <li>学习路径完成情况</li>
-        </ul>
-
-        <h3>2.4 设备信息</h3>
-        <p>为确保应用程序正常运行，我们会收集：</p>
-        <ul>
-            <li>设备型号</li>
-            <li>操作系统版本</li>
-            <li>应用程序版本</li>
-        </ul>
-
-        <h3>2.5 使用数据</h3>
-        <p>仅在获得家长同意的情况下，我们会收集匿名使用数据以改进应用：</p>
-        <ul>
-            <li>功能使用模式</li>
-            <li>应用性能指标</li>
-            <li>学习效果分析</li>
-        </ul>
-        <p><strong>此类数据为匿名数据，不能用于识别个人身份。</strong></p>
-
-        <h2>3. 儿童隐私保护 (COPPA)</h2>
-        <div class="highlight">
-            <strong>我们的COPPA合规承诺：</strong>
-            <ul>
-                <li><strong>可验证的家长同意：</strong>在13岁以下儿童创建账户之前，我们会通过家长门控（数学验证）获得可验证的家长同意</li>
-                <li><strong>有限的数据收集：</strong>我们仅收集应用程序教育功能所必需的个人信息</li>
-                <li><strong>不出售数据：</strong>我们不会出售儿童的个人信息</li>
-                <li><strong>禁止定向广告：</strong>我们不会启用针对儿童的第三方定向广告</li>
-                <li><strong>家长权利：</strong>家长可以随时查看、审查、删除其孩子的个人信息</li>
-                <li><strong>安全保障：</strong>我们采取合理的安全措施保护儿童的个人信息</li>
-            </ul>
-        </div>
-
-        <h2>4. 信息使用</h2>
-        <table>
-            <thead>
-                <tr><th>数据类型</th><th>使用目的</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>账户信息</td><td>身份验证和账户管理</td></tr>
-                <tr><td>档案信息</td><td>个性化学习体验和内容推荐</td></tr>
-                <tr><td>学习数据</td><td>学习进度跟踪和AI反馈</td></tr>
-                <tr><td>绘画作品</td><td>存储作品、提供AI绘画反馈</td></tr>
-                <tr><td>设备信息</td><td>确保应用程序兼容性和性能</td></tr>
-                <tr><td>使用数据</td><td>改进应用功能和用户体验（需家长同意）</td></tr>
-            </tbody>
-        </table>
-
-        <h3>4.1 AI绘画反馈</h3>
-        <p>我们使用AI技术提供绘画反馈和指导。儿童的绘画作品可能会被发送到我们的服务器进行处理，但我们不会将这些作品用于AI模型训练或其他商业目的。</p>
-
-        <h3>4.2 个性化内容推荐</h3>
-        <p>基于孩子的技能水平、兴趣偏好和学习进度，我们会推荐适合的绘画课程和学习路径。家长可以在设置中关闭个性化推荐功能。</p>
-
-        <h2>5. 信息共享</h2>
-        <div class="highlight">
-            <strong>我们的数据共享承诺：</strong>
-            <ul>
-                <li><strong>不出售：</strong>我们不会向第三方出售用户的个人信息</li>
-                <li><strong>有限共享：</strong>我们仅在应用程序运营必要的范围内与第三方服务提供商共享数据</li>
-                <li><strong>法律要求：</strong>在法律要求或保护我们权利的情况下，我们可能会披露用户数据</li>
-            </ul>
-        </div>
-
-        <h3>5.1 第三方服务提供商</h3>
-        <p>我们可能会与以下服务提供商共享必要的数据：</p>
-        <ul>
-            <li><strong>云存储服务：</strong>用于安全存储用户作品和学习数据</li>
-            <li><strong>支付处理：</strong>用于处理订阅和购买</li>
-            <li><strong>认证服务：</strong>用于用户身份验证</li>
-            <li><strong>分析服务：</strong>仅在获得家长同意的情况下使用匿名分析</li>
-        </ul>
-
-        <h2>6. 数据存储与安全</h2>
-        <p>我们采取多层安全措施保护用户数据：</p>
-        <ul>
-            <li><strong>加密存储：</strong>所有数据在存储时都经过加密处理</li>
-            <li><strong>安全传输：</strong>数据传输使用HTTPS/TLS加密协议</li>
-            <li><strong>访问控制：</strong>严格的数据访问权限管理</li>
-            <li><strong>安全审查：</strong>定期进行安全审计和漏洞扫描</li>
-            <li><strong>数据备份：</strong>定期备份以确保数据安全和恢复能力</li>
-        </ul>
-
-        <h2>7. 家长权利</h2>
-        <p>作为孩子的监护人，您拥有以下权利：</p>
-        <ul>
-            <li><strong>查看权：</strong>查看我们收集的您孩子的所有个人信息</li>
-            <li><strong>修改权：</strong>要求更新或修改不准确的信息</li>
-            <li><strong>删除权：</strong>要求删除您孩子的账户和所有相关数据</li>
-            <li><strong>拒绝权：</strong>拒绝进一步的数据收集或使用</li>
-            <li><strong>导出权：</strong>获取您孩子数据的副本</li>
-        </ul>
-
-        <div class="highlight">
-            <strong>如何行使家长权利：</strong>
-            <ul>
-                <li><strong>删除账户：</strong>在应用中前往 设置 > 删除账户</li>
-                <li><strong>其他请求：</strong>发送邮件至 <a href="mailto:privacy@simplydraw.app">privacy@simplydraw.app</a></li>
-                <li><strong>响应时间：</strong>我们将在收到请求后24小时内回复（工作日）</li>
-            </ul>
-        </div>
-
-        <h2>8. 数据保留</h2>
-        <table>
-            <thead>
-                <tr><th>数据类型</th><th>保留期限</th></tr>
-            </thead>
-            <tbody>
-                <tr><td>账户信息</td><td>账户激活期间保留</td></tr>
-                <tr><td>学习数据</td><td>账户激活期间保留</td></tr>
-                <tr><td>绘画作品</td><td>账户激活期间保留</td></tr>
-                <tr><td>使用数据（匿名）</td><td>用于产品改进，长期保留</td></tr>
-                <tr><td>删除数据</td><td>账户删除请求后30天内删除</td></tr>
-            </tbody>
-        </table>
-
-        <h2>9. Cookie与追踪</h2>
-        <div class="highlight">
-            <strong>我们的儿童友好承诺：</strong>
-            <ul>
-                <li><strong>无行为广告：</strong>我们不使用行为定位广告</li>
-                <li><strong>无第三方追踪：</strong>在未获得家长同意的情况下，我们不使用第三方分析服务</li>
-                <li><strong>无跨应用追踪：</strong>我们不会跨应用程序追踪儿童</li>
-                <li><strong>ATT合规：</strong>在iOS设备上，我们遵守App Tracking Transparency规则</li>
-            </ul>
-        </div>
-
-        <h2>10. 政策更新</h2>
-        <p>我们可能会不时更新本隐私政策。重大变更时，我们将通过以下方式通知您：</p>
-        <ul>
-            <li>在应用程序内发布通知</li>
-            <li>发送邮件通知</li>
-            <li>更新本页面的"生效日期"</li>
-        </ul>
-
-        <h2>11. 国际数据传输</h2>
-        <p>您的数据可能会被传输到您所在国家/地区之外的服务器进行处理。无论数据位于何处，我们都将采取适当的安全措施保护您的数据，并遵守适用的数据保护法律法规。</p>
-
-        <h2>12. 联系我们</h2>
-        <p>如有任何隐私相关问题或疑虑，请通过以下方式联系我们：</p>
-        <ul>
-            <li><strong>邮箱：</strong> <a href="mailto:privacy@simplydraw.app">privacy@simplydraw.app</a></li>
-            <li><strong>客服：</strong> <a href="mailto:support@simplydraw.app">support@simplydraw.app</a></li>
-            <li><strong>响应时间：</strong>24小时内回复（工作日）</li>
-        </ul>
-
-        <div class="highlight" style="margin-top: 40px;">
-            <p><strong>总结：</strong> SimplyDraw致力于保护儿童隐私。我们在获得家长同意后仅收集必要的数据，提供安全有趣的绘画学习环境，绝不出售儿童数据，不投放针对儿童的广告，并赋予家长对其孩子数据的完全控制权。</p>
-        </div>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Learn to Draw on Paper</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
     </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For Learn to Draw on Paper. Last updated: 2026-07-29.</p>
+          <p>Beijing baqijiuyi Technology Co., Ltd operates Learn to Draw on Paper. This Privacy Policy explains how information is collected, used, disclosed, and protected when you use the app, website, or related services.</p>
+
+          <h2>Information We Collect</h2>
+          <ul>
+            <li><strong>Local guest data:</strong> learner profiles, preferences, lesson progress, and saved paper-artwork photos remain in app-managed storage on the device. Local guest data is not uploaded or synced to our server.</li>
+            <li><strong>Signed-in account data:</strong> an Apple-linked user identifier; name and email when Apple supplies them; learner profiles and preferences; lesson progress and product interaction.</li>
+            <li><strong>User content:</strong> paper-artwork photos and related content that a signed-in user chooses to upload.</li>
+            <li><strong>Purchases:</strong> purchase history and subscription entitlement state received from Apple. We do not receive or store payment-card details.</li>
+            <li><strong>Optional practice feedback:</strong> inputs and results requested by an entitled user. Our backend performs deterministic pixel, edge, contour, and contrast comparison. It does not use an external AI provider and does not generate or complete artwork.</li>
+            <li><strong>Support and operations:</strong> information you include in a support request and limited technical information needed to secure and operate the service.</li>
+          </ul>
+          <p>We collect information only as needed to provide, maintain, secure, and improve Learn to Draw on Paper.</p>
+
+          <h2>Camera And Photo Library</h2>
+          <p>Camera access is requested only when you choose to photograph a paper artwork. Photo-library access is requested only when you choose an existing image. Simply opening the app does not grant access or upload a photo.</p>
+
+          <h2>How We Use Information</h2>
+          <ul>
+            <li>Provide and operate the service.</li>
+            <li>Maintain security, prevent abuse, and troubleshoot issues.</li>
+            <li>Respond to support, privacy, or legal requests.</li>
+            <li>Improve features, performance, and user experience.</li>
+            <li>Process purchases or subscriptions when applicable.</li>
+          </ul>
+
+          <h2>Third-Party Services</h2>
+          <p>Learn to Draw on Paper uses Apple for Sign in with Apple, App Store distribution, and StoreKit purchases. Service infrastructure providers may process data only to host the API, database, and private signed-account storage. Version 1.0 has no advertising, attribution, external analytics, or crash-reporting SDK.</p>
+          <ul>
+            <li>Apple: Sign in with Apple, App Store distribution, StoreKit purchases, subscription management, and refund mechanisms.</li>
+            <li>Vercel: API hosting and service delivery.</li>
+            <li>Neon: PostgreSQL database hosting for signed-account data.</li>
+            <li>Cloudflare R2: private object storage for artwork uploaded by signed-in users.</li>
+          </ul>
+
+          <h2>Data Sharing</h2>
+          <p>We do not sell personal information. We may share information with service providers, app stores, legal authorities when required, or as part of a business transfer, only as permitted by applicable law.</p>
+
+          <h2>Data Retention</h2>
+          <p>Local guest data remains on the device until you delete an item, clear local data, or remove the app in a way that deletes its data. Signed-account data is retained while needed to provide the service and then deleted, de-identified, or retained only where required for security, disputes, refunds, tax, or other legal obligations. We do not promise a fixed deletion period that the production system cannot verify.</p>
+
+          <h2>Your Choices And Rights</h2>
+          <p>You may request access, correction, deletion, or other privacy assistance by contacting us. Local guests can clear app-managed profiles, progress, and artwork in the app. Signed-in users can request account deletion in Profile &gt; Settings; deletion does not cancel an Apple subscription. Some rights depend on your location and applicable law.</p>
+
+          <h2>Children</h2>
+          <p>Learn to Draw on Paper is a general-audience drawing-learning service and is not designated Made for Kids. Its presentation may be welcoming to younger beginners, but it does not provide an independent parental-consent workflow. A minor should use the service with a parent or guardian when required by applicable law. If you believe a child provided personal information without appropriate authorization, contact us so we can take appropriate action.</p>
+
+          <h2>International Users</h2>
+          <p>Your information may be processed in countries other than where you live. We use reasonable safeguards where required by applicable law.</p>
+
+          <h2>Changes</h2>
+          <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new last-updated date.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <h2>Tracking, Analytics And Advertising</h2>
+          <p>Version 1.0 does not use advertising, cross-app tracking, an external analytics SDK, or a crash-reporting SDK. We do not sell personal information.</p>
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于“零基础学画画：纸上分步教程”。最后更新：2026-07-29。</p>
+          <p>Beijing baqijiuyi Technology Co., Ltd 运营“零基础学画画：纸上分步教程”。本隐私政策说明你在使用应用、网站或相关服务时，我们如何收集、使用、披露和保护信息。</p>
+
+          <h2>我们收集的信息</h2>
+          <ul>
+            <li><strong>本地访客数据：</strong>学习者档案、偏好、课程进度和保存的纸上作品照片仅保存在设备上的 App 管理存储中，不会上传或同步到我们的服务器。</li>
+            <li><strong>登录账号数据：</strong>Apple 关联的用户标识符；Apple 提供时的姓名和邮箱；学习者档案与偏好；课程进度和产品交互。</li>
+            <li><strong>用户内容：</strong>登录用户主动选择上传的纸上作品照片及相关内容。</li>
+            <li><strong>购买信息：</strong>从 Apple 接收的购买历史和订阅权益状态。我们不接收或存储支付卡信息。</li>
+            <li><strong>可选练习建议：</strong>已获得权益的用户主动请求时处理输入和结果。后端执行确定性的像素、边缘、轮廓和对比度比较，不使用外部 AI 服务，也不会生成或补全作品。</li>
+            <li><strong>支持和运营：</strong>你在支持请求中提供的信息，以及保护和运行服务所需的有限技术信息。</li>
+          </ul>
+          <p>我们仅在提供、维护、保护和改进“零基础学画画：纸上分步教程”所需范围内收集信息。</p>
+
+          <h2>相机与照片图库</h2>
+          <p>只有当你选择拍摄纸上作品时，App 才请求相机权限；只有当你选择现有图片时，App 才请求照片图库权限。仅打开 App 不会授予访问权限，也不会上传照片。</p>
+
+          <h2>我们如何使用信息</h2>
+          <ul>
+            <li>提供和运营服务。</li>
+            <li>维护安全、防止滥用并排查问题。</li>
+            <li>回应支持、隐私或法律请求。</li>
+            <li>改进功能、性能和用户体验。</li>
+            <li>在适用时处理购买或订阅。</li>
+          </ul>
+
+          <h2>第三方服务</h2>
+          <p>“零基础学画画：纸上分步教程”使用 Apple 提供登录、App Store 分发和 StoreKit 购买。服务基础设施提供商仅可在托管 API、数据库和保存登录账号的私有数据所需范围内处理信息。版本 1.0 未启用广告、归因、外部分析或崩溃报告 SDK。</p>
+          <ul>
+            <li>Apple：Apple 登录、App Store 分发、StoreKit 购买、订阅管理和退款机制。</li>
+            <li>Vercel：API 托管和服务交付。</li>
+            <li>Neon：保存登录账号数据的 PostgreSQL 数据库托管。</li>
+            <li>Cloudflare R2：保存登录用户主动上传作品的私有对象存储。</li>
+          </ul>
+
+          <h2>数据共享</h2>
+          <p>我们不会出售个人信息。我们可能会在适用法律允许的范围内，与服务提供商、应用商店、依法有权的机构共享信息，或在业务转让中共享必要信息。</p>
+
+          <h2>数据保留</h2>
+          <p>本地访客数据会保留在设备上，直到你删除某项内容、清除本地数据，或以删除 App 数据的方式移除 App。登录账号数据仅在提供服务所需期间保留，之后会被删除、去标识化，或仅因安全、争议、退款、税务及其他法律义务而保留。我们不会承诺生产系统尚无法验证的固定删除期限。</p>
+
+          <h2>你的选择和权利</h2>
+          <p>你可以联系我们请求访问、更正、删除信息或获得其他隐私协助。本地访客可以在 App 内清除由 App 管理的档案、进度和作品；登录用户可以在“个人资料 &gt; 设置”中请求删除账号。删除 App 账号不会取消 Apple 订阅。部分权利取决于你的所在地和适用法律。</p>
+
+          <h2>儿童</h2>
+          <p>“零基础学画画：纸上分步教程”是面向一般用户的绘画学习服务，未指定为儿童专用。界面可能对低龄初学者友好，但本服务没有独立的家长同意流程。适用法律要求时，未成年人应在父母或监护人陪同下使用。如果你认为儿童在未获得适当授权的情况下提供了个人信息，请联系我们以便采取适当措施。</p>
+
+          <h2>国际用户</h2>
+          <p>你的信息可能会在你居住地以外的国家或地区处理。我们会在适用法律要求时采取合理保护措施。</p>
+
+          <h2>变更</h2>
+          <p>我们可能不时更新本隐私政策。更新后的版本会发布在本页面，并标注新的最后更新日期。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <h2>跟踪、分析与广告</h2>
+          <p>版本 1.0 不使用广告、跨 App 跟踪、外部分析 SDK 或崩溃报告 SDK。我们不会出售个人信息。</p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-29</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
 </body>
 </html>
