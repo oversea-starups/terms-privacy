@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow Sort Lab: Cargo Puzzle Support</title>
+  <meta name="description" content="Support, privacy policy, and terms for Flow Sort Lab: Cargo Puzzle">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Flow Sort Lab: Cargo Puzzle</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Flow Sort Lab: Cargo Puzzle Support</h1>
+          <p class="meta">Last updated: 2026-07-30</p>
+          <p>Get help with the single-player cargo-routing puzzle for iPhone.</p>
+          <h2>Quick help</h2>
+          <ul>
+            <li>Core levels work offline and do not require an account or purchase.</li>
+            <li>Game progress, settings, Gem balances, and purchase-delivery records are stored locally on the device.</li>
+            <li>If a purchase is interrupted, reopen the Shop while online so StoreKit can recover unfinished transactions.</li>
+            <li>Apple controls payment, localized pricing, refunds, and purchase approval.</li>
+          </ul>
+          <h2>Privacy and terms</h2>
+          <ul>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+            <li><a href="./terms.html">Terms of Service</a></li>
+          </ul>
+          <h2>Contact</h2>
+          <div class="notice">
+            Email <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>. Include the app version, iOS version, and a short description of the issue. Do not send payment-card details or Apple Account passwords.
+          </div>
+        </section>
+        <section data-lang="zh">
+          <h1>Flow Sort Lab: Cargo Puzzle 支持</h1>
+          <p class="meta">最后更新：2026-07-30</p>
+          <p>获取这款 iPhone 单人货运路线解谜游戏的使用帮助。</p>
+          <h2>快速帮助</h2>
+          <ul>
+            <li>核心关卡可离线游玩，不要求账户或购买。</li>
+            <li>游戏进度、设置、宝石余额和购买发放记录存储在设备本地。</li>
+            <li>若购买被中断，请联网后重新进入商店，让 StoreKit 恢复未完成的交易。</li>
+            <li>付款、本地化价格、退款和购买批准由 Apple 管理。</li>
+          </ul>
+          <h2>隐私与条款</h2>
+          <ul>
+            <li><a href="./privacy.html">隐私政策</a></li>
+            <li><a href="./terms.html">服务条款</a></li>
+          </ul>
+          <h2>联系</h2>
+          <div class="notice">
+            邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a>。请附上 App 版本、iOS 版本和问题简述；请勿发送银行卡信息或 Apple 账户密码。
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-07-30</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
