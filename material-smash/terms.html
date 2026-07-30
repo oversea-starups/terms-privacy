@@ -1,79 +1,266 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Material Smash</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1d1d1f; background: #f5f5f7; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1 { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
-        .effective-date { color: #86868b; font-size: 14px; margin-bottom: 30px; }
-        h2 { font-size: 24px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; }
-        p { margin-bottom: 16px; color: #424245; }
-        ul { margin-left: 20px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; color: #424245; }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        @media (max-width: 600px) { .container { padding: 20px; } h1 { font-size: 28px; } h2 { font-size: 20px; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Material Smash</title>
+  <meta name="description" content="Terms of Service for Material Smash">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Material Smash Terms of Service</h1>
-        <p class="effective-date">Effective Date: June 22, 2026</p>
-
-        <h2>1. Acceptance of Terms</h2>
-        <p>By downloading, installing, or using Material Smash ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.</p>
-
-        <h2>2. License to Use</h2>
-        <p>We grant you a personal, non-exclusive, non-transferable, limited license to use the App on an iOS device that you own or control, in accordance with these Terms and the App Store Terms of Service.</p>
-
-        <h2>3. In-App Purchases</h2>
-        <p>The App offers an optional one-time purchase ("Remove Ads") for $1.99 USD (or equivalent in your local currency):</p>
-        <ul>
-            <li>The purchase removes all advertisements permanently</li>
-            <li>The purchase is tied to your Apple ID and can be restored on new devices</li>
-            <li>All purchases are processed by Apple and are subject to Apple's <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">App Store Terms of Service</a></li>
-            <li>Refunds are handled by Apple according to their refund policy</li>
-        </ul>
-
-        <h2>4. Virtual Currency</h2>
-        <p>The App features an in-game virtual currency called "Shards" earned through gameplay. Shards have no monetary value, cannot be purchased with real money, and cannot be transferred or exchanged. Shards are used solely to enhance the gameplay experience (e.g., purchasing extra cuts).</p>
-
-        <h2>5. Game Center</h2>
-        <p>The App integrates with Apple's Game Center. Your use of Game Center is governed by Apple's Game Center terms and conditions. You are responsible for your interactions with other Game Center users.</p>
-
-        <h2>6. User Conduct</h2>
-        <p>You agree not to:</p>
-        <ul>
-            <li>Attempt to reverse engineer, decompile, or disassemble the App</li>
-            <li>Use cheats, automation software, bots, or any other method to manipulate scores or game mechanics</li>
-            <li>Exploit any bugs or glitches for unfair advantage</li>
-            <li>Interfere with the proper functioning of Game Center leaderboards</li>
-        </ul>
-
-        <h2>7. Disclaimer of Warranties</h2>
-        <p>The App is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied. We do not guarantee that the App will be uninterrupted, error-free, or free of harmful components.</p>
-
-        <h2>8. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by law, we shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of data, loss of profits, or device malfunction, arising out of or in connection with your use of the App.</p>
-
-        <h2>9. Privacy</h2>
-        <p>Your use of the App is also governed by our <a href="privacy.html">Privacy Policy</a>, which describes how we handle information.</p>
-
-        <h2>10. Updates to the App</h2>
-        <p>We may release updates to the App from time to time. You are not required to install updates, but some features may become unavailable if you do not.</p>
-
-        <h2>11. Changes to These Terms</h2>
-        <p>We may update these Terms from time to time. Continued use of the App after changes constitutes acceptance of the new Terms.</p>
-
-        <h2>12. Governing Law</h2>
-        <p>These Terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.</p>
-
-        <h2>13. Contact</h2>
-        <p>If you have questions about these Terms, please contact us at: <a href="mailto:support@materialsmash.app">support@materialsmash.app</a></p>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Material Smash</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html" aria-current="page">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
     </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Terms of Service</h1>
+          <p class="meta">For Material Smash. Last updated: 2026-07-23.</p>
+          <p>These Terms of Service govern your use of Material Smash, provided by the developer of Material Smash. By using the app, you agree to these terms.</p>
+          <div class="notice">
+            <strong>Version scope:</strong> Product-feature statements on this page apply to Material Smash Version 1.2 (build 4). Version 1.1 may remain available while Version 1.2 is reviewed and rolled out; its earlier product disclosures continue to apply to that installed version during the transition.
+          </div>
+
+          <h2>License And Use</h2>
+          <p>You receive a limited, non-exclusive, non-transferable license to install and use Material Smash for lawful entertainment and to create, edit, publish, and reasonably monetize original gameplay recordings that you make with the app, in accordance with these terms, applicable laws, Apple’s rules, and the Apple Media Services Terms and Conditions. This permission is limited to recordings of normal gameplay and does not transfer ownership of the app, its source code, or standalone assets.</p>
+
+          <h2>Accounts And Paid Features</h2>
+          <p>Version 1.2 (build 4) has no account, advertising, in-app purchase, subscription, or paid feature. Gameplay progress is stored locally on your device. The earlier Version 1.1 disclosures described Game Center and a Remove Ads purchase; those disclosures continue to apply only to users running Version 1.1 during the App Store transition.</p>
+
+          <h2>Gameplay Data</h2>
+          <p>You are responsible for maintaining your device and backups. Deleting the app, resetting the device, or losing a device may remove locally stored progress. The developer does not operate a cloud recovery service. An update from Version 1.1 may retain the legacy local <code>hasPurchasedRemoveAds</code> compatibility field; Version 1.2 does not use it to enable ads or paid features and does not transmit it to the developer.</p>
+
+          <h2>Creator Challenge Recording</h2>
+          <p>If you choose to record gameplay with Apple ReplayKit, you control whether to save, share, or discard the recording through Apple’s system preview. You retain your rights in your original creative contribution and may publish or reasonably monetize recordings of normal Material Smash gameplay under the license above. You are responsible for complying with applicable law, the destination platform’s rules, and any third-party rights. You may not imply endorsement by the developer or redistribute extracted app assets, source code, or a playable copy of the app. The recording is not uploaded to the developer.</p>
+
+          <h2>Acceptable Use</h2>
+          <ul>
+            <li>Do not misuse, disrupt, attack, or attempt unauthorized access to the app or related legal website.</li>
+            <li>Do not copy, modify, distribute, sell, or exploit the app except for gameplay recordings expressly permitted above or as otherwise permitted by law.</li>
+            <li>Do not use gameplay recordings to violate another person’s rights or a sharing platform’s rules.</li>
+          </ul>
+
+          <h2>Intellectual Property</h2>
+          <p>Material Smash, its software, visual design, sounds, text, and other app content are owned by or licensed to the developer and are protected by applicable intellectual-property laws. These terms do not transfer ownership to you.</p>
+
+          <h2>Service Changes</h2>
+          <p>The developer may update, modify, suspend, or discontinue the app or individual features. Updates may change gameplay, compatibility, or availability.</p>
+
+          <h2>Disclaimers</h2>
+          <p>The service is provided on an "as is" and "as available" basis. To the maximum extent permitted by law, we disclaim warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+          <h2>Limitation Of Liability</h2>
+          <p>To the maximum extent permitted by law, the developer will not be liable for indirect, incidental, special, consequential, or punitive damages, or loss of data, profits, or revenue arising from use of the app. Nothing in these terms excludes rights or liabilities that cannot legally be excluded.</p>
+
+          <h2>Ending Use</h2>
+          <p>You may stop using and delete the app at any time. The license granted by these terms ends if you materially violate them.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+        </section>
+        <section data-lang="zh">
+          <h1>服务条款</h1>
+          <p class="meta">适用于 Material Smash。最后更新：2026-07-23。</p>
+          <p>本服务条款适用于你使用由 Material Smash 开发者提供的 Material Smash。使用本应用即表示你同意本条款。</p>
+          <div class="notice">
+            <strong>版本范围：</strong>本页面的产品功能说明适用于 Material Smash 1.2 版本（构建 4）。在 1.2 版本审核和分阶段发布期间，1.1 版本可能仍然可用；过渡期间，旧版产品披露继续适用于用户实际安装的 1.1 版本。
+          </div>
+
+          <h2>许可与使用</h2>
+          <p>在遵守本条款、适用法律、Apple 规则及 Apple 媒体服务条款与条件的前提下，你获得一项有限、非独占且不可转让的许可，可以安装并使用 Material Smash 进行合法娱乐，也可以创作、编辑、发布并合理商业化你使用本应用制作的原创游戏录屏。该许可仅适用于正常游戏画面的录制，不会向你转让应用、源代码或独立素材的所有权。</p>
+
+          <h2>账号和付费功能</h2>
+          <p>1.2 版本（构建 4）不提供账号、广告、App 内购买、订阅或付费功能。游戏进度仅存储在你的设备上。此前的 1.1 版本披露说明了 Game Center 和“移除广告”购买；在 App Store 版本过渡期间，这些旧版披露仅继续适用于实际运行 1.1 版本的用户。</p>
+
+          <h2>游戏数据</h2>
+          <p>你有责任维护设备和备份。删除应用、重置设备或设备丢失可能导致本地进度被移除。开发者不提供云端恢复服务。从 1.1 版本升级时，本地存档可能保留旧版兼容字段 <code>hasPurchasedRemoveAds</code>；1.2 版本不会用它启用广告或付费功能，也不会把它发送给开发者。</p>
+
+          <h2>创作者挑战录制</h2>
+          <p>如果你选择使用 Apple ReplayKit 录制游戏画面，可以通过 Apple 系统预览决定保存、分享或丢弃录像。你保留对原创创作部分的权利，并可依据上述许可发布或合理商业化正常的 Material Smash 游戏录屏。你有责任遵守适用法律、目标平台规则及任何第三方权利。你不得暗示开发者为内容背书，也不得重新分发从应用中提取的独立素材、源代码或可运行的应用副本。录像不会上传给开发者。</p>
+
+          <h2>可接受使用</h2>
+          <ul>
+            <li>不得滥用、干扰、攻击应用或相关法律网站，也不得尝试未经授权的访问。</li>
+            <li>除上述明确允许的游戏录屏或法律另有允许的情形外，不得复制、修改、分发、销售或利用本应用。</li>
+            <li>不得使用游戏录像侵犯他人权利或违反分享平台规则。</li>
+          </ul>
+
+          <h2>知识产权</h2>
+          <p>Material Smash 的软件、视觉设计、声音、文字和其他应用内容由开发者拥有或获得许可，并受适用的知识产权法律保护。本条款不会向你转让所有权。</p>
+
+          <h2>服务变更</h2>
+          <p>开发者可能更新、修改、暂停或终止应用或个别功能。更新可能改变玩法、兼容性或可用性。</p>
+
+          <h2>免责声明</h2>
+          <p>服务按“现状”和“可用”基础提供。在法律允许的最大范围内，我们不作适销性、特定用途适用性和不侵权等保证。</p>
+
+          <h2>责任限制</h2>
+          <p>在法律允许的最大范围内，开发者不对因使用本应用导致的间接、附带、特殊、后果性或惩罚性损害，以及数据、利润或收入损失承担责任。本条款不排除依法不得排除的权利或责任。</p>
+
+          <h2>停止使用</h2>
+          <p>你可以随时停止使用并删除本应用。如果你严重违反本条款，本条款授予的许可将终止。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span data-lang="en">Last updated: 2026-07-23</span>
+      <span data-lang="zh">最后更新：2026-07-23</span>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        document.title = lang === "zh" ? "服务条款 | Material Smash" : "Terms of Service | Material Smash";
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
 </body>
 </html>

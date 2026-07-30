@@ -1,107 +1,254 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Material Smash</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #1d1d1f; background: #f5f5f7; padding: 20px; }
-        .container { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-        h1 { font-size: 32px; font-weight: 700; margin-bottom: 10px; }
-        .effective-date { color: #86868b; font-size: 14px; margin-bottom: 30px; }
-        h2 { font-size: 24px; font-weight: 600; margin-top: 40px; margin-bottom: 16px; }
-        p { margin-bottom: 16px; color: #424245; }
-        ul { margin-left: 20px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; color: #424245; }
-        .highlight { background: #f5f5f7; padding: 16px; border-radius: 8px; margin: 20px 0; }
-        a { color: #0071e3; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        @media (max-width: 600px) { .container { padding: 20px; } h1 { font-size: 28px; } h2 { font-size: 20px; } }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Material Smash</title>
+  <meta name="description" content="Privacy Policy for Material Smash">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
 </head>
-<body>
-    <div class="container">
-        <h1>Material Smash Privacy Policy</h1>
-        <p class="effective-date">Effective Date: June 22, 2026</p>
-
-        <h2>1. Overview</h2>
-        <p>Material Smash ("we", "our", or "this app") is a haptic-first ASMR destruction game developed natively for iOS. We respect your privacy and are committed to protecting it. This Privacy Policy explains what information we collect, how we use it, and the choices you have.</p>
-
-        <div class="highlight">
-            <strong>Key Principle:</strong> Material Smash does <strong>NOT</strong> collect, store, or transmit any personal data. All game progress is stored locally on your device.
-        </div>
-
-        <h2>2. Information We Do NOT Collect</h2>
-        <p>We want to be clear about what we don't do:</p>
-        <ul>
-            <li>We do <strong>not</strong> collect your name, email, phone number, or any personal identifier</li>
-            <li>We do <strong>not</strong> require an account or login</li>
-            <li>We do <strong>not</strong> track your location</li>
-            <li>We do <strong>not</strong> use analytics SDKs</li>
-            <li>We do <strong>not</strong> sell or share any data with third parties</li>
-            <li>We do <strong>not</strong> access your photos, contacts, microphone, or camera</li>
-        </ul>
-
-        <h2>3. Data Stored Locally on Your Device</h2>
-        <p>The following data is stored only on your device using iOS's built-in UserDefaults system. It is never sent to any server:</p>
-        <ul>
-            <li><strong>Game Progress:</strong> Best score, total objects smashed, highest level reached, level stars</li>
-            <li><strong>Shards Currency:</strong> Shards earned and spent in-game</li>
-            <li><strong>Material Collection:</strong> Which materials you have discovered</li>
-            <li><strong>Purchase Status:</strong> Whether you have purchased "Remove Ads"</li>
-            <li><strong>Settings:</strong> Sound, haptic intensity, and gameplay preferences</li>
-        </ul>
-        <p>This data is automatically deleted when you uninstall the app.</p>
-
-        <h2>4. Apple Game Center</h2>
-        <p>Material Smash integrates with Apple's Game Center for leaderboards. When you submit a score:</p>
-        <ul>
-            <li>The score is sent directly to Apple's servers via GameKit framework</li>
-            <li>Apple handles all authentication and data processing under <a href="https://www.apple.com/legal/privacy/en-ww/">Apple's Privacy Policy</a></li>
-            <li>We do not receive or store any Game Center data</li>
-            <li>You can disable Game Center in your device Settings at any time</li>
-        </ul>
-
-        <h2>5. In-App Purchases</h2>
-        <p>Material Smash offers a one-time "Remove Ads" purchase ($1.99 USD) processed by Apple's StoreKit framework:</p>
-        <ul>
-            <li>All payment processing is handled by Apple under their <a href="https://www.apple.com/legal/privacy/en-ww/">Privacy Policy</a></li>
-            <li>We only receive a notification that the purchase was successful</li>
-            <li>Your purchase status is stored locally and synced via your Apple ID</li>
-        </ul>
-
-        <h2>6. Advertising</h2>
-        <p>Material Smash may display advertisements, including banner ads, interstitial ads, and rewarded video ads. When an advertising SDK (such as Google AdMob) is integrated:</p>
-        <ul>
-            <li>You will be shown an App Tracking Transparency (ATT) prompt before any personalized ads are served</li>
-            <li>If you decline tracking, you will still see ads, but they will not be personalized</li>
-            <li>You can remove all ads permanently by purchasing "Remove Ads"</li>
-            <li>The advertising SDK may collect device identifiers and usage data as described in their privacy policy</li>
-        </ul>
-
-        <h2>7. Haptic Feedback & Audio</h2>
-        <p>The app generates haptic feedback using Apple's Core Haptics framework and audio using AVAudioEngine. All sounds are synthesized at runtime with no audio files downloaded. These features:</p>
-        <ul>
-            <li>Operate entirely on-device</li>
-            <li>Do not collect or transmit any data</li>
-            <li>Can be disabled in the app's Settings screen</li>
-        </ul>
-
-        <h2>8. Children's Privacy</h2>
-        <p>Material Smash is suitable for all ages and does not knowingly collect any personal information from anyone, including children under 13. No account creation is required. If we add any features in the future that involve data collection, we will update this policy and obtain appropriate consent.</p>
-
-        <h2>9. Your Rights</h2>
-        <p>Since we do not collect any personal data, there is no data to access, correct, or delete on our servers. To erase all locally stored data, simply uninstall the app.</p>
-
-        <h2>10. Third-Party Links</h2>
-        <p>This app may link to Apple's Game Center and App Store. These services have their own privacy policies that you should review.</p>
-
-        <h2>11. Changes to This Policy</h2>
-        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date.</p>
-
-        <h2>12. Contact Us</h2>
-        <p>If you have any questions about this Privacy Policy, please contact us at: <a href="mailto:support@materialsmash.app">support@materialsmash.app</a></p>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Material Smash</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
     </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For Material Smash. Last updated: 2026-07-23.</p>
+          <p>Material Smash Version 1.2 (build 4) is an offline iPhone game. The developer does not collect, store, or transmit personal data through this version of the app.</p>
+          <div class="notice">
+            <strong>Version scope:</strong> The Version 1.2 statements on this page apply specifically to build 4. Version 1.1 may remain available during the App Store review and rollout period; the transition section below preserves the relevant earlier-version disclosures.
+          </div>
+
+          <h2>Data We Do Not Collect</h2>
+          <ul>
+            <li>No account, login, contact information, identifiers, location, contacts, photos, camera, or microphone data.</li>
+            <li>No analytics, crash-reporting, advertising, or attribution data.</li>
+            <li>No gameplay uploads or cloud storage. Version 1.2 offers no in-app purchase or subscription, and the developer receives no payment information.</li>
+          </ul>
+
+          <h2>Data Stored On Your Device</h2>
+          <p>Material Smash saves gameplay progress, stage records, scores, in-game shards, discovered materials, tutorial state, and audio or haptic settings in Apple UserDefaults on your device. If you update from Version 1.1, the same local save may retain a legacy compatibility field named <code>hasPurchasedRemoveAds</code>, which records only whether Remove Ads was previously purchased. Version 1.2 does not use that field to show ads or offer paid features, and it is not sent to the developer. This local data is used only to restore or preserve your game. You can remove it by deleting the app; any device backups are controlled by Apple and your device settings.</p>
+
+          <h2>Optional Screen Recording</h2>
+          <p>The Creator Challenge can open Apple ReplayKit only after you choose Record Take. The microphone is disabled. Apple’s system preview lets you save, share, or discard the recording. The developer does not receive or upload the recording.</p>
+
+          <h2>Apple Services</h2>
+          <p>The app is distributed through the Apple App Store and can use Apple ReplayKit at your request. Those Apple services are governed by Apple’s terms and privacy policy. Version 1.2 (build 4) does not initialize or enable Game Center, in-app purchases, advertising, analytics, or third-party SDKs.</p>
+
+          <h2>Version 1.1 Transition</h2>
+          <p>The legal disclosures previously published for Version 1.1 described Game Center, a Remove Ads purchase, and possible advertising. Those earlier disclosures continue to describe Version 1.1 for users who still have that version installed during the App Store transition. They do not describe Version 1.2 (build 4), where those flows are not enabled or presented. You can check the installed app version in Material Smash Settings.</p>
+
+          <h2>This Legal Website</h2>
+          <p>This website stores only your English or Chinese language preference in browser local storage. It uses no analytics, advertising, or tracking cookies.</p>
+
+          <h2>Children</h2>
+          <p>Material Smash is not directed to children under 13, and the app does not collect personal data. If you have a privacy concern involving a child, contact us.</p>
+
+          <h2>Changes</h2>
+          <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new last-updated date.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于 Material Smash。最后更新：2026-07-23。</p>
+          <p>Material Smash 1.2 版本（构建 4）是一款可离线运行的 iPhone 游戏。开发者不会通过此版本的应用收集、存储或传输个人数据。</p>
+          <div class="notice">
+            <strong>版本范围：</strong>本页面关于 1.2 版本的说明仅适用于构建 4。在 App Store 审核和分阶段发布期间，1.1 版本可能仍然可用；下方的版本过渡章节保留了与旧版本有关的披露。
+          </div>
+
+          <h2>我们不收集的数据</h2>
+          <ul>
+            <li>不收集账号、登录信息、联系方式、设备标识、位置、通讯录、照片、相机或麦克风数据。</li>
+            <li>不收集分析、崩溃报告、广告或归因数据。</li>
+            <li>不上传游戏数据，也不使用云存储。1.2 版本不提供 App 内购买或订阅，开发者也不会收到支付信息。</li>
+          </ul>
+
+          <h2>存储在设备上的数据</h2>
+          <p>Material Smash 使用 Apple UserDefaults 在你的设备上保存游戏进度、关卡记录、分数、游戏内碎片、已发现材质、教学状态，以及声音和触感设置。如果你从 1.1 版本升级，同一份本地存档可能保留名为 <code>hasPurchasedRemoveAds</code> 的旧版兼容字段；它只记录你此前是否购买过“移除广告”。1.2 版本不会用该字段展示广告或提供付费功能，也不会把它发送给开发者。这些本地数据仅用于恢复或兼容你的游戏。你可以通过删除应用移除这些数据；设备备份由 Apple 和你的设备设置控制。</p>
+
+          <h2>可选的屏幕录制</h2>
+          <p>只有当你在创作者挑战中主动选择“录制本局”时，应用才会打开 Apple ReplayKit。麦克风保持关闭。你可以在 Apple 系统预览中保存、分享或丢弃录像；开发者不会接收或上传录像。</p>
+
+          <h2>Apple 服务</h2>
+          <p>本应用通过 Apple App Store 分发，并可在你主动请求时使用 Apple ReplayKit。相关 Apple 服务受 Apple 的条款和隐私政策约束。1.2 版本（构建 4）不会初始化或启用 Game Center、App 内购买、广告、分析或第三方 SDK。</p>
+
+          <h2>1.1 版本过渡</h2>
+          <p>此前为 1.1 版本发布的法律披露说明了 Game Center、“移除广告”购买以及可能的广告配置。在 App Store 版本过渡期间，仍安装并使用 1.1 版本的用户继续适用这些旧版披露。它们不描述 1.2 版本（构建 4）；后者不会启用或展示上述流程。你可以在 Material Smash 的“设置”中查看当前安装版本。</p>
+
+          <h2>本法律网站</h2>
+          <p>本网站仅在浏览器本地存储中保存你的中英文语言偏好，不使用分析、广告或跟踪 Cookie。</p>
+
+          <h2>儿童</h2>
+          <p>Material Smash 并非面向 13 岁以下儿童，且应用不会收集个人数据。如你对涉及儿童的隐私问题有疑虑，请联系我们。</p>
+
+          <h2>变更</h2>
+          <p>我们可能不时更新本隐私政策。更新后的版本会发布在本页面，并标注新的最后更新日期。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">
+      <span data-lang="en">Last updated: 2026-07-23</span>
+      <span data-lang="zh">最后更新：2026-07-23</span>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        document.title = lang === "zh" ? "隐私政策 | Material Smash" : "Privacy Policy | Material Smash";
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
 </body>
 </html>
