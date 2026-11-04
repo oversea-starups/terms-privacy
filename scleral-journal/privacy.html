@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy | Scleral Journal</title>
+  <meta name="description" content="Privacy Policy for Scleral Journal — a local-only journal for specialty lens wearers.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Scleral Journal</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html" aria-current="page">Privacy</a>
+        <a href="./terms.html">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Privacy Policy</h1>
+          <p class="meta">For Scleral Journal. Last updated: 2026-11-04.</p>
+          <div class="notice">
+            <p><strong>Short version:</strong> Scleral Journal works entirely on your device. We do not collect, transmit, receive, or see any of your journal data. There is no account, no server, no analytics, no advertising, and no third-party SDK.</p>
+          </div>
+          <p>Jerry (independent developer, "we") operates Scleral Journal, a personal record-keeping tool for people wearing specialty contact lenses such as scleral lenses. This policy explains what happens to information in connection with the app. It is deliberately specific, because the app's privacy model is simple.</p>
+
+          <h2>What the app stores, and where</h2>
+          <p>Information you enter — lens versions, wear records, events such as fogging or removal, notes, questions for your visit, and an optional appointment time — is stored only on your device, in the app's private storage:</p>
+          <ul>
+            <li>No account, sign-up, or login is required or offered.</li>
+            <li>The journal files are excluded from device backups and are protected while your device is locked.</li>
+            <li>There is no cloud sync and no server copy. We never receive a copy of your journal.</li>
+          </ul>
+
+          <h2>What we do not do</h2>
+          <ul>
+            <li>No analytics, crash reporting, advertising, attribution, or tracking SDKs.</li>
+            <li>No third-party services receive your data from the app.</li>
+            <li>No AI features process your entries.</li>
+            <li>We do not sell or share personal information, because we do not receive any.</li>
+          </ul>
+
+          <h2>Notifications (optional)</h2>
+          <p>If you enable an appointment reminder or the optional daily record reminder, the app asks iOS for notification permission and schedules notifications locally on your device. Reminder content is generated on-device and nothing related to your entries is sent to us. You can disable reminders in the app or in iOS Settings at any time.</p>
+
+          <h2>Exports you choose to make</h2>
+          <p>If you export or share a report (PDF, TXT, or CSV), the app hands those files to the iOS share sheet or another destination you choose. Shared copies are outside the app's and our control and may contain personal health information; please choose recipients and storage carefully. Temporary export files are kept in the app's cache, are protected and excluded from backup, and are automatically cleaned up after 24 hours or when you clear the app's data.</p>
+
+          <h2>Deleting your data</h2>
+          <p>You can delete individual records, or clear all journal data in Settings at any time; clearing also removes scheduled reminders and temporary exports. Deleting the app removes its local files. Because there is no cloud copy, deletion — or losing your device — is permanent. If you want to keep your history, export an archive first.</p>
+
+          <h2>Not a medical device</h2>
+          <p>Scleral Journal records your own observations and your existing plans. It does not diagnose, treat, or recommend anything, and it is not a medical device. Always consult your eye care professional about your lenses or symptoms.</p>
+
+          <h2>Children</h2>
+          <p>The app is not directed to children under 13, and we do not knowingly collect information from children — the app has no way to receive it in the first place.</p>
+
+          <h2>Changes to this policy</h2>
+          <p>We may update this policy to reflect app changes. Updates will be posted on this page with a new last-updated date, and any change to the app's data handling will be reflected here before an app version that changes it is released.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <div class="notice">
+            <p>This page is a product document prepared by the developer. It is not legal advice and has not been reviewed by a lawyer. The description above reflects how the app is built as of the last-updated date.</p>
+          </div>
+        </section>
+        <section data-lang="zh">
+          <h1>隐私政策</h1>
+          <p class="meta">适用于 Scleral Journal。最后更新：2026-11-04。</p>
+          <div class="notice">
+            <p><strong>简要版本：</strong>Scleral Journal 完全在你的设备上运行。我们不收集、不传输、不接收、也看不到你的任何日志数据。没有账号、没有服务器、没有分析统计、没有广告，也没有任何第三方 SDK。</p>
+          </div>
+          <p>Jerry（独立开发者，下称"我们"）运营 Scleral Journal，一款面向巩膜镜等专科隐形眼镜佩戴者的个人记录工具。本政策说明与应用相关的信息如何处理。由于应用的隐私模型非常简单，本政策可以写得很具体。</p>
+
+          <h2>应用保存什么、保存在哪里</h2>
+          <p>你输入的信息——镜片版本、佩戴记录、起雾或摘镜等事件、备注、复诊问题清单以及可选的复诊时间——只保存在你设备的本应用私有存储中：</p>
+          <ul>
+            <li>不要求也不提供账号、注册或登录。</li>
+            <li>日志文件不纳入设备备份，并在设备锁定时受文件保护。</li>
+            <li>没有云同步，没有服务器副本。我们永远不会收到你的日志副本。</li>
+          </ul>
+
+          <h2>我们不做什么</h2>
+          <ul>
+            <li>不使用分析统计、崩溃报告、广告、归因或追踪 SDK。</li>
+            <li>任何第三方服务都不会从本应用收到你的数据。</li>
+            <li>没有 AI 功能处理你的记录。</li>
+            <li>我们不买卖或共享个人信息，因为我们根本不接收任何信息。</li>
+          </ul>
+
+          <h2>通知（可选）</h2>
+          <p>如果你开启复诊提醒或可选的每日记录提醒，应用会向 iOS 请求通知权限，并在你的设备上本地安排通知。提醒内容由设备生成，与你记录内容相关的任何信息都不会发送给我们。你可以随时在应用内或 iOS 设置中关闭提醒。</p>
+
+          <h2>你主动进行的导出</h2>
+          <p>当你导出或分享报告（PDF、TXT 或 CSV）时，应用把这些文件交给 iOS 分享面板或你选择的其他目标位置。已分享的副本不在本应用和我们的控制范围内，可能包含个人健康信息，请谨慎选择接收人和保存位置。临时导出文件保存在应用缓存中，受保护、不纳入备份，并在 24 小时后或你清空数据时自动清理。</p>
+
+          <h2>删除你的数据</h2>
+          <p>你可以随时删除单条记录，或在设置中清空全部日志数据；清空会同时移除已安排的提醒和临时导出文件。删除应用会移除其本地文件。由于没有云端副本，删除（或设备丢失）是永久性的。如果你想保留历史，请先导出存档。</p>
+
+          <h2>不是医疗器械</h2>
+          <p>Scleral Journal 只记录你自己的观察和已有安排。它不诊断、不治疗、不推荐任何内容，也不是医疗器械。关于镜片或症状的问题，请始终咨询你的眼视光专业人员。</p>
+
+          <h2>儿童</h2>
+          <p>本应用并非面向 13 岁以下儿童；我们也不会有意收集儿童信息——应用本身根本没有接收信息的通道。</p>
+
+          <h2>政策变更</h2>
+          <p>我们可能随应用更新而更新本政策。更新后的版本会发布在本页面并标注新的最后更新日期；对数据处理方式的任何变更，都会在包含该变更的应用版本发布前反映在本页面。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <div class="notice">
+            <p>本页面是开发者准备的产品文档，不构成法律意见，也未经律师审阅。以上描述反映截至最后更新日期的应用实现方式。</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-11-04</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>

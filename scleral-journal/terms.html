@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Terms of Service | Scleral Journal</title>
+  <meta name="description" content="Supplemental terms of use for Scleral Journal — a local-only journal for specialty lens wearers.">
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f7f7f4;
+      --text: #202124;
+      --muted: #626760;
+      --line: #d9ddd2;
+      --panel: #ffffff;
+      --accent: #0f766e;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    header {
+      border-bottom: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .wrap {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 0;
+    }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover { text-decoration: underline; }
+    .brand {
+      color: var(--text);
+      font-weight: 750;
+    }
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      background: var(--panel);
+    }
+    .lang-switch button {
+      border: 0;
+      border-right: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      font: inherit;
+      padding: 7px 11px;
+    }
+    .lang-switch button:last-child { border-right: 0; }
+    .lang-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    main {
+      padding: 44px 0 64px;
+    }
+    .document {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: clamp(22px, 4vw, 44px);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 34px 0 10px;
+      font-size: 1.28rem;
+      line-height: 1.25;
+      letter-spacing: 0;
+    }
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 1.05rem;
+      letter-spacing: 0;
+    }
+    p { margin: 0 0 14px; }
+    ul { margin: 0 0 18px 1.2rem; padding: 0; }
+    li { margin: 6px 0; }
+    .meta {
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .notice {
+      border-left: 4px solid var(--accent);
+      background: #eef7f4;
+      padding: 14px 16px;
+      margin: 22px 0;
+    }
+    [data-lang] { display: none; }
+    [data-current-lang="en"] [data-lang="en"],
+    [data-current-lang="zh"] [data-lang="zh"] { display: block; }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      padding: 24px 0;
+      background: var(--panel);
+    }
+  </style>
+</head>
+<body data-current-lang="en">
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="./">Scleral Journal</a>
+      <nav aria-label="Primary">
+        <a href="./privacy.html">Privacy</a>
+        <a href="./terms.html" aria-current="page">Terms</a>
+        <span class="lang-switch" aria-label="Language">
+          <button type="button" data-set-lang="en" aria-pressed="true">English</button>
+          <button type="button" data-set-lang="zh" aria-pressed="false">中文</button>
+        </span>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <div class="wrap">
+      <article class="document">
+        <section data-lang="en">
+          <h1>Terms of Use</h1>
+          <p class="meta">For Scleral Journal. Last updated: 2026-11-04.</p>
+          <div class="notice">
+            <p><strong>In short:</strong> Scleral Journal is a personal record-keeping tool. It is not medical software, does not give advice, and stores your data only on your device. Apple's standard Licensed Application End User License Agreement (EULA) governs your use of the app; these supplemental terms apply where they add to, and do not conflict with, the EULA.</p>
+          </div>
+          <p>Jerry (independent developer, "we") operates Scleral Journal. By using the app, you agree to these supplemental terms. The app is currently offered free of charge.</p>
+
+          <h2>Relationship to Apple's EULA</h2>
+          <p>Scleral Journal is licensed to you through the App Store under Apple's standard Licensed Application End User License Agreement. These supplemental terms cover points the standard EULA does not specifically address for this app and do not replace or override it.</p>
+
+          <h2>Purpose of the app</h2>
+          <p>Scleral Journal helps you keep a personal record of your specialty contact lens wear: lens versions you name yourself, wear intervals, events such as fogging or removal, notes, questions for your eye care visit, and shareable summaries.</p>
+          <ul>
+            <li>The app records facts you enter. It does not diagnose, treat, prevent, or recommend anything, and it does not assess lens fit.</li>
+            <li>Statistics shown or exported (such as elapsed intervals or event counts) are factual descriptions of your entries. They are not advice about wearing time, lens use, or care products.</li>
+            <li>Nothing in the app is a medical device function. Always make lens and health decisions with your eye care professional.</li>
+          </ul>
+
+          <h2>Your data and your responsibility</h2>
+          <p>Your entries are stored only on your device. There is no cloud copy and we cannot recover your data for you. You are responsible for:</p>
+          <ul>
+            <li>making your own archives (for example by exporting reports) if you want copies;</li>
+            <li>choosing recipients and storage carefully when sharing exports, which may contain personal health information;</li>
+            <li>understanding that deleting records, clearing data, deleting the app, or losing your device permanently removes the local data.</li>
+          </ul>
+
+          <h2>Acceptable use</h2>
+          <p>You may use the app for lawful personal purposes. You may not misuse the app or its outputs to misrepresent medical facts, and you may not redistribute the app itself outside the App Store.</p>
+
+          <h2>Availability and changes</h2>
+          <p>The app is provided "as is" and "as available" without warranties of any kind, except as required by law. We may add, change, or discontinue free features. If a future version introduces paid features, they will be offered under terms presented at that time, and these supplemental terms will be updated before that version is released.</p>
+
+          <h2>Limitation of liability</h2>
+          <p>To the maximum extent permitted by applicable law, we are not liable for indirect, incidental, special, consequential, or punitive damages, or for data loss, lost savings, or lost opportunities arising from your use of, or inability to use, the app. Nothing in these terms limits liability that cannot be limited by law.</p>
+
+          <h2>Trademarks</h2>
+          <p>Apple, the Apple logo, iPhone, and App Store are trademarks of Apple Inc., registered in the U.S. and other countries. Other names are trademarks of their respective owners.</p>
+
+          <h2>Contact</h2>
+          <p>Email: <a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <div class="notice">
+            <p>This page is a product document prepared by the developer. It is not legal advice and has not been reviewed by a lawyer. If you need binding terms for a particular use, have them reviewed by qualified counsel.</p>
+          </div>
+        </section>
+        <section data-lang="zh">
+          <h1>使用条款</h1>
+          <p class="meta">适用于 Scleral Journal。最后更新：2026-11-04。</p>
+          <div class="notice">
+            <p><strong>简要版本：</strong>Scleral Journal 是个人记录工具。它不是医疗软件，不提供建议，且只把你的数据保存在你的设备上。Apple 的标准《Licensed Application End User License Agreement》（标准 EULA）管辖你对应用的使用；在不与标准 EULA 冲突的范围内，本补充条款适用。</p>
+          </div>
+          <p>Jerry（独立开发者，下称"我们"）运营 Scleral Journal。你使用本应用即表示同意本补充条款。本应用目前免费提供。</p>
+
+          <h2>与 Apple 标准 EULA 的关系</h2>
+          <p>Scleral Journal 通过 App Store 依据 Apple 的标准《Licensed Application End User License Agreement》授权给你使用。本补充条款仅覆盖标准 EULA 未针对本应用具体说明的事项，不取代、不优先于标准 EULA。</p>
+
+          <h2>应用用途</h2>
+          <p>Scleral Journal 帮助你记录专科隐形眼镜的个人使用情况：你自行命名的镜片版本、佩戴时段、起雾或摘镜等事件、备注、复诊问题清单，以及可分享的摘要。</p>
+          <ul>
+            <li>应用只记录你输入的事实。它不诊断、不治疗、不预防、不推荐任何内容，也不评估镜片适配。</li>
+            <li>应用展示或导出的统计（如经过时长、事件计数）是对你记录内容的事实性描述，不构成关于佩戴时长、镜片使用或护理产品的建议。</li>
+            <li>应用不具备任何医疗器械功能。镜片与健康决策请始终与你的眼视光专业人员共同做出。</li>
+          </ul>
+
+          <h2>你的数据与你的责任</h2>
+          <p>你的记录只保存在你的设备上。没有云端副本，我们也无法为你找回数据。你需要负责：</p>
+          <ul>
+            <li>如需保留副本，自行进行存档（例如导出报告）；</li>
+            <li>分享导出文件时谨慎选择接收人与保存位置——导出内容可能包含个人健康信息；</li>
+            <li>理解删除记录、清空数据、删除应用或设备丢失都会永久移除本地数据。</li>
+          </ul>
+
+          <h2>正当使用</h2>
+          <p>你可以出于合法的个人目的使用本应用。不得滥用应用或其输出去歪曲医疗事实，也不得在 App Store 之外再分发应用本体。</p>
+
+          <h2>可用性与变更</h2>
+          <p>本应用按"现状"和"现有功能"提供，除法律强制要求外不附带任何保证。我们可能新增、更改或停止免费功能。如果未来版本引入付费功能，将在当时以单独呈现的条款提供，并在该版本发布前更新本补充条款。</p>
+
+          <h2>责任限制</h2>
+          <p>在适用法律允许的最大范围内，对于因使用或无法使用本应用而产生的间接、附带、特殊、后果性或惩罚性损害，以及数据丢失、储蓄损失或机会损失，我们不承担责任。本条款不限制法律不允许限制的责任。</p>
+
+          <h2>商标</h2>
+          <p>Apple、Apple 标志、iPhone 和 App Store 是 Apple Inc. 在美国及其他国家/地区的商标。其他名称为其各自所有者的商标。</p>
+
+          <h2>联系我们</h2>
+          <p>邮箱：<a href="mailto:vokie123@gmail.com">vokie123@gmail.com</a></p>
+
+          <div class="notice">
+            <p>本页面是开发者准备的产品文档，不构成法律意见，也未经律师审阅。如需针对特定用途的约束性条款，请咨询合资格的法律专业人士。</p>
+          </div>
+        </section>
+      </article>
+    </div>
+  </main>
+  <footer>
+    <div class="wrap">Last updated: 2026-11-04</div>
+  </footer>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var initial = params.get("lang") || localStorage.getItem("legal-pages-lang") || "en";
+      function setLang(lang) {
+        if (lang !== "zh") lang = "en";
+        document.body.setAttribute("data-current-lang", lang);
+        document.documentElement.setAttribute("lang", lang === "zh" ? "zh-Hans" : "en");
+        localStorage.setItem("legal-pages-lang", lang);
+        document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+          button.setAttribute("aria-pressed", button.getAttribute("data-set-lang") === lang ? "true" : "false");
+        });
+      }
+      document.querySelectorAll("[data-set-lang]").forEach(function (button) {
+        button.addEventListener("click", function () {
+          setLang(button.getAttribute("data-set-lang"));
+        });
+      });
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
