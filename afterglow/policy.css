@@ -1,0 +1,29 @@
+:root {
+  color-scheme: light dark;
+  --ink: #181725;
+  --paper: #f5f2fb;
+  --muted: #514a63;
+  --accent: #4a3190;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #f3eefb;
+    --paper: #171320;
+    --muted: #d0c6dd;
+    --accent: #a3edd8;
+  }
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 1rem/1.7 system-ui, -apple-system, sans-serif;
+}
+main { max-width: 42rem; padding: 3.5rem 1.5rem; margin: auto; }
+header { margin-bottom: 2.5rem; }
+.brand { color: var(--accent); font-weight: 700; letter-spacing: 0.12em; }
+h1 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.2; margin: .25em 0; }
+h2 { font-size: 1.25rem; margin-top: 2rem; }
+p { color: var(--muted); margin-top: .65rem; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+footer { border-top: 1px solid var(--muted); margin-top: 2.5rem; padding-top: 1rem; }
