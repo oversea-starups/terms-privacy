@@ -23,6 +23,11 @@ This repository hosts legal documents for our apps.
 - [Privacy Policy](https://oversea-starups.github.io/terms-privacy/material-bounce/privacy.html)
 - [Terms of Service](https://oversea-starups.github.io/terms-privacy/material-bounce/terms.html)
 
+### AI Pulse (AI News & Perks)
+- [Privacy Policy](https://oversea-starups.github.io/terms-privacy/ai-hotspot/privacy.html)
+- [Terms of Service](https://oversea-starups.github.io/terms-privacy/ai-hotspot/terms.html)
+- [Support](https://oversea-starups.github.io/terms-privacy/ai-hotspot/support.html)
+
 ## Structure
 
 ```
